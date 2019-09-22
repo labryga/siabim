@@ -3,4 +3,6 @@ version: "3"
 services:
     django:
       image: siabim_django:2.2.5
+      volumes:
+        - ../django/siabim/:/siabim/siabim/
       command: tail -F anything
