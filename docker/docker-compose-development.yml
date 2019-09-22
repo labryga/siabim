@@ -1,7 +1,6 @@
 version: "3"
 
 services:
-  django:
-  nginx:
-  postgresql:
-  gulp:
+    django:
+      image: siabim_django:2.2.5
+      command: tail -F anything

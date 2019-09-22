@@ -2,7 +2,7 @@ FROM python:3.7-alpine3.9 as main
 
 
 FROM main as user
-WORKDIR /klangrausch
+WORKDIR /siabim
 ARG host_user_name
 ARG host_user_id
 ENV PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYGECODE=1 \
