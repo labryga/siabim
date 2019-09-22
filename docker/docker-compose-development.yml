@@ -5,4 +5,4 @@ services:
       image: siabim_django:2.2.5
       volumes:
         - ../django/siabim/:/siabim/siabim/
-      command: tail -F anything
+      command: tail -F example
