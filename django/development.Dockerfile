@@ -12,5 +12,6 @@ RUN apk update && \
     adduser -D -g "" -H \
     -u "$user_id" \
     -h "$(pwd)" "$user_name" && \
-    chown -R "$user_id":"$user_id" "$(pwd)"
+    chown -R "$user_id":"$user_id" "$(pwd)" && \
+    apk del shadow
 USER "$user_name"
