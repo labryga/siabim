@@ -5,8 +5,8 @@ FROM main as user
 WORKDIR /klangrausch
 ARG host_user_name
 ARG host_user_id
-ENV user_name=$host_user_name 
-ENV user_id=$host_user_id
+ENV PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYGECODE=1 \
+    user_name=$host_user_name user_id=$host_user_id
 RUN apk update && \
     apk add --virtual --no-cache shadow && \
     adduser -D -g "" -H \
@@ -14,4 +14,17 @@ RUN apk update && \
     -h "$(pwd)" "$user_name" && \
     chown -R "$user_id":"$user_id" "$(pwd)" && \
     apk del shadow
+
+
+FROM main as pythonbuild
+RUN mkdir /install
+WORKDIR /install
+COPY requierments_development.txt .
+RUN apk update && apk add --no-cache --virtual \
+    build-deps musl-dev gcc python3-dev postgresql-dev && \
+    pip install --install-option="--prefix=/install" \
+    -r requierments_development.txt
+
+FROM user
+COPY --from=pythonbuild /install /usr/local
 USER "$user_name"
