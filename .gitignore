@@ -3,3 +3,5 @@
 !/django/
 
 !.gitignore
+*.swp
+*.pyc
