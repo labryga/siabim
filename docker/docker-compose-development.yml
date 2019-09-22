@@ -5,4 +5,5 @@ services:
       image: siabim_django:2.2.5
       volumes:
         - ../django/siabim/:/siabim/siabim/
-      command: tail -F example
+      working_dir: /siabim/siabim/
+      command: gunicorn siabim.wsgi:application 0.0.0.0:8000
