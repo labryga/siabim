@@ -14,5 +14,3 @@ RUN apk update && \
     apk add --no-cache --virtual shadow && \
     adduser -D -H -g "" -h "$(pwd)" \
     -u "$image_uid" "$image_uid_name"
-
-
