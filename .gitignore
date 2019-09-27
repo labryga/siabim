@@ -1,6 +1,7 @@
 /*
 !/docker
 !/django/
+!/gulp/
 
 !.gitignore
 *.swp
