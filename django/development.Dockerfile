@@ -2,10 +2,14 @@ FROM python:3.7-alpine3.9 as main
 
 # user image to run as non root and sync with host
 # user name and id; look into build script for details
+
 FROM main as user
+
 WORKDIR /siabim
+
 ARG host_user_name
 ARG host_user_id
+
 ENV PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYGECODE=1 \
     user_name=$host_user_name user_id=$host_user_id
 RUN apk update && \
