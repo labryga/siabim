@@ -3,6 +3,7 @@
 !/django/
 !/gulp/
 !/postgresql
+!/vim/
 
 !.gitignore
 *.swp
