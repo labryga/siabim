@@ -3,9 +3,12 @@ FROM postgres:11-alpine
 ARG host_uid
 ARG host_uid_name
 
+ENV uid=$host_uid \
+    uid_name=$host_uid_name
 
+WORKDIR /siabim
 
 RUN apk add --no-cache --virtual \
     shadow && \ 
-    adduser 
-
+    adduser -D -H -g "" -h "$(pwd)" \
+    -u "$uid" "$uid_name"
