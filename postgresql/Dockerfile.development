@@ -1,0 +1,11 @@
+FROM postgres:11-alpine 
+
+ARG host_uid
+ARG host_uid_name
+
+
+
+RUN apk add --no-cache --virtual \
+    shadow && \ 
+    adduser 
+

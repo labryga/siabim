@@ -2,6 +2,7 @@
 !/docker
 !/django/
 !/gulp/
+!/postgresql
 
 !.gitignore
 *.swp
