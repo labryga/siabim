@@ -26,7 +26,8 @@ RUN mkdir /install
 WORKDIR /install
 COPY requierments_development.txt .
 RUN apk update && apk add --no-cache --virtual \
-    build-deps musl-dev gcc python3-dev postgresql-dev && \
+    build-deps musl-dev gcc python3-dev \
+    postgresql-dev && \
     pip install --install-option="--prefix=/install" \
     -r requierments_development.txt
 
