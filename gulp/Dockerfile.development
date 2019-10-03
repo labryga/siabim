@@ -7,7 +7,9 @@ ENV image_uid_name=$host_uid_name
 WORKDIR /siabim
 COPY ./siabim/package.json .
 RUN mkdir /node_modules \
-          /staticfiles && \
+          /staticfiles \
+          /staticfiles/css \
+          /staticfiles/js && \
     apk update && \
     apk add --no-cache --virtual shadow && \
     adduser -D -H -g "" -h "$(pwd)" \
