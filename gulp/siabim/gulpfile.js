@@ -31,8 +31,8 @@ gulp.task('javascript', () => {
     .pipe(concat('siabim_es6_build.js'))
     .pipe(gulp.dest('/staticfiles/js/development/'))
     .pipe(babel({
-      // presets: ['@babel/preset-env'],
-      // plugins: ['babel-plugin-loop-optimizer']
+      presets: ['@babel/preset-env'],
+      plugins: ['babel-plugin-loop-optimizer']
     }))
     .pipe(rename('siabim.js'))
     .pipe(gulp.dest('/staticfiles/js/production/'))

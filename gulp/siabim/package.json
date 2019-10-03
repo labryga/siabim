@@ -9,7 +9,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.6.0",
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "babel-plugin-loop-optimizer": "^1.4.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.0",
     "gulp-babel": "^8.0.0",
@@ -20,8 +22,6 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
-    "gulp-uglifycss": "^1.1.0",
-    "babel-plugin-loop-optimizer": "^1.4.1",
-    "babel-preset-env": "^1.7.0"
+    "gulp-uglifycss": "^1.1.0"
   }
 }
