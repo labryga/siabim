@@ -4,6 +4,10 @@ services:
 
   siabim_django:
     image: siabim_django:2.2.5
+    depends_on:
+      - siabim_postgresql
+    env_file:
+      - ./.env_siabim_django
     volumes:
       - ../django/siabim/:/siabim/siabim/
     working_dir: /siabim/siabim/
@@ -25,3 +29,5 @@ services:
 
   siabim_postgresql:
     image: postgres:11.5-alpine
+    env_file:
+      - ./.env_siabim_postgresql
