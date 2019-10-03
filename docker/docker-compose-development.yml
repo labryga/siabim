@@ -7,7 +7,7 @@ services:
     volumes:
       - ../django/siabim/:/siabim/siabim/
     working_dir: /siabim/siabim/
-    command: gunicorn siabim.wsgi:application 0.0.0.0:8000
+    command: gunicorn siabim.wsgi:application -b 0.0.0.0:8000
 
   siabim_gulp:
     image: siabim_gulp:node_10.16.3 
@@ -15,3 +15,13 @@ services:
       - ../gulp/siabim/:/siabim/
       - ../staticfiles/:/staticfiles/ 
     command: gulp watch
+
+  siabim_nginx:
+    image: nginx:1.17-alpine
+    ports:
+      - 80:80
+    volumes:
+      - ../nginx/conf.d/:/etc/nginx/conf.d/
+
+  siabim_postgresql:
+    image: postgres:11.5-alpine
