@@ -20,6 +20,8 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
-    "gulp-uglifycss": "^1.1.0"
+    "gulp-uglifycss": "^1.1.0",
+    "babel-plugin-loop-optimizer": "^1.4.1",
+    "babel-preset-env": "^1.7.0"
   }
 }
