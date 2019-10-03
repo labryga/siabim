@@ -13,7 +13,7 @@ RUN mkdir /node_modules \
     adduser -D -H -g "" -h "$(pwd)" \
             -u "$image_uid" "$image_uid_name" && \
     chown -R "$image_uid":"$image_uid" \
-    "$(pwd)" /node_modules && \
+             "$(pwd)" /node_modules /staticfiles && \
     npm i gulp -g gulp-cli && \
     npm i && \
     npm audit fix && \
