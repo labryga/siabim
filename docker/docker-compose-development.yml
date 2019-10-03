@@ -1,7 +1,7 @@
 version: "3"
 
 services:
-  django:
+  siabim_django:
     image: siabim_django:2.2.5
     volumes:
       - ../django/siabim/:/siabim/siabim/
