@@ -19,7 +19,6 @@ RUN apk update && \
     apk del shadow
 
 
-
 # python image to create artefacts 
 FROM main as pythonbuild
 RUN mkdir /install
@@ -30,7 +29,6 @@ RUN apk update && apk add --no-cache --virtual \
     postgresql-dev && \
     pip install --install-option="--prefix=/install" \
     -r requierments_development.txt
-
 
 
 # final image stage with copied artefacts

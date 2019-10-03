@@ -9,6 +9,8 @@ services:
     working_dir: /siabim/siabim/
     command: gunicorn siabim.wsgi:application 0.0.0.0:8000
 
-    siabim_gulp:
-      image: siabim_gulp:node_10.16.3 
-      command: gulp watch
+  siabim_gulp:
+    image: siabim_gulp:node_10.16.3 
+    volumes:
+      - ../gulp/siabim/:/siabim/
+    command: gulp watch
