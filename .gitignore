@@ -4,6 +4,7 @@
 !/gulp/
 !/postgresql
 !/vim/
+.npm
 
 !.gitignore
 *.swp

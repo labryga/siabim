@@ -21,6 +21,8 @@ services:
     command: gulp watch
 
   siabim_nginx:
+    depends_on:
+      - siabim_django
     image: nginx:1.17-alpine
     ports:
       - 80:80
