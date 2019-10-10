@@ -1,0 +1,33 @@
+@import "01_global.sass"
+
+@mixin grid_container
+  width: 100%
+  max-width: 1200px
+  margin: 0px auto
+  & .grid_row 
+    @include clearfix
+
+@mixin clearfix
+  &:after
+    display: table
+    content: ""
+    clear: both
+
+// media queries
+@mixin phone
+  @media (max-width: 799px)
+    background-color: rgba(mintcream, 0.7)
+    border: 1px solid cyan
+    @content
+
+@mixin tablet
+  @media (min-width: 800px) and (max-width: 1099px)
+    background-color: rgba(red, 0.2)
+    border: 1px solid cyan
+    @content
+
+@mixin desktop
+  @media (min-width: 1100px)
+    background-color: rgba(blue, 0.2)
+    border: 1px solid cyan
+    @content

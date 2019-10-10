@@ -1,0 +1,2 @@
+// alert("ja");
+"use strict";
