@@ -19,6 +19,8 @@ services:
       - ../gulp/siabim/:/siabim/
       - ../staticfiles/:/staticfiles/ 
     command: gulp watch
+    ports:
+      - 35729:35729
 
   siabim_nginx:
     depends_on:

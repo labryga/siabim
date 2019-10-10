@@ -12,8 +12,8 @@ var gulp = require('gulp'),
 
 gulp.task('css', () => {
   return gulp.src([
-    '/staticfiles/css/development/*.css',
-    '/staticfiles/css/development/sass/*.sass'])
+    '/staticfiles/css/development/sass/*.sass',
+    '/staticfiles/css/development/*.css',])
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer('last 5 versions',
                        'Android >= 2.3',
