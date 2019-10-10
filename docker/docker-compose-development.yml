@@ -26,6 +26,8 @@ services:
       - 80:80
     volumes:
       - ../nginx/conf.d/:/etc/nginx/conf.d/
+      - ../staticfiles/css/production/:/staticfiles/css/production/
+      - ../staticfiles/js/production/:/staticfiles/js/production/
 
   siabim_postgresql:
     image: postgres:11.5-alpine
