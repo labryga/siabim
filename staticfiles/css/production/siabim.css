@@ -43,7 +43,7 @@ body {
   @media (min-width: 1100px) {
     #container_main_menu {
       background-color: rgba(0, 0, 255, 0.2);
-      border: 1px solid white;
+      border: 1px solid whitE;
       width: 16.66667%; } }
 
 #container_main_menu_phone {
@@ -61,7 +61,7 @@ body {
   @media (min-width: 1100px) {
     #container_main_menu_phone {
       background-color: rgba(0, 0, 255, 0.2);
-      border: 1px solid white;
+      border: 1px solid whitE;
       display: none; } }
 
 @media (max-width: 899px) {
@@ -82,7 +82,7 @@ body {
 @media (min-width: 1100px) {
   #container_main_content {
     background-color: rgba(0, 0, 255, 0.2);
-    border: 1px solid white;
+    border: 1px solid whitE;
     background-color: grey;
     height: 300px;
     float: right;
