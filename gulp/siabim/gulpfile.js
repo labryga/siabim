@@ -12,7 +12,7 @@ var gulp = require('gulp'),
 
 gulp.task('css', () => {
   return gulp.src([
-    '/staticfiles/css/development/sass/*.sass',
+    '/staticfiles/css/development/sass/00_main.sass',
     '/staticfiles/css/development/*.css',])
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer('last 5 versions',
