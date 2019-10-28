@@ -100,8 +100,8 @@ body {
   bottom: 0px;
   text-align: center; }
   #grid_container_footer a {
-    width: 100px;
-    padding: 5px 10px;
+    width: 80px;
+    padding: 5px 5px;
     display: inline-block;
     text-decoration: none;
     text-align: center; }
