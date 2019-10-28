@@ -1,18 +1,19 @@
 
-const mytime = new Date();
-
-const mytimes = ["getFullYear", "getHours", "getMinutes"];
-
-
-
-function we() {
-  mytimes.forEach(item =>
-    console.log(eval("mytime" + "." + item + "()")));
+function currying(fun) {
+  return function(a) {
+    return function(b) {
+      return fun(a, b)
+    }
+  }
 }
 
-document.body.appendChild(
-  document.createElement("ARTICLE"));
+
+function mysum(a, b) {
+  return a * b;
+}
+
+mysum = currying(mysum);
 
 console.log(
-  ["22", "33" ,"44"].includes(22)
+  mysum(24)(999)
 );
