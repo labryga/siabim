@@ -97,13 +97,16 @@ body {
 
 #grid_container_footer {
   background-color: rgba(255, 0, 0, 0.3);
-  height: 300px;
-  margin: 50px auto; }
+  margin: 0px auto 5px;
+  position: absolute;
+  bottom: 0px;
+  text-align: center; }
   #grid_container_footer a {
-    display: inline-block;
+    width: 100px;
     padding: 5px 10px;
-    color: white;
-    text-decoration: none; }
+    display: inline-block;
+    text-decoration: none;
+    text-align: center; }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
