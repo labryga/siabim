@@ -1,0 +1,58 @@
+@import "01_global.sass"
+@import "02_mixins.sass"
+
+
+#container_main
+  @include grid_container
+  background-color: rgba(#01c, 0.4)
+  height: 100%
+  margin: 50px auto
+
+#container_main_row
+  height: 100%
+
+#container_main_menu
+  height: 100%
+  float: left
+  & li
+    list-style-type: none
+    color: white
+  @include phone
+    display: none
+    // width: percentage(1/12)  
+  @include tablet
+    width: 180px
+  @include desktop
+    width: 180px
+
+#container_main_menu_phone
+  background-color: khaki
+  width: 100%
+  @include phone
+  height: 100px
+  @include tablet
+    display: none
+  @include desktop
+    display: none
+
+@mixin content
+  background-color: silver
+  height: 300px
+  float: right
+
+#container_main_content
+  @include phone
+    display: none
+  @include tablet
+    @include content
+    width: calc(100% - 180px) 
+  @include desktop
+    @include content
+    width: calc(100% - 180px) 
+
+#container_main_content_phone
+  @include phone
+  @include tablet
+    display: none
+  @include desktop
+    display: none

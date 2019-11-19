@@ -1,14 +1,14 @@
-var gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    sourcemaps = require('gulp-sourcemaps'),
-    postcss = require('gulp-postcss'),
-    autoprefixer = require('gulp-autoprefixer'),
-    concat = require('gulp-concat'),
-    babel = require('gulp-babel'),
-    uglifyjs = require('gulp-uglify'),
-    uglifycss = require('gulp-uglifycss'),
-    rename = require('gulp-rename'),
-    livereload = require('gulp-livereload');
+var gulp          = require('gulp'),
+    sass          = require('gulp-sass'),
+    sourcemaps    = require('gulp-sourcemaps'),
+    postcss       = require('gulp-postcss'),
+    autoprefixer  = require('gulp-autoprefixer'),
+    concat        = require('gulp-concat'),
+    babel         = require('gulp-babel'),
+    uglifyjs      = require('gulp-uglify'),
+    uglifycss     = require('gulp-uglifycss'),
+    rename        = require('gulp-rename'),
+    livereload    = require('gulp-livereload');
 
 gulp.task('css', () => {
   return gulp.src([

@@ -1,17 +1,19 @@
 @import "01_global.sass"
 @import "02_mixins.sass"
 
-%grid_container
-  @include grid_container
 
-#grid_container_footer
-  @extend %grid_container
-  margin: 0px auto 5px
+#container_footer
+  @include grid_container
+  margin: 0px auto 7px
   width: 100%
   position: absolute
   left: 0px
   right: 0px
   bottom: 0px
+
+#container_footer_row
+  background-color: orange
+  height: 100%
   text-align: center
   & a
     width: 80px
