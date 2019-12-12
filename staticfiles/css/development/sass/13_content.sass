@@ -5,24 +5,23 @@
 #container_main
   @include grid_container
   background-color: rgba(#4fc, 0.4)
-  height: 100%
-  margin: 0px auto
+  height:   100%
+  margin:   0px auto
   position: relative
   // bottom: 0px
 
 #container_main_row
   background-color: brown
-  position: relative
+  position:         relative
 
 #container_main_menu
   position: fixed
-  float: left
+  float:    left
   & li
     list-style-type: none
     color: white
   @include phone
     display: none
-    // width: percentage(1/12)  
   @include tablet
     width:  220px
     height: 100%
@@ -54,7 +53,6 @@
   @include desktop
     @include content
     width: calc(100% - 220px) 
-    height: 100%
 
 #container_main_content_phone
   @include phone

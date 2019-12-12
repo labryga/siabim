@@ -82,8 +82,7 @@ body {
     background-color: green;
     float: right;
     height: 100%;
-    width: calc(100% - 220px);
-    height: 100%; } }
+    width: calc(100% - 220px); } }
 
 @media (max-width: 899px) {
   #container_main_content_phone {
