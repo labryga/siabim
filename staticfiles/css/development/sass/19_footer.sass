@@ -2,18 +2,13 @@
 @import "02_mixins.sass"
 
 
-#container_footer
-  @include grid_container
-  margin: 0px auto 7px
-  width:  100%
-
 #container_footer_row
   // display: none
   // background-color: orange
   width:    100%
   height:   #{$footer_height}px
-  position: relative
-  // bottom: -100px
+  position: absolute
+  bottom: 0px
   text-align: center
   & a
     width:   80px
