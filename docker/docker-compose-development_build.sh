@@ -1,4 +1,3 @@
-
 cd ../django/
 . ./django/Dockerfile.development_build.sh
 
