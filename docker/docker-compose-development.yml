@@ -9,8 +9,8 @@ services:
     env_file:
       - ./.env_siabim_django
     volumes:
-      - ../django/siabim/:/siabim/siabim/
-    working_dir: /siabim/siabim/
+      - ../django/siabim/:/siabim/
+    working_dir: /siabim/
     command: gunicorn siabim.wsgi:application -b 0.0.0.0:8000
 
   siabim_gulp:
