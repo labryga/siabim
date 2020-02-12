@@ -2,11 +2,11 @@ let SessionLoad = 1
 if &cp | set nocp | endif
 let s:cpo_save=&cpo
 set cpo&vim
-inoremap <silent> <expr> <Plug>(neocomplcache_start_unite_complete) unite#sources#neocomplcache#start_complete()
-inoremap <silent> <expr> <Plug>(neocomplcache_start_unite_quick_match) unite#sources#neocomplcache#start_quick_match()
-inoremap <silent> <Plug>(neocomplcache_start_auto_complete) =neocomplcache#mappings#popup_post()
-inoremap <silent> <Plug>(neocomplcache_start_auto_complete_no_select) 
 inoremap <silent> <Plug>(neocomplcache_start_omni_complete) 
+inoremap <silent> <Plug>(neocomplcache_start_auto_complete_no_select) 
+inoremap <silent> <Plug>(neocomplcache_start_auto_complete) =neocomplcache#mappings#popup_post()
+inoremap <silent> <expr> <Plug>(neocomplcache_start_unite_quick_match) unite#sources#neocomplcache#start_quick_match()
+inoremap <silent> <expr> <Plug>(neocomplcache_start_unite_complete) unite#sources#neocomplcache#start_complete()
 imap <C-R>	 <Plug>snipMateShow
 imap <S-Tab> <Plug>snipMateBack
 inoremap <silent> <Plug>(table-mode-tableize) |:call tablemode#TableizeInsertMode()a
@@ -85,33 +85,32 @@ nmap  :tabnext
 nmap  :tabprevious
 nmap  zk
 nmap  zj
-nmap 9 <Plug>TComment-9
-nmap 8 <Plug>TComment-8
-nmap 7 <Plug>TComment-7
-nmap 6 <Plug>TComment-6
-nmap 5 <Plug>TComment-5
-nmap 4 <Plug>TComment-4
-nmap 3 <Plug>TComment-3
-nmap 2 <Plug>TComment-2
-nmap 1 <Plug>TComment-1
-nmap  <Plug>TComment-
 vmap 9 <Plug>TComment-9
+nmap 9 <Plug>TComment-9
 omap 9 <Plug>TComment-9
 vmap 8 <Plug>TComment-8
+nmap 8 <Plug>TComment-8
 omap 8 <Plug>TComment-8
 vmap 7 <Plug>TComment-7
+nmap 7 <Plug>TComment-7
 omap 7 <Plug>TComment-7
 vmap 6 <Plug>TComment-6
+nmap 6 <Plug>TComment-6
 omap 6 <Plug>TComment-6
 vmap 5 <Plug>TComment-5
+nmap 5 <Plug>TComment-5
 omap 5 <Plug>TComment-5
 vmap 4 <Plug>TComment-4
+nmap 4 <Plug>TComment-4
 omap 4 <Plug>TComment-4
 vmap 3 <Plug>TComment-3
+nmap 3 <Plug>TComment-3
 omap 3 <Plug>TComment-3
 vmap 2 <Plug>TComment-2
+nmap 2 <Plug>TComment-2
 omap 2 <Plug>TComment-2
 vmap 1 <Plug>TComment-1
+nmap 1 <Plug>TComment-1
 omap 1 <Plug>TComment-1
 map ca <Plug>TComment-ca
 map cc <Plug>TComment-cc
@@ -124,10 +123,9 @@ map r <Plug>TComment-r
 map   <Plug>TComment- 
 map p <Plug>TComment-p
 vmap  <Plug>TComment-
+nmap  <Plug>TComment-
 omap  <Plug>TComment-
 nmap   <Plug>(easymotion-s)
-nmap ,__ <Plug>TComment-,__
-smap ,__ <Plug>TComment-,__
 xmap ,T <Plug>(table-mode-tableize-delimiter)
 xmap ,tt <Plug>(table-mode-tableize)
 nmap ,tt <Plug>(table-mode-tableize)
@@ -143,6 +141,8 @@ xmap ,_i <Plug>TComment-,_i
 map ,_  <Plug>TComment-,_ 
 map ,_p <Plug>TComment-,_p
 xmap ,__ <Plug>TComment-,__
+nmap ,__ <Plug>TComment-,__
+smap ,__ <Plug>TComment-,__
 omap ,__ <Plug>TComment-,__
 nmap ,tc <Plug>Colorizer
 map ,rwp <Plug>RestoreWinPosn
@@ -199,214 +199,6 @@ nmap ySs <Plug>YSsurround
 nmap yss <Plug>Yssurround
 nmap yS <Plug>YSurround
 nmap ys <Plug>Ysurround
-nnoremap <silent> <Plug>(easymotion-activate) :call EasyMotion#activate(0)
-snoremap <silent> <Plug>(easymotion-activate) :call EasyMotion#activate(0)
-nnoremap <silent> <Plug>(easymotion-lineanywhere) :call EasyMotion#LineAnywhere(0,2)
-snoremap <silent> <Plug>(easymotion-lineanywhere) :call EasyMotion#LineAnywhere(0,2)
-nnoremap <silent> <Plug>(easymotion-linebackward) :call EasyMotion#LineAnywhere(0,1)
-snoremap <silent> <Plug>(easymotion-linebackward) :call EasyMotion#LineAnywhere(0,1)
-nnoremap <silent> <Plug>(easymotion-lineforward) :call EasyMotion#LineAnywhere(0,0)
-snoremap <silent> <Plug>(easymotion-lineforward) :call EasyMotion#LineAnywhere(0,0)
-nnoremap <silent> <Plug>(easymotion-bd-el) :call EasyMotion#EL(0,2)
-snoremap <silent> <Plug>(easymotion-bd-el) :call EasyMotion#EL(0,2)
-nnoremap <silent> <Plug>(easymotion-gel) :call EasyMotion#EL(0,1)
-snoremap <silent> <Plug>(easymotion-gel) :call EasyMotion#EL(0,1)
-nnoremap <silent> <Plug>(easymotion-el) :call EasyMotion#EL(0,0)
-snoremap <silent> <Plug>(easymotion-el) :call EasyMotion#EL(0,0)
-nnoremap <silent> <Plug>(easymotion-bd-wl) :call EasyMotion#WBL(0,2)
-snoremap <silent> <Plug>(easymotion-bd-wl) :call EasyMotion#WBL(0,2)
-nnoremap <silent> <Plug>(easymotion-bl) :call EasyMotion#WBL(0,1)
-snoremap <silent> <Plug>(easymotion-bl) :call EasyMotion#WBL(0,1)
-nnoremap <silent> <Plug>(easymotion-wl) :call EasyMotion#WBL(0,0)
-snoremap <silent> <Plug>(easymotion-wl) :call EasyMotion#WBL(0,0)
-nnoremap <silent> <Plug>(easymotion-prev) :call EasyMotion#NextPrevious(0,1)
-snoremap <silent> <Plug>(easymotion-prev) :call EasyMotion#NextPrevious(0,1)
-nnoremap <silent> <Plug>(easymotion-next) :call EasyMotion#NextPrevious(0,0)
-snoremap <silent> <Plug>(easymotion-next) :call EasyMotion#NextPrevious(0,0)
-nnoremap <silent> <Plug>(easymotion-repeat) :call EasyMotion#Repeat(0)
-snoremap <silent> <Plug>(easymotion-repeat) :call EasyMotion#Repeat(0)
-nnoremap <silent> <Plug>(easymotion-jumptoanywhere) :call EasyMotion#JumpToAnywhere(0,2)
-snoremap <silent> <Plug>(easymotion-jumptoanywhere) :call EasyMotion#JumpToAnywhere(0,2)
-nnoremap <silent> <Plug>(easymotion-bd-n) :call EasyMotion#Search(0,2,0)
-snoremap <silent> <Plug>(easymotion-bd-n) :call EasyMotion#Search(0,2,0)
-nnoremap <silent> <Plug>(easymotion-vim-N) :call EasyMotion#Search(0,1,1)
-snoremap <silent> <Plug>(easymotion-vim-N) :call EasyMotion#Search(0,1,1)
-nnoremap <silent> <Plug>(easymotion-vim-n) :call EasyMotion#Search(0,0,1)
-snoremap <silent> <Plug>(easymotion-vim-n) :call EasyMotion#Search(0,0,1)
-nnoremap <silent> <Plug>(easymotion-N) :call EasyMotion#Search(0,1,0)
-snoremap <silent> <Plug>(easymotion-N) :call EasyMotion#Search(0,1,0)
-nnoremap <silent> <Plug>(easymotion-n) :call EasyMotion#Search(0,0,0)
-snoremap <silent> <Plug>(easymotion-n) :call EasyMotion#Search(0,0,0)
-nnoremap <silent> <Plug>(easymotion-eol-bd-jk) :call EasyMotion#Eol(0,2)
-snoremap <silent> <Plug>(easymotion-eol-bd-jk) :call EasyMotion#Eol(0,2)
-nnoremap <silent> <Plug>(easymotion-eol-k) :call EasyMotion#Eol(0,1)
-snoremap <silent> <Plug>(easymotion-eol-k) :call EasyMotion#Eol(0,1)
-nnoremap <silent> <Plug>(easymotion-eol-j) :call EasyMotion#Eol(0,0)
-snoremap <silent> <Plug>(easymotion-eol-j) :call EasyMotion#Eol(0,0)
-nnoremap <silent> <Plug>(easymotion-sol-bd-jk) :call EasyMotion#Sol(0,2)
-snoremap <silent> <Plug>(easymotion-sol-bd-jk) :call EasyMotion#Sol(0,2)
-nnoremap <silent> <Plug>(easymotion-sol-k) :call EasyMotion#Sol(0,1)
-snoremap <silent> <Plug>(easymotion-sol-k) :call EasyMotion#Sol(0,1)
-nnoremap <silent> <Plug>(easymotion-sol-j) :call EasyMotion#Sol(0,0)
-snoremap <silent> <Plug>(easymotion-sol-j) :call EasyMotion#Sol(0,0)
-nnoremap <silent> <Plug>(easymotion-bd-jk) :call EasyMotion#JK(0,2)
-snoremap <silent> <Plug>(easymotion-bd-jk) :call EasyMotion#JK(0,2)
-nnoremap <silent> <Plug>(easymotion-k) :call EasyMotion#JK(0,1)
-snoremap <silent> <Plug>(easymotion-k) :call EasyMotion#JK(0,1)
-nnoremap <silent> <Plug>(easymotion-j) :call EasyMotion#JK(0,0)
-snoremap <silent> <Plug>(easymotion-j) :call EasyMotion#JK(0,0)
-nnoremap <silent> <Plug>(easymotion-iskeyword-bd-e) :call EasyMotion#EK(0,2)
-snoremap <silent> <Plug>(easymotion-iskeyword-bd-e) :call EasyMotion#EK(0,2)
-nnoremap <silent> <Plug>(easymotion-iskeyword-ge) :call EasyMotion#EK(0,1)
-snoremap <silent> <Plug>(easymotion-iskeyword-ge) :call EasyMotion#EK(0,1)
-nnoremap <silent> <Plug>(easymotion-iskeyword-e) :call EasyMotion#EK(0,0)
-snoremap <silent> <Plug>(easymotion-iskeyword-e) :call EasyMotion#EK(0,0)
-nnoremap <silent> <Plug>(easymotion-bd-E) :call EasyMotion#EW(0,2)
-snoremap <silent> <Plug>(easymotion-bd-E) :call EasyMotion#EW(0,2)
-nnoremap <silent> <Plug>(easymotion-gE) :call EasyMotion#EW(0,1)
-snoremap <silent> <Plug>(easymotion-gE) :call EasyMotion#EW(0,1)
-nnoremap <silent> <Plug>(easymotion-E) :call EasyMotion#EW(0,0)
-snoremap <silent> <Plug>(easymotion-E) :call EasyMotion#EW(0,0)
-nnoremap <silent> <Plug>(easymotion-bd-e) :call EasyMotion#E(0,2)
-snoremap <silent> <Plug>(easymotion-bd-e) :call EasyMotion#E(0,2)
-nnoremap <silent> <Plug>(easymotion-ge) :call EasyMotion#E(0,1)
-snoremap <silent> <Plug>(easymotion-ge) :call EasyMotion#E(0,1)
-nnoremap <silent> <Plug>(easymotion-e) :call EasyMotion#E(0,0)
-snoremap <silent> <Plug>(easymotion-e) :call EasyMotion#E(0,0)
-nnoremap <silent> <Plug>(easymotion-iskeyword-bd-w) :call EasyMotion#WBK(0,2)
-snoremap <silent> <Plug>(easymotion-iskeyword-bd-w) :call EasyMotion#WBK(0,2)
-nnoremap <silent> <Plug>(easymotion-iskeyword-b) :call EasyMotion#WBK(0,1)
-snoremap <silent> <Plug>(easymotion-iskeyword-b) :call EasyMotion#WBK(0,1)
-nnoremap <silent> <Plug>(easymotion-iskeyword-w) :call EasyMotion#WBK(0,0)
-snoremap <silent> <Plug>(easymotion-iskeyword-w) :call EasyMotion#WBK(0,0)
-nnoremap <silent> <Plug>(easymotion-bd-W) :call EasyMotion#WBW(0,2)
-snoremap <silent> <Plug>(easymotion-bd-W) :call EasyMotion#WBW(0,2)
-nnoremap <silent> <Plug>(easymotion-B) :call EasyMotion#WBW(0,1)
-snoremap <silent> <Plug>(easymotion-B) :call EasyMotion#WBW(0,1)
-nnoremap <silent> <Plug>(easymotion-W) :call EasyMotion#WBW(0,0)
-snoremap <silent> <Plug>(easymotion-W) :call EasyMotion#WBW(0,0)
-nnoremap <silent> <Plug>(easymotion-bd-w) :call EasyMotion#WB(0,2)
-snoremap <silent> <Plug>(easymotion-bd-w) :call EasyMotion#WB(0,2)
-nnoremap <silent> <Plug>(easymotion-b) :call EasyMotion#WB(0,1)
-snoremap <silent> <Plug>(easymotion-b) :call EasyMotion#WB(0,1)
-nnoremap <silent> <Plug>(easymotion-w) :call EasyMotion#WB(0,0)
-snoremap <silent> <Plug>(easymotion-w) :call EasyMotion#WB(0,0)
-nnoremap <silent> <Plug>(easymotion-Tln) :call EasyMotion#TL(-1,0,1)
-snoremap <silent> <Plug>(easymotion-Tln) :call EasyMotion#TL(-1,0,1)
-nnoremap <silent> <Plug>(easymotion-t2) :call EasyMotion#T(2,0,0)
-snoremap <silent> <Plug>(easymotion-t2) :call EasyMotion#T(2,0,0)
-nnoremap <silent> <Plug>(easymotion-t) :call EasyMotion#T(1,0,0)
-snoremap <silent> <Plug>(easymotion-t) :call EasyMotion#T(1,0,0)
-nnoremap <silent> <Plug>(easymotion-s) :call EasyMotion#S(1,0,2)
-snoremap <silent> <Plug>(easymotion-s) :call EasyMotion#S(1,0,2)
-nnoremap <silent> <Plug>(easymotion-tn) :call EasyMotion#T(-1,0,0)
-snoremap <silent> <Plug>(easymotion-tn) :call EasyMotion#T(-1,0,0)
-nnoremap <silent> <Plug>(easymotion-bd-t2) :call EasyMotion#T(2,0,2)
-snoremap <silent> <Plug>(easymotion-bd-t2) :call EasyMotion#T(2,0,2)
-nnoremap <silent> <Plug>(easymotion-tl) :call EasyMotion#TL(1,0,0)
-snoremap <silent> <Plug>(easymotion-tl) :call EasyMotion#TL(1,0,0)
-nnoremap <silent> <Plug>(easymotion-bd-tn) :call EasyMotion#T(-1,0,2)
-snoremap <silent> <Plug>(easymotion-bd-tn) :call EasyMotion#T(-1,0,2)
-nnoremap <silent> <Plug>(easymotion-fn) :call EasyMotion#S(-1,0,0)
-snoremap <silent> <Plug>(easymotion-fn) :call EasyMotion#S(-1,0,0)
-nnoremap <silent> <Plug>(easymotion-bd-tl) :call EasyMotion#TL(1,0,2)
-snoremap <silent> <Plug>(easymotion-bd-tl) :call EasyMotion#TL(1,0,2)
-nnoremap <silent> <Plug>(easymotion-fl) :call EasyMotion#SL(1,0,0)
-snoremap <silent> <Plug>(easymotion-fl) :call EasyMotion#SL(1,0,0)
-nnoremap <silent> <Plug>(easymotion-bd-tl2) :call EasyMotion#TL(2,0,2)
-snoremap <silent> <Plug>(easymotion-bd-tl2) :call EasyMotion#TL(2,0,2)
-nnoremap <silent> <Plug>(easymotion-bd-fn) :call EasyMotion#S(-1,0,2)
-snoremap <silent> <Plug>(easymotion-bd-fn) :call EasyMotion#S(-1,0,2)
-nnoremap <silent> <Plug>(easymotion-f) :call EasyMotion#S(1,0,0)
-snoremap <silent> <Plug>(easymotion-f) :call EasyMotion#S(1,0,0)
-nnoremap <silent> <Plug>(easymotion-bd-fl) :call EasyMotion#SL(1,0,2)
-snoremap <silent> <Plug>(easymotion-bd-fl) :call EasyMotion#SL(1,0,2)
-nnoremap <silent> <Plug>(easymotion-Fl2) :call EasyMotion#SL(2,0,1)
-snoremap <silent> <Plug>(easymotion-Fl2) :call EasyMotion#SL(2,0,1)
-nnoremap <silent> <Plug>(easymotion-tl2) :call EasyMotion#TL(2,0,0)
-snoremap <silent> <Plug>(easymotion-tl2) :call EasyMotion#TL(2,0,0)
-nnoremap <silent> <Plug>(easymotion-f2) :call EasyMotion#S(2,0,0)
-snoremap <silent> <Plug>(easymotion-f2) :call EasyMotion#S(2,0,0)
-nnoremap <silent> <Plug>(easymotion-Fln) :call EasyMotion#SL(-1,0,1)
-snoremap <silent> <Plug>(easymotion-Fln) :call EasyMotion#SL(-1,0,1)
-nnoremap <silent> <Plug>(easymotion-sln) :call EasyMotion#SL(-1,0,2)
-snoremap <silent> <Plug>(easymotion-sln) :call EasyMotion#SL(-1,0,2)
-nnoremap <silent> <Plug>(easymotion-tln) :call EasyMotion#TL(-1,0,0)
-snoremap <silent> <Plug>(easymotion-tln) :call EasyMotion#TL(-1,0,0)
-nnoremap <silent> <Plug>(easymotion-fl2) :call EasyMotion#SL(2,0,0)
-snoremap <silent> <Plug>(easymotion-fl2) :call EasyMotion#SL(2,0,0)
-nnoremap <silent> <Plug>(easymotion-bd-fl2) :call EasyMotion#SL(2,0,2)
-snoremap <silent> <Plug>(easymotion-bd-fl2) :call EasyMotion#SL(2,0,2)
-nnoremap <silent> <Plug>(easymotion-T2) :call EasyMotion#T(2,0,1)
-snoremap <silent> <Plug>(easymotion-T2) :call EasyMotion#T(2,0,1)
-nnoremap <silent> <Plug>(easymotion-bd-tln) :call EasyMotion#TL(-1,0,2)
-snoremap <silent> <Plug>(easymotion-bd-tln) :call EasyMotion#TL(-1,0,2)
-nnoremap <silent> <Plug>(easymotion-T) :call EasyMotion#T(1,0,1)
-snoremap <silent> <Plug>(easymotion-T) :call EasyMotion#T(1,0,1)
-nnoremap <silent> <Plug>(easymotion-bd-t) :call EasyMotion#T(1,0,2)
-snoremap <silent> <Plug>(easymotion-bd-t) :call EasyMotion#T(1,0,2)
-nnoremap <silent> <Plug>(easymotion-Tn) :call EasyMotion#T(-1,0,1)
-snoremap <silent> <Plug>(easymotion-Tn) :call EasyMotion#T(-1,0,1)
-nnoremap <silent> <Plug>(easymotion-s2) :call EasyMotion#S(2,0,2)
-snoremap <silent> <Plug>(easymotion-s2) :call EasyMotion#S(2,0,2)
-nnoremap <silent> <Plug>(easymotion-Tl) :call EasyMotion#TL(1,0,1)
-snoremap <silent> <Plug>(easymotion-Tl) :call EasyMotion#TL(1,0,1)
-nnoremap <silent> <Plug>(easymotion-sn) :call EasyMotion#S(-1,0,2)
-snoremap <silent> <Plug>(easymotion-sn) :call EasyMotion#S(-1,0,2)
-nnoremap <silent> <Plug>(easymotion-Fn) :call EasyMotion#S(-1,0,1)
-snoremap <silent> <Plug>(easymotion-Fn) :call EasyMotion#S(-1,0,1)
-nnoremap <silent> <Plug>(easymotion-sl) :call EasyMotion#SL(1,0,2)
-snoremap <silent> <Plug>(easymotion-sl) :call EasyMotion#SL(1,0,2)
-nnoremap <silent> <Plug>(easymotion-Fl) :call EasyMotion#SL(1,0,1)
-snoremap <silent> <Plug>(easymotion-Fl) :call EasyMotion#SL(1,0,1)
-nnoremap <silent> <Plug>(easymotion-sl2) :call EasyMotion#SL(2,0,2)
-snoremap <silent> <Plug>(easymotion-sl2) :call EasyMotion#SL(2,0,2)
-nnoremap <silent> <Plug>(easymotion-bd-fln) :call EasyMotion#SL(-1,0,2)
-snoremap <silent> <Plug>(easymotion-bd-fln) :call EasyMotion#SL(-1,0,2)
-nnoremap <silent> <Plug>(easymotion-F) :call EasyMotion#S(1,0,1)
-snoremap <silent> <Plug>(easymotion-F) :call EasyMotion#S(1,0,1)
-nnoremap <silent> <Plug>(easymotion-bd-f) :call EasyMotion#S(1,0,2)
-snoremap <silent> <Plug>(easymotion-bd-f) :call EasyMotion#S(1,0,2)
-nnoremap <silent> <Plug>(easymotion-F2) :call EasyMotion#S(2,0,1)
-snoremap <silent> <Plug>(easymotion-F2) :call EasyMotion#S(2,0,1)
-nnoremap <silent> <Plug>(easymotion-bd-f2) :call EasyMotion#S(2,0,2)
-snoremap <silent> <Plug>(easymotion-bd-f2) :call EasyMotion#S(2,0,2)
-nnoremap <silent> <Plug>(easymotion-Tl2) :call EasyMotion#TL(2,0,1)
-snoremap <silent> <Plug>(easymotion-Tl2) :call EasyMotion#TL(2,0,1)
-nnoremap <silent> <Plug>(easymotion-fln) :call EasyMotion#SL(-1,0,0)
-snoremap <silent> <Plug>(easymotion-fln) :call EasyMotion#SL(-1,0,0)
-nmap <C-_>9 <Plug>TComment-9
-nmap <C-_>8 <Plug>TComment-8
-nmap <C-_>7 <Plug>TComment-7
-nmap <C-_>6 <Plug>TComment-6
-nmap <C-_>5 <Plug>TComment-5
-nmap <C-_>4 <Plug>TComment-4
-nmap <C-_>3 <Plug>TComment-3
-nmap <C-_>2 <Plug>TComment-2
-nmap <C-_>1 <Plug>TComment-1
-nmap <C-_><C-_> <Plug>TComment-
-nnoremap <Plug>TComment-<C-_>9 :call tcomment#SetOption("count", 9)
-nnoremap <Plug>TComment-9 :call tcomment#SetOption("count", 9)
-nnoremap <Plug>TComment-<C-_>8 :call tcomment#SetOption("count", 8)
-nnoremap <Plug>TComment-8 :call tcomment#SetOption("count", 8)
-nnoremap <Plug>TComment-<C-_>7 :call tcomment#SetOption("count", 7)
-nnoremap <Plug>TComment-7 :call tcomment#SetOption("count", 7)
-nnoremap <Plug>TComment-<C-_>6 :call tcomment#SetOption("count", 6)
-nnoremap <Plug>TComment-6 :call tcomment#SetOption("count", 6)
-nnoremap <Plug>TComment-<C-_>5 :call tcomment#SetOption("count", 5)
-nnoremap <Plug>TComment-5 :call tcomment#SetOption("count", 5)
-nnoremap <Plug>TComment-<C-_>4 :call tcomment#SetOption("count", 4)
-nnoremap <Plug>TComment-4 :call tcomment#SetOption("count", 4)
-nnoremap <Plug>TComment-<C-_>3 :call tcomment#SetOption("count", 3)
-nnoremap <Plug>TComment-3 :call tcomment#SetOption("count", 3)
-nnoremap <Plug>TComment-<C-_>2 :call tcomment#SetOption("count", 2)
-nnoremap <Plug>TComment-2 :call tcomment#SetOption("count", 2)
-nnoremap <Plug>TComment-<C-_>1 :call tcomment#SetOption("count", 1)
-nnoremap <Plug>TComment-1 :call tcomment#SetOption("count", 1)
-nnoremap <Plug>TComment-,__ :TComment
-snoremap <Plug>TComment-,__ :TComment
-nnoremap <Plug>TComment-<C-_><C-_> :TComment
-nnoremap <Plug>TComment- :TComment
 smap <S-Tab> <Plug>snipMateBack
 vnoremap <silent> <Plug>NetrwBrowseXVis :call netrw#BrowseXVis()
 nnoremap <silent> <Plug>NetrwBrowseX :call netrw#BrowseX(netrw#GX(),netrw#CheckIfRemote(netrw#GX()))
@@ -449,199 +241,384 @@ map <silent> <Plug>(easymotion-prefix)t <Plug>(easymotion-t)
 map <silent> <Plug>(easymotion-prefix)F <Plug>(easymotion-F)
 map <silent> <Plug>(easymotion-prefix)f <Plug>(easymotion-f)
 xnoremap <silent> <Plug>(easymotion-activate) :call EasyMotion#activate(1)
+nnoremap <silent> <Plug>(easymotion-activate) :call EasyMotion#activate(0)
+snoremap <silent> <Plug>(easymotion-activate) :call EasyMotion#activate(0)
 onoremap <silent> <Plug>(easymotion-activate) :call EasyMotion#activate(0)
 xnoremap <silent> <Plug>(easymotion-lineanywhere) :call EasyMotion#LineAnywhere(1,2)
+nnoremap <silent> <Plug>(easymotion-lineanywhere) :call EasyMotion#LineAnywhere(0,2)
+snoremap <silent> <Plug>(easymotion-lineanywhere) :call EasyMotion#LineAnywhere(0,2)
 onoremap <silent> <Plug>(easymotion-lineanywhere) :call EasyMotion#LineAnywhere(0,2)
 xnoremap <silent> <Plug>(easymotion-linebackward) :call EasyMotion#LineAnywhere(1,1)
+nnoremap <silent> <Plug>(easymotion-linebackward) :call EasyMotion#LineAnywhere(0,1)
+snoremap <silent> <Plug>(easymotion-linebackward) :call EasyMotion#LineAnywhere(0,1)
 onoremap <silent> <Plug>(easymotion-linebackward) :call EasyMotion#LineAnywhere(0,1)
 xnoremap <silent> <Plug>(easymotion-lineforward) :call EasyMotion#LineAnywhere(1,0)
+nnoremap <silent> <Plug>(easymotion-lineforward) :call EasyMotion#LineAnywhere(0,0)
+snoremap <silent> <Plug>(easymotion-lineforward) :call EasyMotion#LineAnywhere(0,0)
 onoremap <silent> <Plug>(easymotion-lineforward) :call EasyMotion#LineAnywhere(0,0)
 xnoremap <silent> <Plug>(easymotion-bd-el) :call EasyMotion#EL(1,2)
+nnoremap <silent> <Plug>(easymotion-bd-el) :call EasyMotion#EL(0,2)
+snoremap <silent> <Plug>(easymotion-bd-el) :call EasyMotion#EL(0,2)
 onoremap <silent> <Plug>(easymotion-bd-el) :call EasyMotion#EL(0,2)
 xnoremap <silent> <Plug>(easymotion-gel) :call EasyMotion#EL(1,1)
+nnoremap <silent> <Plug>(easymotion-gel) :call EasyMotion#EL(0,1)
+snoremap <silent> <Plug>(easymotion-gel) :call EasyMotion#EL(0,1)
 onoremap <silent> <Plug>(easymotion-gel) :call EasyMotion#EL(0,1)
 xnoremap <silent> <Plug>(easymotion-el) :call EasyMotion#EL(1,0)
+nnoremap <silent> <Plug>(easymotion-el) :call EasyMotion#EL(0,0)
+snoremap <silent> <Plug>(easymotion-el) :call EasyMotion#EL(0,0)
 onoremap <silent> <Plug>(easymotion-el) :call EasyMotion#EL(0,0)
 xnoremap <silent> <Plug>(easymotion-bd-wl) :call EasyMotion#WBL(1,2)
+nnoremap <silent> <Plug>(easymotion-bd-wl) :call EasyMotion#WBL(0,2)
+snoremap <silent> <Plug>(easymotion-bd-wl) :call EasyMotion#WBL(0,2)
 onoremap <silent> <Plug>(easymotion-bd-wl) :call EasyMotion#WBL(0,2)
 xnoremap <silent> <Plug>(easymotion-bl) :call EasyMotion#WBL(1,1)
+nnoremap <silent> <Plug>(easymotion-bl) :call EasyMotion#WBL(0,1)
+snoremap <silent> <Plug>(easymotion-bl) :call EasyMotion#WBL(0,1)
 onoremap <silent> <Plug>(easymotion-bl) :call EasyMotion#WBL(0,1)
 xnoremap <silent> <Plug>(easymotion-wl) :call EasyMotion#WBL(1,0)
+nnoremap <silent> <Plug>(easymotion-wl) :call EasyMotion#WBL(0,0)
+snoremap <silent> <Plug>(easymotion-wl) :call EasyMotion#WBL(0,0)
 onoremap <silent> <Plug>(easymotion-wl) :call EasyMotion#WBL(0,0)
 xnoremap <silent> <Plug>(easymotion-prev) :call EasyMotion#NextPrevious(1,1)
+nnoremap <silent> <Plug>(easymotion-prev) :call EasyMotion#NextPrevious(0,1)
+snoremap <silent> <Plug>(easymotion-prev) :call EasyMotion#NextPrevious(0,1)
 onoremap <silent> <Plug>(easymotion-prev) :call EasyMotion#NextPrevious(0,1)
 xnoremap <silent> <Plug>(easymotion-next) :call EasyMotion#NextPrevious(1,0)
+nnoremap <silent> <Plug>(easymotion-next) :call EasyMotion#NextPrevious(0,0)
+snoremap <silent> <Plug>(easymotion-next) :call EasyMotion#NextPrevious(0,0)
 onoremap <silent> <Plug>(easymotion-next) :call EasyMotion#NextPrevious(0,0)
 noremap <silent> <Plug>(easymotion-dotrepeat) :call EasyMotion#DotRepeat()
 xnoremap <silent> <Plug>(easymotion-repeat) :call EasyMotion#Repeat(1)
+nnoremap <silent> <Plug>(easymotion-repeat) :call EasyMotion#Repeat(0)
+snoremap <silent> <Plug>(easymotion-repeat) :call EasyMotion#Repeat(0)
 onoremap <silent> <Plug>(easymotion-repeat) :call EasyMotion#Repeat(0)
 xnoremap <silent> <Plug>(easymotion-jumptoanywhere) :call EasyMotion#JumpToAnywhere(1,2)
+nnoremap <silent> <Plug>(easymotion-jumptoanywhere) :call EasyMotion#JumpToAnywhere(0,2)
+snoremap <silent> <Plug>(easymotion-jumptoanywhere) :call EasyMotion#JumpToAnywhere(0,2)
 onoremap <silent> <Plug>(easymotion-jumptoanywhere) :call EasyMotion#JumpToAnywhere(0,2)
 xnoremap <silent> <Plug>(easymotion-bd-n) :call EasyMotion#Search(1,2,0)
+nnoremap <silent> <Plug>(easymotion-bd-n) :call EasyMotion#Search(0,2,0)
+snoremap <silent> <Plug>(easymotion-bd-n) :call EasyMotion#Search(0,2,0)
 onoremap <silent> <Plug>(easymotion-bd-n) :call EasyMotion#Search(0,2,0)
 xnoremap <silent> <Plug>(easymotion-vim-N) :call EasyMotion#Search(1,1,1)
+nnoremap <silent> <Plug>(easymotion-vim-N) :call EasyMotion#Search(0,1,1)
+snoremap <silent> <Plug>(easymotion-vim-N) :call EasyMotion#Search(0,1,1)
 onoremap <silent> <Plug>(easymotion-vim-N) :call EasyMotion#Search(0,1,1)
 xnoremap <silent> <Plug>(easymotion-vim-n) :call EasyMotion#Search(1,0,1)
+nnoremap <silent> <Plug>(easymotion-vim-n) :call EasyMotion#Search(0,0,1)
+snoremap <silent> <Plug>(easymotion-vim-n) :call EasyMotion#Search(0,0,1)
 onoremap <silent> <Plug>(easymotion-vim-n) :call EasyMotion#Search(0,0,1)
 xnoremap <silent> <Plug>(easymotion-N) :call EasyMotion#Search(1,1,0)
+nnoremap <silent> <Plug>(easymotion-N) :call EasyMotion#Search(0,1,0)
+snoremap <silent> <Plug>(easymotion-N) :call EasyMotion#Search(0,1,0)
 onoremap <silent> <Plug>(easymotion-N) :call EasyMotion#Search(0,1,0)
 xnoremap <silent> <Plug>(easymotion-n) :call EasyMotion#Search(1,0,0)
+nnoremap <silent> <Plug>(easymotion-n) :call EasyMotion#Search(0,0,0)
+snoremap <silent> <Plug>(easymotion-n) :call EasyMotion#Search(0,0,0)
 onoremap <silent> <Plug>(easymotion-n) :call EasyMotion#Search(0,0,0)
 xnoremap <silent> <Plug>(easymotion-eol-bd-jk) :call EasyMotion#Eol(1,2)
+nnoremap <silent> <Plug>(easymotion-eol-bd-jk) :call EasyMotion#Eol(0,2)
+snoremap <silent> <Plug>(easymotion-eol-bd-jk) :call EasyMotion#Eol(0,2)
 onoremap <silent> <Plug>(easymotion-eol-bd-jk) :call EasyMotion#Eol(0,2)
 xnoremap <silent> <Plug>(easymotion-eol-k) :call EasyMotion#Eol(1,1)
+nnoremap <silent> <Plug>(easymotion-eol-k) :call EasyMotion#Eol(0,1)
+snoremap <silent> <Plug>(easymotion-eol-k) :call EasyMotion#Eol(0,1)
 onoremap <silent> <Plug>(easymotion-eol-k) :call EasyMotion#Eol(0,1)
 xnoremap <silent> <Plug>(easymotion-eol-j) :call EasyMotion#Eol(1,0)
+nnoremap <silent> <Plug>(easymotion-eol-j) :call EasyMotion#Eol(0,0)
+snoremap <silent> <Plug>(easymotion-eol-j) :call EasyMotion#Eol(0,0)
 onoremap <silent> <Plug>(easymotion-eol-j) :call EasyMotion#Eol(0,0)
 xnoremap <silent> <Plug>(easymotion-sol-bd-jk) :call EasyMotion#Sol(1,2)
+nnoremap <silent> <Plug>(easymotion-sol-bd-jk) :call EasyMotion#Sol(0,2)
+snoremap <silent> <Plug>(easymotion-sol-bd-jk) :call EasyMotion#Sol(0,2)
 onoremap <silent> <Plug>(easymotion-sol-bd-jk) :call EasyMotion#Sol(0,2)
 xnoremap <silent> <Plug>(easymotion-sol-k) :call EasyMotion#Sol(1,1)
+nnoremap <silent> <Plug>(easymotion-sol-k) :call EasyMotion#Sol(0,1)
+snoremap <silent> <Plug>(easymotion-sol-k) :call EasyMotion#Sol(0,1)
 onoremap <silent> <Plug>(easymotion-sol-k) :call EasyMotion#Sol(0,1)
 xnoremap <silent> <Plug>(easymotion-sol-j) :call EasyMotion#Sol(1,0)
+nnoremap <silent> <Plug>(easymotion-sol-j) :call EasyMotion#Sol(0,0)
+snoremap <silent> <Plug>(easymotion-sol-j) :call EasyMotion#Sol(0,0)
 onoremap <silent> <Plug>(easymotion-sol-j) :call EasyMotion#Sol(0,0)
 xnoremap <silent> <Plug>(easymotion-bd-jk) :call EasyMotion#JK(1,2)
+nnoremap <silent> <Plug>(easymotion-bd-jk) :call EasyMotion#JK(0,2)
+snoremap <silent> <Plug>(easymotion-bd-jk) :call EasyMotion#JK(0,2)
 onoremap <silent> <Plug>(easymotion-bd-jk) :call EasyMotion#JK(0,2)
 xnoremap <silent> <Plug>(easymotion-k) :call EasyMotion#JK(1,1)
+nnoremap <silent> <Plug>(easymotion-k) :call EasyMotion#JK(0,1)
+snoremap <silent> <Plug>(easymotion-k) :call EasyMotion#JK(0,1)
 onoremap <silent> <Plug>(easymotion-k) :call EasyMotion#JK(0,1)
 xnoremap <silent> <Plug>(easymotion-j) :call EasyMotion#JK(1,0)
+nnoremap <silent> <Plug>(easymotion-j) :call EasyMotion#JK(0,0)
+snoremap <silent> <Plug>(easymotion-j) :call EasyMotion#JK(0,0)
 onoremap <silent> <Plug>(easymotion-j) :call EasyMotion#JK(0,0)
 xnoremap <silent> <Plug>(easymotion-iskeyword-bd-e) :call EasyMotion#EK(1,2)
+nnoremap <silent> <Plug>(easymotion-iskeyword-bd-e) :call EasyMotion#EK(0,2)
+snoremap <silent> <Plug>(easymotion-iskeyword-bd-e) :call EasyMotion#EK(0,2)
 onoremap <silent> <Plug>(easymotion-iskeyword-bd-e) :call EasyMotion#EK(0,2)
 xnoremap <silent> <Plug>(easymotion-iskeyword-ge) :call EasyMotion#EK(1,1)
+nnoremap <silent> <Plug>(easymotion-iskeyword-ge) :call EasyMotion#EK(0,1)
+snoremap <silent> <Plug>(easymotion-iskeyword-ge) :call EasyMotion#EK(0,1)
 onoremap <silent> <Plug>(easymotion-iskeyword-ge) :call EasyMotion#EK(0,1)
 xnoremap <silent> <Plug>(easymotion-iskeyword-e) :call EasyMotion#EK(1,0)
+nnoremap <silent> <Plug>(easymotion-iskeyword-e) :call EasyMotion#EK(0,0)
+snoremap <silent> <Plug>(easymotion-iskeyword-e) :call EasyMotion#EK(0,0)
 onoremap <silent> <Plug>(easymotion-iskeyword-e) :call EasyMotion#EK(0,0)
 xnoremap <silent> <Plug>(easymotion-bd-E) :call EasyMotion#EW(1,2)
+nnoremap <silent> <Plug>(easymotion-bd-E) :call EasyMotion#EW(0,2)
+snoremap <silent> <Plug>(easymotion-bd-E) :call EasyMotion#EW(0,2)
 onoremap <silent> <Plug>(easymotion-bd-E) :call EasyMotion#EW(0,2)
 xnoremap <silent> <Plug>(easymotion-gE) :call EasyMotion#EW(1,1)
+nnoremap <silent> <Plug>(easymotion-gE) :call EasyMotion#EW(0,1)
+snoremap <silent> <Plug>(easymotion-gE) :call EasyMotion#EW(0,1)
 onoremap <silent> <Plug>(easymotion-gE) :call EasyMotion#EW(0,1)
 xnoremap <silent> <Plug>(easymotion-E) :call EasyMotion#EW(1,0)
+nnoremap <silent> <Plug>(easymotion-E) :call EasyMotion#EW(0,0)
+snoremap <silent> <Plug>(easymotion-E) :call EasyMotion#EW(0,0)
 onoremap <silent> <Plug>(easymotion-E) :call EasyMotion#EW(0,0)
 xnoremap <silent> <Plug>(easymotion-bd-e) :call EasyMotion#E(1,2)
+nnoremap <silent> <Plug>(easymotion-bd-e) :call EasyMotion#E(0,2)
+snoremap <silent> <Plug>(easymotion-bd-e) :call EasyMotion#E(0,2)
 onoremap <silent> <Plug>(easymotion-bd-e) :call EasyMotion#E(0,2)
 xnoremap <silent> <Plug>(easymotion-ge) :call EasyMotion#E(1,1)
+nnoremap <silent> <Plug>(easymotion-ge) :call EasyMotion#E(0,1)
+snoremap <silent> <Plug>(easymotion-ge) :call EasyMotion#E(0,1)
 onoremap <silent> <Plug>(easymotion-ge) :call EasyMotion#E(0,1)
 xnoremap <silent> <Plug>(easymotion-e) :call EasyMotion#E(1,0)
+nnoremap <silent> <Plug>(easymotion-e) :call EasyMotion#E(0,0)
+snoremap <silent> <Plug>(easymotion-e) :call EasyMotion#E(0,0)
 onoremap <silent> <Plug>(easymotion-e) :call EasyMotion#E(0,0)
 xnoremap <silent> <Plug>(easymotion-iskeyword-bd-w) :call EasyMotion#WBK(1,2)
+nnoremap <silent> <Plug>(easymotion-iskeyword-bd-w) :call EasyMotion#WBK(0,2)
+snoremap <silent> <Plug>(easymotion-iskeyword-bd-w) :call EasyMotion#WBK(0,2)
 onoremap <silent> <Plug>(easymotion-iskeyword-bd-w) :call EasyMotion#WBK(0,2)
 xnoremap <silent> <Plug>(easymotion-iskeyword-b) :call EasyMotion#WBK(1,1)
+nnoremap <silent> <Plug>(easymotion-iskeyword-b) :call EasyMotion#WBK(0,1)
+snoremap <silent> <Plug>(easymotion-iskeyword-b) :call EasyMotion#WBK(0,1)
 onoremap <silent> <Plug>(easymotion-iskeyword-b) :call EasyMotion#WBK(0,1)
 xnoremap <silent> <Plug>(easymotion-iskeyword-w) :call EasyMotion#WBK(1,0)
+nnoremap <silent> <Plug>(easymotion-iskeyword-w) :call EasyMotion#WBK(0,0)
+snoremap <silent> <Plug>(easymotion-iskeyword-w) :call EasyMotion#WBK(0,0)
 onoremap <silent> <Plug>(easymotion-iskeyword-w) :call EasyMotion#WBK(0,0)
 xnoremap <silent> <Plug>(easymotion-bd-W) :call EasyMotion#WBW(1,2)
+nnoremap <silent> <Plug>(easymotion-bd-W) :call EasyMotion#WBW(0,2)
+snoremap <silent> <Plug>(easymotion-bd-W) :call EasyMotion#WBW(0,2)
 onoremap <silent> <Plug>(easymotion-bd-W) :call EasyMotion#WBW(0,2)
 xnoremap <silent> <Plug>(easymotion-B) :call EasyMotion#WBW(1,1)
+nnoremap <silent> <Plug>(easymotion-B) :call EasyMotion#WBW(0,1)
+snoremap <silent> <Plug>(easymotion-B) :call EasyMotion#WBW(0,1)
 onoremap <silent> <Plug>(easymotion-B) :call EasyMotion#WBW(0,1)
 xnoremap <silent> <Plug>(easymotion-W) :call EasyMotion#WBW(1,0)
+nnoremap <silent> <Plug>(easymotion-W) :call EasyMotion#WBW(0,0)
+snoremap <silent> <Plug>(easymotion-W) :call EasyMotion#WBW(0,0)
 onoremap <silent> <Plug>(easymotion-W) :call EasyMotion#WBW(0,0)
 xnoremap <silent> <Plug>(easymotion-bd-w) :call EasyMotion#WB(1,2)
+nnoremap <silent> <Plug>(easymotion-bd-w) :call EasyMotion#WB(0,2)
+snoremap <silent> <Plug>(easymotion-bd-w) :call EasyMotion#WB(0,2)
 onoremap <silent> <Plug>(easymotion-bd-w) :call EasyMotion#WB(0,2)
 xnoremap <silent> <Plug>(easymotion-b) :call EasyMotion#WB(1,1)
+nnoremap <silent> <Plug>(easymotion-b) :call EasyMotion#WB(0,1)
+snoremap <silent> <Plug>(easymotion-b) :call EasyMotion#WB(0,1)
 onoremap <silent> <Plug>(easymotion-b) :call EasyMotion#WB(0,1)
 xnoremap <silent> <Plug>(easymotion-w) :call EasyMotion#WB(1,0)
+nnoremap <silent> <Plug>(easymotion-w) :call EasyMotion#WB(0,0)
+snoremap <silent> <Plug>(easymotion-w) :call EasyMotion#WB(0,0)
 onoremap <silent> <Plug>(easymotion-w) :call EasyMotion#WB(0,0)
 xnoremap <silent> <Plug>(easymotion-Tln) :call EasyMotion#TL(-1,1,1)
+nnoremap <silent> <Plug>(easymotion-Tln) :call EasyMotion#TL(-1,0,1)
+snoremap <silent> <Plug>(easymotion-Tln) :call EasyMotion#TL(-1,0,1)
 onoremap <silent> <Plug>(easymotion-Tln) :call EasyMotion#TL(-1,0,1)
 xnoremap <silent> <Plug>(easymotion-t2) :call EasyMotion#T(2,1,0)
+nnoremap <silent> <Plug>(easymotion-t2) :call EasyMotion#T(2,0,0)
+snoremap <silent> <Plug>(easymotion-t2) :call EasyMotion#T(2,0,0)
 onoremap <silent> <Plug>(easymotion-t2) :call EasyMotion#T(2,0,0)
 xnoremap <silent> <Plug>(easymotion-t) :call EasyMotion#T(1,1,0)
+nnoremap <silent> <Plug>(easymotion-t) :call EasyMotion#T(1,0,0)
+snoremap <silent> <Plug>(easymotion-t) :call EasyMotion#T(1,0,0)
 onoremap <silent> <Plug>(easymotion-t) :call EasyMotion#T(1,0,0)
 xnoremap <silent> <Plug>(easymotion-s) :call EasyMotion#S(1,1,2)
+nnoremap <silent> <Plug>(easymotion-s) :call EasyMotion#S(1,0,2)
+snoremap <silent> <Plug>(easymotion-s) :call EasyMotion#S(1,0,2)
 onoremap <silent> <Plug>(easymotion-s) :call EasyMotion#S(1,0,2)
 xnoremap <silent> <Plug>(easymotion-tn) :call EasyMotion#T(-1,1,0)
+nnoremap <silent> <Plug>(easymotion-tn) :call EasyMotion#T(-1,0,0)
+snoremap <silent> <Plug>(easymotion-tn) :call EasyMotion#T(-1,0,0)
 onoremap <silent> <Plug>(easymotion-tn) :call EasyMotion#T(-1,0,0)
 xnoremap <silent> <Plug>(easymotion-bd-t2) :call EasyMotion#T(2,1,2)
+nnoremap <silent> <Plug>(easymotion-bd-t2) :call EasyMotion#T(2,0,2)
+snoremap <silent> <Plug>(easymotion-bd-t2) :call EasyMotion#T(2,0,2)
 onoremap <silent> <Plug>(easymotion-bd-t2) :call EasyMotion#T(2,0,2)
 xnoremap <silent> <Plug>(easymotion-tl) :call EasyMotion#TL(1,1,0)
+nnoremap <silent> <Plug>(easymotion-tl) :call EasyMotion#TL(1,0,0)
+snoremap <silent> <Plug>(easymotion-tl) :call EasyMotion#TL(1,0,0)
 onoremap <silent> <Plug>(easymotion-tl) :call EasyMotion#TL(1,0,0)
 xnoremap <silent> <Plug>(easymotion-bd-tn) :call EasyMotion#T(-1,1,2)
+nnoremap <silent> <Plug>(easymotion-bd-tn) :call EasyMotion#T(-1,0,2)
+snoremap <silent> <Plug>(easymotion-bd-tn) :call EasyMotion#T(-1,0,2)
 onoremap <silent> <Plug>(easymotion-bd-tn) :call EasyMotion#T(-1,0,2)
 xnoremap <silent> <Plug>(easymotion-fn) :call EasyMotion#S(-1,1,0)
+nnoremap <silent> <Plug>(easymotion-fn) :call EasyMotion#S(-1,0,0)
+snoremap <silent> <Plug>(easymotion-fn) :call EasyMotion#S(-1,0,0)
 onoremap <silent> <Plug>(easymotion-fn) :call EasyMotion#S(-1,0,0)
 xnoremap <silent> <Plug>(easymotion-bd-tl) :call EasyMotion#TL(1,1,2)
+nnoremap <silent> <Plug>(easymotion-bd-tl) :call EasyMotion#TL(1,0,2)
+snoremap <silent> <Plug>(easymotion-bd-tl) :call EasyMotion#TL(1,0,2)
 onoremap <silent> <Plug>(easymotion-bd-tl) :call EasyMotion#TL(1,0,2)
 xnoremap <silent> <Plug>(easymotion-fl) :call EasyMotion#SL(1,1,0)
+nnoremap <silent> <Plug>(easymotion-fl) :call EasyMotion#SL(1,0,0)
+snoremap <silent> <Plug>(easymotion-fl) :call EasyMotion#SL(1,0,0)
 onoremap <silent> <Plug>(easymotion-fl) :call EasyMotion#SL(1,0,0)
 xnoremap <silent> <Plug>(easymotion-bd-tl2) :call EasyMotion#TL(2,1,2)
+nnoremap <silent> <Plug>(easymotion-bd-tl2) :call EasyMotion#TL(2,0,2)
+snoremap <silent> <Plug>(easymotion-bd-tl2) :call EasyMotion#TL(2,0,2)
 onoremap <silent> <Plug>(easymotion-bd-tl2) :call EasyMotion#TL(2,0,2)
 xnoremap <silent> <Plug>(easymotion-bd-fn) :call EasyMotion#S(-1,1,2)
+nnoremap <silent> <Plug>(easymotion-bd-fn) :call EasyMotion#S(-1,0,2)
+snoremap <silent> <Plug>(easymotion-bd-fn) :call EasyMotion#S(-1,0,2)
 onoremap <silent> <Plug>(easymotion-bd-fn) :call EasyMotion#S(-1,0,2)
 xnoremap <silent> <Plug>(easymotion-f) :call EasyMotion#S(1,1,0)
+nnoremap <silent> <Plug>(easymotion-f) :call EasyMotion#S(1,0,0)
+snoremap <silent> <Plug>(easymotion-f) :call EasyMotion#S(1,0,0)
 onoremap <silent> <Plug>(easymotion-f) :call EasyMotion#S(1,0,0)
 xnoremap <silent> <Plug>(easymotion-bd-fl) :call EasyMotion#SL(1,1,2)
+nnoremap <silent> <Plug>(easymotion-bd-fl) :call EasyMotion#SL(1,0,2)
+snoremap <silent> <Plug>(easymotion-bd-fl) :call EasyMotion#SL(1,0,2)
 onoremap <silent> <Plug>(easymotion-bd-fl) :call EasyMotion#SL(1,0,2)
 xnoremap <silent> <Plug>(easymotion-Fl2) :call EasyMotion#SL(2,1,1)
+nnoremap <silent> <Plug>(easymotion-Fl2) :call EasyMotion#SL(2,0,1)
+snoremap <silent> <Plug>(easymotion-Fl2) :call EasyMotion#SL(2,0,1)
 onoremap <silent> <Plug>(easymotion-Fl2) :call EasyMotion#SL(2,0,1)
 xnoremap <silent> <Plug>(easymotion-tl2) :call EasyMotion#TL(2,1,0)
+nnoremap <silent> <Plug>(easymotion-tl2) :call EasyMotion#TL(2,0,0)
+snoremap <silent> <Plug>(easymotion-tl2) :call EasyMotion#TL(2,0,0)
 onoremap <silent> <Plug>(easymotion-tl2) :call EasyMotion#TL(2,0,0)
 xnoremap <silent> <Plug>(easymotion-f2) :call EasyMotion#S(2,1,0)
+nnoremap <silent> <Plug>(easymotion-f2) :call EasyMotion#S(2,0,0)
+snoremap <silent> <Plug>(easymotion-f2) :call EasyMotion#S(2,0,0)
 onoremap <silent> <Plug>(easymotion-f2) :call EasyMotion#S(2,0,0)
 xnoremap <silent> <Plug>(easymotion-Fln) :call EasyMotion#SL(-1,1,1)
+nnoremap <silent> <Plug>(easymotion-Fln) :call EasyMotion#SL(-1,0,1)
+snoremap <silent> <Plug>(easymotion-Fln) :call EasyMotion#SL(-1,0,1)
 onoremap <silent> <Plug>(easymotion-Fln) :call EasyMotion#SL(-1,0,1)
 xnoremap <silent> <Plug>(easymotion-sln) :call EasyMotion#SL(-1,1,2)
+nnoremap <silent> <Plug>(easymotion-sln) :call EasyMotion#SL(-1,0,2)
+snoremap <silent> <Plug>(easymotion-sln) :call EasyMotion#SL(-1,0,2)
 onoremap <silent> <Plug>(easymotion-sln) :call EasyMotion#SL(-1,0,2)
 xnoremap <silent> <Plug>(easymotion-tln) :call EasyMotion#TL(-1,1,0)
+nnoremap <silent> <Plug>(easymotion-tln) :call EasyMotion#TL(-1,0,0)
+snoremap <silent> <Plug>(easymotion-tln) :call EasyMotion#TL(-1,0,0)
 onoremap <silent> <Plug>(easymotion-tln) :call EasyMotion#TL(-1,0,0)
 xnoremap <silent> <Plug>(easymotion-fl2) :call EasyMotion#SL(2,1,0)
+nnoremap <silent> <Plug>(easymotion-fl2) :call EasyMotion#SL(2,0,0)
+snoremap <silent> <Plug>(easymotion-fl2) :call EasyMotion#SL(2,0,0)
 onoremap <silent> <Plug>(easymotion-fl2) :call EasyMotion#SL(2,0,0)
 xnoremap <silent> <Plug>(easymotion-bd-fl2) :call EasyMotion#SL(2,1,2)
+nnoremap <silent> <Plug>(easymotion-bd-fl2) :call EasyMotion#SL(2,0,2)
+snoremap <silent> <Plug>(easymotion-bd-fl2) :call EasyMotion#SL(2,0,2)
 onoremap <silent> <Plug>(easymotion-bd-fl2) :call EasyMotion#SL(2,0,2)
 xnoremap <silent> <Plug>(easymotion-T2) :call EasyMotion#T(2,1,1)
+nnoremap <silent> <Plug>(easymotion-T2) :call EasyMotion#T(2,0,1)
+snoremap <silent> <Plug>(easymotion-T2) :call EasyMotion#T(2,0,1)
 onoremap <silent> <Plug>(easymotion-T2) :call EasyMotion#T(2,0,1)
 xnoremap <silent> <Plug>(easymotion-bd-tln) :call EasyMotion#TL(-1,1,2)
+nnoremap <silent> <Plug>(easymotion-bd-tln) :call EasyMotion#TL(-1,0,2)
+snoremap <silent> <Plug>(easymotion-bd-tln) :call EasyMotion#TL(-1,0,2)
 onoremap <silent> <Plug>(easymotion-bd-tln) :call EasyMotion#TL(-1,0,2)
 xnoremap <silent> <Plug>(easymotion-T) :call EasyMotion#T(1,1,1)
+nnoremap <silent> <Plug>(easymotion-T) :call EasyMotion#T(1,0,1)
+snoremap <silent> <Plug>(easymotion-T) :call EasyMotion#T(1,0,1)
 onoremap <silent> <Plug>(easymotion-T) :call EasyMotion#T(1,0,1)
 xnoremap <silent> <Plug>(easymotion-bd-t) :call EasyMotion#T(1,1,2)
+nnoremap <silent> <Plug>(easymotion-bd-t) :call EasyMotion#T(1,0,2)
+snoremap <silent> <Plug>(easymotion-bd-t) :call EasyMotion#T(1,0,2)
 onoremap <silent> <Plug>(easymotion-bd-t) :call EasyMotion#T(1,0,2)
 xnoremap <silent> <Plug>(easymotion-Tn) :call EasyMotion#T(-1,1,1)
+nnoremap <silent> <Plug>(easymotion-Tn) :call EasyMotion#T(-1,0,1)
+snoremap <silent> <Plug>(easymotion-Tn) :call EasyMotion#T(-1,0,1)
 onoremap <silent> <Plug>(easymotion-Tn) :call EasyMotion#T(-1,0,1)
 xnoremap <silent> <Plug>(easymotion-s2) :call EasyMotion#S(2,1,2)
+nnoremap <silent> <Plug>(easymotion-s2) :call EasyMotion#S(2,0,2)
+snoremap <silent> <Plug>(easymotion-s2) :call EasyMotion#S(2,0,2)
 onoremap <silent> <Plug>(easymotion-s2) :call EasyMotion#S(2,0,2)
 xnoremap <silent> <Plug>(easymotion-Tl) :call EasyMotion#TL(1,1,1)
+nnoremap <silent> <Plug>(easymotion-Tl) :call EasyMotion#TL(1,0,1)
+snoremap <silent> <Plug>(easymotion-Tl) :call EasyMotion#TL(1,0,1)
 onoremap <silent> <Plug>(easymotion-Tl) :call EasyMotion#TL(1,0,1)
 xnoremap <silent> <Plug>(easymotion-sn) :call EasyMotion#S(-1,1,2)
+nnoremap <silent> <Plug>(easymotion-sn) :call EasyMotion#S(-1,0,2)
+snoremap <silent> <Plug>(easymotion-sn) :call EasyMotion#S(-1,0,2)
 onoremap <silent> <Plug>(easymotion-sn) :call EasyMotion#S(-1,0,2)
 xnoremap <silent> <Plug>(easymotion-Fn) :call EasyMotion#S(-1,1,1)
+nnoremap <silent> <Plug>(easymotion-Fn) :call EasyMotion#S(-1,0,1)
+snoremap <silent> <Plug>(easymotion-Fn) :call EasyMotion#S(-1,0,1)
 onoremap <silent> <Plug>(easymotion-Fn) :call EasyMotion#S(-1,0,1)
 xnoremap <silent> <Plug>(easymotion-sl) :call EasyMotion#SL(1,1,2)
+nnoremap <silent> <Plug>(easymotion-sl) :call EasyMotion#SL(1,0,2)
+snoremap <silent> <Plug>(easymotion-sl) :call EasyMotion#SL(1,0,2)
 onoremap <silent> <Plug>(easymotion-sl) :call EasyMotion#SL(1,0,2)
 xnoremap <silent> <Plug>(easymotion-Fl) :call EasyMotion#SL(1,1,1)
+nnoremap <silent> <Plug>(easymotion-Fl) :call EasyMotion#SL(1,0,1)
+snoremap <silent> <Plug>(easymotion-Fl) :call EasyMotion#SL(1,0,1)
 onoremap <silent> <Plug>(easymotion-Fl) :call EasyMotion#SL(1,0,1)
 xnoremap <silent> <Plug>(easymotion-sl2) :call EasyMotion#SL(2,1,2)
+nnoremap <silent> <Plug>(easymotion-sl2) :call EasyMotion#SL(2,0,2)
+snoremap <silent> <Plug>(easymotion-sl2) :call EasyMotion#SL(2,0,2)
 onoremap <silent> <Plug>(easymotion-sl2) :call EasyMotion#SL(2,0,2)
 xnoremap <silent> <Plug>(easymotion-bd-fln) :call EasyMotion#SL(-1,1,2)
+nnoremap <silent> <Plug>(easymotion-bd-fln) :call EasyMotion#SL(-1,0,2)
+snoremap <silent> <Plug>(easymotion-bd-fln) :call EasyMotion#SL(-1,0,2)
 onoremap <silent> <Plug>(easymotion-bd-fln) :call EasyMotion#SL(-1,0,2)
 xnoremap <silent> <Plug>(easymotion-F) :call EasyMotion#S(1,1,1)
+nnoremap <silent> <Plug>(easymotion-F) :call EasyMotion#S(1,0,1)
+snoremap <silent> <Plug>(easymotion-F) :call EasyMotion#S(1,0,1)
 onoremap <silent> <Plug>(easymotion-F) :call EasyMotion#S(1,0,1)
 xnoremap <silent> <Plug>(easymotion-bd-f) :call EasyMotion#S(1,1,2)
+nnoremap <silent> <Plug>(easymotion-bd-f) :call EasyMotion#S(1,0,2)
+snoremap <silent> <Plug>(easymotion-bd-f) :call EasyMotion#S(1,0,2)
 onoremap <silent> <Plug>(easymotion-bd-f) :call EasyMotion#S(1,0,2)
 xnoremap <silent> <Plug>(easymotion-F2) :call EasyMotion#S(2,1,1)
+nnoremap <silent> <Plug>(easymotion-F2) :call EasyMotion#S(2,0,1)
+snoremap <silent> <Plug>(easymotion-F2) :call EasyMotion#S(2,0,1)
 onoremap <silent> <Plug>(easymotion-F2) :call EasyMotion#S(2,0,1)
 xnoremap <silent> <Plug>(easymotion-bd-f2) :call EasyMotion#S(2,1,2)
+nnoremap <silent> <Plug>(easymotion-bd-f2) :call EasyMotion#S(2,0,2)
+snoremap <silent> <Plug>(easymotion-bd-f2) :call EasyMotion#S(2,0,2)
 onoremap <silent> <Plug>(easymotion-bd-f2) :call EasyMotion#S(2,0,2)
 xnoremap <silent> <Plug>(easymotion-Tl2) :call EasyMotion#TL(2,1,1)
+nnoremap <silent> <Plug>(easymotion-Tl2) :call EasyMotion#TL(2,0,1)
+snoremap <silent> <Plug>(easymotion-Tl2) :call EasyMotion#TL(2,0,1)
 onoremap <silent> <Plug>(easymotion-Tl2) :call EasyMotion#TL(2,0,1)
 xnoremap <silent> <Plug>(easymotion-fln) :call EasyMotion#SL(-1,1,0)
+nnoremap <silent> <Plug>(easymotion-fln) :call EasyMotion#SL(-1,0,0)
+snoremap <silent> <Plug>(easymotion-fln) :call EasyMotion#SL(-1,0,0)
 onoremap <silent> <Plug>(easymotion-fln) :call EasyMotion#SL(-1,0,0)
 vmap <C-_>9 <Plug>TComment-9
+nmap <C-_>9 <Plug>TComment-9
 omap <C-_>9 <Plug>TComment-9
 vmap <C-_>8 <Plug>TComment-8
+nmap <C-_>8 <Plug>TComment-8
 omap <C-_>8 <Plug>TComment-8
 vmap <C-_>7 <Plug>TComment-7
+nmap <C-_>7 <Plug>TComment-7
 omap <C-_>7 <Plug>TComment-7
 vmap <C-_>6 <Plug>TComment-6
+nmap <C-_>6 <Plug>TComment-6
 omap <C-_>6 <Plug>TComment-6
 vmap <C-_>5 <Plug>TComment-5
+nmap <C-_>5 <Plug>TComment-5
 omap <C-_>5 <Plug>TComment-5
 vmap <C-_>4 <Plug>TComment-4
+nmap <C-_>4 <Plug>TComment-4
 omap <C-_>4 <Plug>TComment-4
 vmap <C-_>3 <Plug>TComment-3
+nmap <C-_>3 <Plug>TComment-3
 omap <C-_>3 <Plug>TComment-3
 vmap <C-_>2 <Plug>TComment-2
+nmap <C-_>2 <Plug>TComment-2
 omap <C-_>2 <Plug>TComment-2
 vmap <C-_>1 <Plug>TComment-1
+nmap <C-_>1 <Plug>TComment-1
 omap <C-_>1 <Plug>TComment-1
 map <C-_>ca <Plug>TComment-ca
 map <C-_>cc <Plug>TComment-cc
@@ -654,6 +631,7 @@ map <C-_>r <Plug>TComment-r
 map <C-_>  <Plug>TComment- 
 map <C-_>p <Plug>TComment-p
 vmap <C-_><C-_> <Plug>TComment-
+nmap <C-_><C-_> <Plug>TComment-
 omap <C-_><C-_> <Plug>TComment-
 nnoremap <silent> <Plug>TComment-gc9c :let w:tcommentPos = getpos(".") | call tcomment#SetOption("count", 9) | set opfunc=tcomment#Operatorg@
 nnoremap <silent> <Plug>TComment-gc8c :let w:tcommentPos = getpos(".") | call tcomment#SetOption("count", 8) | set opfunc=tcomment#Operatorg@
@@ -666,39 +644,57 @@ nnoremap <silent> <Plug>TComment-gc2c :let w:tcommentPos = getpos(".") | call t
 nnoremap <silent> <Plug>TComment-gc1c :let w:tcommentPos = getpos(".") | call tcomment#SetOption("count", 1) | set opfunc=tcomment#Operatorg@
 vnoremap <Plug>TComment-<C-_>9 :call tcomment#SetOption("count", 9)
 vnoremap <Plug>TComment-9 :call tcomment#SetOption("count", 9)
+nnoremap <Plug>TComment-<C-_>9 :call tcomment#SetOption("count", 9)
 onoremap <Plug>TComment-<C-_>9 :call tcomment#SetOption("count", 9)
+nnoremap <Plug>TComment-9 :call tcomment#SetOption("count", 9)
 onoremap <Plug>TComment-9 :call tcomment#SetOption("count", 9)
 vnoremap <Plug>TComment-<C-_>8 :call tcomment#SetOption("count", 8)
 vnoremap <Plug>TComment-8 :call tcomment#SetOption("count", 8)
+nnoremap <Plug>TComment-<C-_>8 :call tcomment#SetOption("count", 8)
 onoremap <Plug>TComment-<C-_>8 :call tcomment#SetOption("count", 8)
+nnoremap <Plug>TComment-8 :call tcomment#SetOption("count", 8)
 onoremap <Plug>TComment-8 :call tcomment#SetOption("count", 8)
 vnoremap <Plug>TComment-<C-_>7 :call tcomment#SetOption("count", 7)
 vnoremap <Plug>TComment-7 :call tcomment#SetOption("count", 7)
+nnoremap <Plug>TComment-<C-_>7 :call tcomment#SetOption("count", 7)
 onoremap <Plug>TComment-<C-_>7 :call tcomment#SetOption("count", 7)
+nnoremap <Plug>TComment-7 :call tcomment#SetOption("count", 7)
 onoremap <Plug>TComment-7 :call tcomment#SetOption("count", 7)
 vnoremap <Plug>TComment-<C-_>6 :call tcomment#SetOption("count", 6)
 vnoremap <Plug>TComment-6 :call tcomment#SetOption("count", 6)
+nnoremap <Plug>TComment-<C-_>6 :call tcomment#SetOption("count", 6)
 onoremap <Plug>TComment-<C-_>6 :call tcomment#SetOption("count", 6)
+nnoremap <Plug>TComment-6 :call tcomment#SetOption("count", 6)
 onoremap <Plug>TComment-6 :call tcomment#SetOption("count", 6)
 vnoremap <Plug>TComment-<C-_>5 :call tcomment#SetOption("count", 5)
 vnoremap <Plug>TComment-5 :call tcomment#SetOption("count", 5)
+nnoremap <Plug>TComment-<C-_>5 :call tcomment#SetOption("count", 5)
 onoremap <Plug>TComment-<C-_>5 :call tcomment#SetOption("count", 5)
+nnoremap <Plug>TComment-5 :call tcomment#SetOption("count", 5)
 onoremap <Plug>TComment-5 :call tcomment#SetOption("count", 5)
 vnoremap <Plug>TComment-<C-_>4 :call tcomment#SetOption("count", 4)
 vnoremap <Plug>TComment-4 :call tcomment#SetOption("count", 4)
+nnoremap <Plug>TComment-<C-_>4 :call tcomment#SetOption("count", 4)
 onoremap <Plug>TComment-<C-_>4 :call tcomment#SetOption("count", 4)
+nnoremap <Plug>TComment-4 :call tcomment#SetOption("count", 4)
 onoremap <Plug>TComment-4 :call tcomment#SetOption("count", 4)
 vnoremap <Plug>TComment-<C-_>3 :call tcomment#SetOption("count", 3)
 vnoremap <Plug>TComment-3 :call tcomment#SetOption("count", 3)
+nnoremap <Plug>TComment-<C-_>3 :call tcomment#SetOption("count", 3)
 onoremap <Plug>TComment-<C-_>3 :call tcomment#SetOption("count", 3)
+nnoremap <Plug>TComment-3 :call tcomment#SetOption("count", 3)
 onoremap <Plug>TComment-3 :call tcomment#SetOption("count", 3)
 vnoremap <Plug>TComment-<C-_>2 :call tcomment#SetOption("count", 2)
 vnoremap <Plug>TComment-2 :call tcomment#SetOption("count", 2)
+nnoremap <Plug>TComment-<C-_>2 :call tcomment#SetOption("count", 2)
 onoremap <Plug>TComment-<C-_>2 :call tcomment#SetOption("count", 2)
+nnoremap <Plug>TComment-2 :call tcomment#SetOption("count", 2)
 onoremap <Plug>TComment-2 :call tcomment#SetOption("count", 2)
 vnoremap <Plug>TComment-<C-_>1 :call tcomment#SetOption("count", 1)
 vnoremap <Plug>TComment-1 :call tcomment#SetOption("count", 1)
+nnoremap <Plug>TComment-<C-_>1 :call tcomment#SetOption("count", 1)
 onoremap <Plug>TComment-<C-_>1 :call tcomment#SetOption("count", 1)
+nnoremap <Plug>TComment-1 :call tcomment#SetOption("count", 1)
 onoremap <Plug>TComment-1 :call tcomment#SetOption("count", 1)
 nnoremap <silent> <Plug>TComment-gc :if v:count > 0 | call tcomment#SetOption("count", v:count) | endif | let w:tcommentPos = getpos(".") | set opfunc=tcomment#Operatorg@
 xnoremap <Plug>TComment-gc :TCommentMaybeInline
@@ -722,6 +718,8 @@ xnoremap <Plug>TComment-,_i :TCommentInline
 noremap <Plug>TComment-,_  :TComment 
 noremap <Plug>TComment-,_p vip:TComment
 xnoremap <Plug>TComment-,__ :TCommentMaybeInline
+nnoremap <Plug>TComment-,__ :TComment
+snoremap <Plug>TComment-,__ :TComment
 onoremap <Plug>TComment-,__ :TComment
 noremap <Plug>TComment-<C-_>ca :call tcomment#SetOption("as", input("Comment as: ", &filetype, "customlist,tcomment#Complete"))
 noremap <Plug>TComment-ca :call tcomment#SetOption("as", input("Comment as: ", &filetype, "customlist,tcomment#Complete"))
@@ -745,7 +743,9 @@ noremap <Plug>TComment-<C-_>p m`vip:TComment``
 noremap <Plug>TComment-p m`vip:TComment``
 vnoremap <Plug>TComment-<C-_><C-_> :TCommentMaybeInline
 vnoremap <Plug>TComment- :TCommentMaybeInline
+nnoremap <Plug>TComment-<C-_><C-_> :TComment
 onoremap <Plug>TComment-<C-_><C-_> :TComment
+nnoremap <Plug>TComment- :TComment
 onoremap <Plug>TComment- :TComment
 nnoremap <silent> <Plug>Colorizer :ColorToggle
 nmap <silent> <Plug>RestoreWinPosn :call RestoreWinPosn()
@@ -823,14 +823,14 @@ unlet s:cpo_save
 set autoindent
 set background=dark
 set backspace=indent,eol,start
-set commentstring=#\ %s
+set comments=://
+set commentstring=//\ %s
 set completefunc=neocomplcache#complete#manual_complete
 set completeopt=preview,menuone
 set expandtab
 set fileencodings=ucs-bom,utf-8,default,latin1
 set helplang=de
 set hlsearch
-set indentexpr=DockerfileIndent(v:lnum)
 set nomodeline
 set operatorfunc=tcomment#OperatorLine
 set pastetoggle=\\.
@@ -845,19 +845,862 @@ let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
 silent tabonly
-cd ~/siabim/docker
+cd ~/siabim/staticfiles
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
 argglobal
 %argdel
-$argadd docker-compose-development.yml
+$argadd css/development/sass/main.sass
 set stal=2
 tabnew
 tabnew
 tabrewind
-edit docker-compose-development.yml
+edit css/development/sass/main.sass
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd _ | wincmd |
+split
+wincmd _ | wincmd |
+split
+2wincmd k
+wincmd w
+wincmd w
+wincmd w
+set nosplitbelow
+set nosplitright
+wincmd t
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+exe '1resize ' . ((&lines * 10 + 40) / 81)
+exe 'vert 1resize ' . ((&columns * 57 + 68) / 136)
+exe '2resize ' . ((&lines * 12 + 40) / 81)
+exe 'vert 2resize ' . ((&columns * 57 + 68) / 136)
+exe '3resize ' . ((&lines * 54 + 40) / 81)
+exe 'vert 3resize ' . ((&columns * 57 + 68) / 136)
+exe 'vert 4resize ' . ((&columns * 78 + 68) / 136)
+argglobal
+setlocal keymap=
+setlocal noarabic
+setlocal autoindent
+setlocal backupcopy=
+setlocal balloonexpr=
+setlocal nobinary
+setlocal nobreakindent
+setlocal breakindentopt=
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal nocindent
+setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
+setlocal cinoptions=
+setlocal cinwords=if,else,while,do,for,switch
+setlocal colorcolumn=
+setlocal comments=://
+setlocal commentstring=//\ %s
+setlocal complete=.,w,b,u,t,i
+setlocal concealcursor=
+setlocal conceallevel=0
+setlocal completefunc=neocomplcache#complete#manual_complete
+setlocal nocopyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+setlocal nocursorline
+setlocal cursorlineopt=both
+setlocal define=^\\C\\v\\s*%(\\@function|\\@mixin|\\=)|^\\s*%(\\$[[:alnum:]-]+:|[%.][:alnum:]-]+\\s*%(\\{|$))@=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal expandtab
+if &filetype != 'sass'
+setlocal filetype=sass
+endif
+setlocal fixendofline
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=manual
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=tcq
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal formatprg=
+setlocal grepprg=
+setlocal iminsert=0
+setlocal imsearch=-1
+setlocal include=^\\s*@import\\s\\+\\%(url(\\)\\=[\"']\\=
+setlocal includeexpr=SassIncludeExpr(v:fname)
+setlocal indentexpr=GetSassIndent()
+setlocal indentkeys=o,O,*<Return>,<:>,!^F
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keywordprg=
+setlocal nolinebreak
+setlocal nolisp
+setlocal lispwords=
+setlocal nolist
+setlocal makeencoding=
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:]
+setlocal nomodeline
+setlocal modifiable
+setlocal nrformats=bin,octal,hex
+set number
+setlocal number
+setlocal numberwidth=4
+setlocal omnifunc=csscomplete#CompleteCSS
+setlocal path=
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal norelativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal noscrollbind
+setlocal scrolloff=-1
+setlocal shiftwidth=2
+setlocal noshortname
+setlocal showbreak=
+setlocal sidescrolloff=-1
+setlocal signcolumn=auto
+setlocal nosmartindent
+setlocal softtabstop=2
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal statusline=
+setlocal suffixesadd=.sass,.scss,.css
+setlocal noswapfile
+setlocal synmaxcol=3000
+if &syntax != 'sass'
+setlocal syntax=sass
+endif
+setlocal tabstop=8
+setlocal tagcase=
+setlocal tagfunc=
+setlocal tags=
+setlocal termwinkey=
+setlocal termwinscroll=10000
+setlocal termwinsize=
+setlocal textwidth=0
+setlocal thesaurus=
+setlocal noundofile
+setlocal undolevels=-123456
+setlocal varsofttabstop=
+setlocal vartabstop=
+setlocal wincolor=
+setlocal nowinfixheight
+setlocal nowinfixwidth
+setlocal wrap
+setlocal wrapmargin=0
+silent! normal! zE
+let s:l = 3 - ((2 * winheight(0) + 5) / 10)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+3
+normal! 0
+wincmd w
+argglobal
+if bufexists("css/development/sass/global.sass") | buffer css/development/sass/global.sass | else | edit css/development/sass/global.sass | endif
+setlocal keymap=
+setlocal noarabic
+setlocal autoindent
+setlocal backupcopy=
+setlocal balloonexpr=
+setlocal nobinary
+setlocal nobreakindent
+setlocal breakindentopt=
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal nocindent
+setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
+setlocal cinoptions=
+setlocal cinwords=if,else,while,do,for,switch
+setlocal colorcolumn=
+setlocal comments=://
+setlocal commentstring=//\ %s
+setlocal complete=.,w,b,u,t,i
+setlocal concealcursor=
+setlocal conceallevel=0
+setlocal completefunc=neocomplcache#complete#auto_complete
+setlocal nocopyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+setlocal nocursorline
+setlocal cursorlineopt=both
+setlocal define=^\\C\\v\\s*%(\\@function|\\@mixin|\\=)|^\\s*%(\\$[[:alnum:]-]+:|[%.][:alnum:]-]+\\s*%(\\{|$))@=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal expandtab
+if &filetype != 'sass'
+setlocal filetype=sass
+endif
+setlocal fixendofline
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=manual
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=tcq
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal formatprg=
+setlocal grepprg=
+setlocal iminsert=0
+setlocal imsearch=-1
+setlocal include=^\\s*@import\\s\\+\\%(url(\\)\\=[\"']\\=
+setlocal includeexpr=SassIncludeExpr(v:fname)
+setlocal indentexpr=GetSassIndent()
+setlocal indentkeys=o,O,*<Return>,<:>,!^F
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keywordprg=
+setlocal nolinebreak
+setlocal nolisp
+setlocal lispwords=
+setlocal nolist
+setlocal makeencoding=
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:]
+setlocal nomodeline
+setlocal modifiable
+setlocal nrformats=bin,octal,hex
+set number
+setlocal number
+setlocal numberwidth=4
+setlocal omnifunc=csscomplete#CompleteCSS
+setlocal path=
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal norelativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal noscrollbind
+setlocal scrolloff=0
+setlocal shiftwidth=2
+setlocal noshortname
+setlocal showbreak=
+setlocal sidescrolloff=-1
+setlocal signcolumn=auto
+setlocal nosmartindent
+setlocal softtabstop=2
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal statusline=
+setlocal suffixesadd=.sass,.scss,.css
+setlocal noswapfile
+setlocal synmaxcol=3000
+if &syntax != 'sass'
+setlocal syntax=sass
+endif
+setlocal tabstop=8
+setlocal tagcase=
+setlocal tagfunc=
+setlocal tags=
+setlocal termwinkey=
+setlocal termwinscroll=10000
+setlocal termwinsize=
+setlocal textwidth=0
+setlocal thesaurus=
+setlocal noundofile
+setlocal undolevels=-123456
+setlocal varsofttabstop=
+setlocal vartabstop=
+setlocal wincolor=
+setlocal nowinfixheight
+setlocal nowinfixwidth
+setlocal wrap
+setlocal wrapmargin=0
+silent! normal! zE
+let s:l = 2 - ((1 * winheight(0) + 6) / 12)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+2
+normal! 0
+wincmd w
+argglobal
+if bufexists("css/development/sass/mixins.sass") | buffer css/development/sass/mixins.sass | else | edit css/development/sass/mixins.sass | endif
+setlocal keymap=
+setlocal noarabic
+setlocal autoindent
+setlocal backupcopy=
+setlocal balloonexpr=
+setlocal nobinary
+setlocal nobreakindent
+setlocal breakindentopt=
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal nocindent
+setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
+setlocal cinoptions=
+setlocal cinwords=if,else,while,do,for,switch
+setlocal colorcolumn=
+setlocal comments=://
+setlocal commentstring=//\ %s
+setlocal complete=.,w,b,u,t,i
+setlocal concealcursor=
+setlocal conceallevel=0
+setlocal completefunc=neocomplcache#complete#auto_complete
+setlocal nocopyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+setlocal nocursorline
+setlocal cursorlineopt=both
+setlocal define=^\\C\\v\\s*%(\\@function|\\@mixin|\\=)|^\\s*%(\\$[[:alnum:]-]+:|[%.][:alnum:]-]+\\s*%(\\{|$))@=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal expandtab
+if &filetype != 'sass'
+setlocal filetype=sass
+endif
+setlocal fixendofline
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=manual
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=tcq
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal formatprg=
+setlocal grepprg=
+setlocal iminsert=0
+setlocal imsearch=-1
+setlocal include=^\\s*@import\\s\\+\\%(url(\\)\\=[\"']\\=
+setlocal includeexpr=SassIncludeExpr(v:fname)
+setlocal indentexpr=GetSassIndent()
+setlocal indentkeys=o,O,*<Return>,<:>,!^F
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keywordprg=
+setlocal nolinebreak
+setlocal nolisp
+setlocal lispwords=
+setlocal nolist
+setlocal makeencoding=
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:]
+setlocal nomodeline
+setlocal modifiable
+setlocal nrformats=bin,octal,hex
+set number
+setlocal number
+setlocal numberwidth=4
+setlocal omnifunc=csscomplete#CompleteCSS
+setlocal path=
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal norelativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal noscrollbind
+setlocal scrolloff=0
+setlocal shiftwidth=2
+setlocal noshortname
+setlocal showbreak=
+setlocal sidescrolloff=-1
+setlocal signcolumn=auto
+setlocal nosmartindent
+setlocal softtabstop=2
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal statusline=
+setlocal suffixesadd=.sass,.scss,.css
+setlocal noswapfile
+setlocal synmaxcol=3000
+if &syntax != 'sass'
+setlocal syntax=sass
+endif
+setlocal tabstop=8
+setlocal tagcase=
+setlocal tagfunc=
+setlocal tags=
+setlocal termwinkey=
+setlocal termwinscroll=10000
+setlocal termwinsize=
+setlocal textwidth=0
+setlocal thesaurus=
+setlocal noundofile
+setlocal undolevels=-123456
+setlocal varsofttabstop=
+setlocal vartabstop=
+setlocal wincolor=
+setlocal nowinfixheight
+setlocal nowinfixwidth
+setlocal wrap
+setlocal wrapmargin=0
+silent! normal! zE
+let s:l = 30 - ((29 * winheight(0) + 27) / 54)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+30
+normal! 028|
+wincmd w
+argglobal
+if bufexists("css/development/sass/content.sass") | buffer css/development/sass/content.sass | else | edit css/development/sass/content.sass | endif
+setlocal keymap=
+setlocal noarabic
+setlocal autoindent
+setlocal backupcopy=
+setlocal balloonexpr=
+setlocal nobinary
+setlocal nobreakindent
+setlocal breakindentopt=
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal nocindent
+setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
+setlocal cinoptions=
+setlocal cinwords=if,else,while,do,for,switch
+setlocal colorcolumn=
+setlocal comments=://
+setlocal commentstring=//\ %s
+setlocal complete=.,w,b,u,t,i
+setlocal concealcursor=
+setlocal conceallevel=0
+setlocal completefunc=neocomplcache#complete#manual_complete
+setlocal nocopyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+setlocal nocursorline
+setlocal cursorlineopt=both
+setlocal define=^\\C\\v\\s*%(\\@function|\\@mixin|\\=)|^\\s*%(\\$[[:alnum:]-]+:|[%.][:alnum:]-]+\\s*%(\\{|$))@=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal expandtab
+if &filetype != 'sass'
+setlocal filetype=sass
+endif
+setlocal fixendofline
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=manual
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=tcq
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal formatprg=
+setlocal grepprg=
+setlocal iminsert=0
+setlocal imsearch=-1
+setlocal include=^\\s*@import\\s\\+\\%(url(\\)\\=[\"']\\=
+setlocal includeexpr=SassIncludeExpr(v:fname)
+setlocal indentexpr=GetSassIndent()
+setlocal indentkeys=o,O,*<Return>,<:>,!^F
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keywordprg=
+setlocal nolinebreak
+setlocal nolisp
+setlocal lispwords=
+setlocal nolist
+setlocal makeencoding=
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:]
+setlocal nomodeline
+setlocal modifiable
+setlocal nrformats=bin,octal,hex
+set number
+setlocal number
+setlocal numberwidth=4
+setlocal omnifunc=csscomplete#CompleteCSS
+setlocal path=
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal norelativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal noscrollbind
+setlocal scrolloff=0
+setlocal shiftwidth=2
+setlocal noshortname
+setlocal showbreak=
+setlocal sidescrolloff=-1
+setlocal signcolumn=auto
+setlocal nosmartindent
+setlocal softtabstop=2
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal statusline=
+setlocal suffixesadd=.sass,.scss,.css
+setlocal noswapfile
+setlocal synmaxcol=3000
+if &syntax != 'sass'
+setlocal syntax=sass
+endif
+setlocal tabstop=8
+setlocal tagcase=
+setlocal tagfunc=
+setlocal tags=
+setlocal termwinkey=
+setlocal termwinscroll=10000
+setlocal termwinsize=
+setlocal textwidth=0
+setlocal thesaurus=
+setlocal noundofile
+setlocal undolevels=-123456
+setlocal varsofttabstop=
+setlocal vartabstop=
+setlocal wincolor=
+setlocal nowinfixheight
+setlocal nowinfixwidth
+setlocal wrap
+setlocal wrapmargin=0
+silent! normal! zE
+let s:l = 41 - ((40 * winheight(0) + 39) / 78)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+41
+normal! 0
+wincmd w
+exe '1resize ' . ((&lines * 10 + 40) / 81)
+exe 'vert 1resize ' . ((&columns * 57 + 68) / 136)
+exe '2resize ' . ((&lines * 12 + 40) / 81)
+exe 'vert 2resize ' . ((&columns * 57 + 68) / 136)
+exe '3resize ' . ((&lines * 54 + 40) / 81)
+exe 'vert 3resize ' . ((&columns * 57 + 68) / 136)
+exe 'vert 4resize ' . ((&columns * 78 + 68) / 136)
+tabnext
+edit css/development/sass/footer.sass
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
+set nosplitbelow
+set nosplitright
+wincmd t
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+exe 'vert 1resize ' . ((&columns * 68 + 68) / 136)
+exe 'vert 2resize ' . ((&columns * 67 + 68) / 136)
+argglobal
+setlocal keymap=
+setlocal noarabic
+setlocal autoindent
+setlocal backupcopy=
+setlocal balloonexpr=
+setlocal nobinary
+setlocal nobreakindent
+setlocal breakindentopt=
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal nocindent
+setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
+setlocal cinoptions=
+setlocal cinwords=if,else,while,do,for,switch
+setlocal colorcolumn=
+setlocal comments=://
+setlocal commentstring=//\ %s
+setlocal complete=.,w,b,u,t,i
+setlocal concealcursor=
+setlocal conceallevel=0
+setlocal completefunc=neocomplcache#complete#manual_complete
+setlocal nocopyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+setlocal nocursorline
+setlocal cursorlineopt=both
+setlocal define=^\\C\\v\\s*%(\\@function|\\@mixin|\\=)|^\\s*%(\\$[[:alnum:]-]+:|[%.][:alnum:]-]+\\s*%(\\{|$))@=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal expandtab
+if &filetype != 'sass'
+setlocal filetype=sass
+endif
+setlocal fixendofline
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=manual
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=tcq
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal formatprg=
+setlocal grepprg=
+setlocal iminsert=0
+setlocal imsearch=-1
+setlocal include=^\\s*@import\\s\\+\\%(url(\\)\\=[\"']\\=
+setlocal includeexpr=SassIncludeExpr(v:fname)
+setlocal indentexpr=GetSassIndent()
+setlocal indentkeys=o,O,*<Return>,<:>,!^F
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keywordprg=
+setlocal nolinebreak
+setlocal nolisp
+setlocal lispwords=
+setlocal nolist
+setlocal makeencoding=
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:]
+setlocal nomodeline
+setlocal modifiable
+setlocal nrformats=bin,octal,hex
+set number
+setlocal number
+setlocal numberwidth=4
+setlocal omnifunc=csscomplete#CompleteCSS
+setlocal path=
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal norelativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal noscrollbind
+setlocal scrolloff=-1
+setlocal shiftwidth=2
+setlocal noshortname
+setlocal showbreak=
+setlocal sidescrolloff=-1
+setlocal signcolumn=auto
+setlocal nosmartindent
+setlocal softtabstop=2
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal statusline=
+setlocal suffixesadd=.sass,.scss,.css
+setlocal noswapfile
+setlocal synmaxcol=3000
+if &syntax != 'sass'
+setlocal syntax=sass
+endif
+setlocal tabstop=8
+setlocal tagcase=
+setlocal tagfunc=
+setlocal tags=
+setlocal termwinkey=
+setlocal termwinscroll=10000
+setlocal termwinsize=
+setlocal textwidth=0
+setlocal thesaurus=
+setlocal noundofile
+setlocal undolevels=-123456
+setlocal varsofttabstop=
+setlocal vartabstop=
+setlocal wincolor=
+setlocal nowinfixheight
+setlocal nowinfixwidth
+setlocal wrap
+setlocal wrapmargin=0
+silent! normal! zE
+let s:l = 2 - ((1 * winheight(0) + 39) / 78)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+2
+normal! 0
+wincmd w
+argglobal
+if bufexists("css/development/sass/body.sass") | buffer css/development/sass/body.sass | else | edit css/development/sass/body.sass | endif
+setlocal keymap=
+setlocal noarabic
+setlocal autoindent
+setlocal backupcopy=
+setlocal balloonexpr=
+setlocal nobinary
+setlocal nobreakindent
+setlocal breakindentopt=
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal nocindent
+setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
+setlocal cinoptions=
+setlocal cinwords=if,else,while,do,for,switch
+setlocal colorcolumn=
+setlocal comments=://
+setlocal commentstring=//\ %s
+setlocal complete=.,w,b,u,t,i
+setlocal concealcursor=
+setlocal conceallevel=0
+setlocal completefunc=neocomplcache#complete#manual_complete
+setlocal nocopyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+setlocal nocursorline
+setlocal cursorlineopt=both
+setlocal define=^\\C\\v\\s*%(\\@function|\\@mixin|\\=)|^\\s*%(\\$[[:alnum:]-]+:|[%.][:alnum:]-]+\\s*%(\\{|$))@=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal expandtab
+if &filetype != 'sass'
+setlocal filetype=sass
+endif
+setlocal fixendofline
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=manual
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=tcq
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal formatprg=
+setlocal grepprg=
+setlocal iminsert=0
+setlocal imsearch=-1
+setlocal include=^\\s*@import\\s\\+\\%(url(\\)\\=[\"']\\=
+setlocal includeexpr=SassIncludeExpr(v:fname)
+setlocal indentexpr=GetSassIndent()
+setlocal indentkeys=o,O,*<Return>,<:>,!^F
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keywordprg=
+setlocal nolinebreak
+setlocal nolisp
+setlocal lispwords=
+setlocal nolist
+setlocal makeencoding=
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:]
+setlocal nomodeline
+setlocal modifiable
+setlocal nrformats=bin,octal,hex
+set number
+setlocal number
+setlocal numberwidth=4
+setlocal omnifunc=csscomplete#CompleteCSS
+setlocal path=
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal norelativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal noscrollbind
+setlocal scrolloff=-1
+setlocal shiftwidth=2
+setlocal noshortname
+setlocal showbreak=
+setlocal sidescrolloff=-1
+setlocal signcolumn=auto
+setlocal nosmartindent
+setlocal softtabstop=2
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal statusline=
+setlocal suffixesadd=.sass,.scss,.css
+setlocal noswapfile
+setlocal synmaxcol=3000
+if &syntax != 'sass'
+setlocal syntax=sass
+endif
+setlocal tabstop=8
+setlocal tagcase=
+setlocal tagfunc=
+setlocal tags=
+setlocal termwinkey=
+setlocal termwinscroll=10000
+setlocal termwinsize=
+setlocal textwidth=0
+setlocal thesaurus=
+setlocal noundofile
+setlocal undolevels=-123456
+setlocal varsofttabstop=
+setlocal vartabstop=
+setlocal wincolor=
+setlocal nowinfixheight
+setlocal nowinfixwidth
+setlocal wrap
+setlocal wrapmargin=0
+silent! normal! zE
+let s:l = 2 - ((1 * winheight(0) + 39) / 78)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+2
+normal! 0
+wincmd w
+exe 'vert 1resize ' . ((&columns * 68 + 68) / 136)
+exe 'vert 2resize ' . ((&columns * 67 + 68) / 136)
+tabnext
+edit ~/siabim/gulp/siabim/gulpfile.js
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -883,12 +1726,12 @@ setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
 setlocal cinoptions=
 setlocal cinwords=if,else,while,do,for,switch
 setlocal colorcolumn=
-setlocal comments=:#
-setlocal commentstring=#\ %s
+setlocal comments=sO:*\ -,mO:*\ \ ,exO:*/,s1:/*,mb:*,ex:*/,://
+setlocal commentstring=//%s
 setlocal complete=.,w,b,u,t,i
 setlocal concealcursor=
 setlocal conceallevel=0
-setlocal completefunc=neocomplcache#complete#auto_complete
+setlocal completefunc=neocomplcache#complete#manual_complete
 setlocal nocopyindent
 setlocal cryptmethod=
 setlocal nocursorbind
@@ -901,8 +1744,8 @@ setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
 setlocal expandtab
-if &filetype != 'yaml'
-setlocal filetype=yaml
+if &filetype != 'javascript'
+setlocal filetype=javascript
 endif
 setlocal fixendofline
 setlocal foldcolumn=0
@@ -924,10 +1767,10 @@ setlocal iminsert=0
 setlocal imsearch=-1
 setlocal include=
 setlocal includeexpr=
-setlocal indentexpr=GetYAMLIndent(v:lnum)
-setlocal indentkeys=!^F,o,O,0#,0},0],<:>,0-
+setlocal indentexpr=GetJavascriptIndent()
+setlocal indentkeys=0{,0},0),0],:,0#,!^F,o,O,e,0],0)
 setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255
+setlocal iskeyword=@,48-57,_,192-255,$
 setlocal keywordprg=
 setlocal nolinebreak
 setlocal nolisp
@@ -942,630 +1785,7 @@ setlocal nrformats=bin,octal,hex
 set number
 setlocal number
 setlocal numberwidth=4
-setlocal omnifunc=
-setlocal path=
-setlocal nopreserveindent
-setlocal nopreviewwindow
-setlocal quoteescape=\\
-setlocal noreadonly
-setlocal norelativenumber
-setlocal norightleft
-setlocal rightleftcmd=search
-setlocal noscrollbind
-setlocal scrolloff=0
-setlocal shiftwidth=2
-setlocal noshortname
-setlocal showbreak=
-setlocal sidescrolloff=-1
-setlocal signcolumn=auto
-setlocal nosmartindent
-setlocal softtabstop=2
-setlocal nospell
-setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
-setlocal spellfile=
-setlocal spelllang=en
-setlocal statusline=
-setlocal suffixesadd=
-setlocal swapfile
-setlocal synmaxcol=3000
-if &syntax != 'yaml'
-setlocal syntax=yaml
-endif
-setlocal tabstop=8
-setlocal tagcase=
-setlocal tagfunc=
-setlocal tags=
-setlocal termwinkey=
-setlocal termwinscroll=10000
-setlocal termwinsize=
-setlocal textwidth=0
-setlocal thesaurus=
-setlocal noundofile
-setlocal undolevels=-123456
-setlocal varsofttabstop=
-setlocal vartabstop=
-setlocal wincolor=
-setlocal nowinfixheight
-setlocal nowinfixwidth
-setlocal wrap
-setlocal wrapmargin=0
-silent! normal! zE
-let s:l = 14 - ((12 * winheight(0) + 39) / 79)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-14
-normal! 025|
-tabnext
-edit ~/siabim/django/Dockerfile.development_build.sh
-set splitbelow splitright
-wincmd _ | wincmd |
-split
-1wincmd k
-wincmd w
-set nosplitbelow
-set nosplitright
-wincmd t
-set winminheight=0
-set winheight=1
-set winminwidth=0
-set winwidth=1
-exe '1resize ' . ((&lines * 39 + 40) / 81)
-exe '2resize ' . ((&lines * 38 + 40) / 81)
-argglobal
-inoreabbr <buffer> <silent> stopsignal =DockerfileReplaceInstruction("stopsignal", "STOPSIGNAL")
-inoreabbr <buffer> <silent> onbuild =DockerfileReplaceInstruction("onbuild", "ONBUILD")
-inoreabbr <buffer> <silent> arg =DockerfileReplaceInstruction("arg", "ARG")
-inoreabbr <buffer> <silent> workdir =DockerfileReplaceInstruction("workdir", "WORKDIR")
-inoreabbr <buffer> <silent> user =DockerfileReplaceInstruction("user", "USER")
-inoreabbr <buffer> <silent> volume =DockerfileReplaceInstruction("volume", "VOLUME")
-inoreabbr <buffer> <silent> entrypoint =DockerfileReplaceInstruction("entrypoint", "ENTRYPOINT")
-inoreabbr <buffer> <silent> copy =DockerfileReplaceInstruction("copy", "COPY")
-inoreabbr <buffer> <silent> add =DockerfileReplaceInstruction("add", "ADD")
-inoreabbr <buffer> <silent> env =DockerfileReplaceInstruction("env", "ENV")
-inoreabbr <buffer> <silent> expose =DockerfileReplaceInstruction("expose", "EXPOSE")
-inoreabbr <buffer> <silent> label =DockerfileReplaceInstruction("label", "LABEL")
-inoreabbr <buffer> <silent> cmd =DockerfileReplaceInstruction("cmd", "CMD")
-inoreabbr <buffer> <silent> run =DockerfileReplaceInstruction("run", "RUN")
-inoreabbr <buffer> <silent> maintainer =DockerfileReplaceInstruction("maintainer", "MAINTAINER")
-inoreabbr <buffer> <silent> from =DockerfileReplaceInstruction("from", "FROM")
-setlocal keymap=
-setlocal noarabic
-setlocal autoindent
-setlocal backupcopy=
-setlocal balloonexpr=
-setlocal nobinary
-setlocal nobreakindent
-setlocal breakindentopt=
-setlocal bufhidden=
-setlocal buflisted
-setlocal buftype=
-setlocal nocindent
-setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
-setlocal cinoptions=
-setlocal cinwords=if,else,while,do,for,switch
-setlocal colorcolumn=
-setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
-setlocal commentstring=#%s
-setlocal complete=.,w,b,u,t,i
-setlocal concealcursor=
-setlocal conceallevel=0
-setlocal completefunc=neocomplcache#complete#auto_complete
-setlocal nocopyindent
-setlocal cryptmethod=
-setlocal nocursorbind
-setlocal nocursorcolumn
-setlocal nocursorline
-setlocal cursorlineopt=both
-setlocal define=
-setlocal dictionary=
-setlocal nodiff
-setlocal equalprg=
-setlocal errorformat=
-setlocal expandtab
-if &filetype != 'sh'
-setlocal filetype=sh
-endif
-setlocal fixendofline
-setlocal foldcolumn=0
-setlocal foldenable
-setlocal foldexpr=0
-setlocal foldignore=#
-setlocal foldlevel=0
-setlocal foldmarker={{{,}}}
-setlocal foldmethod=manual
-setlocal foldminlines=1
-setlocal foldnestmax=20
-setlocal foldtext=foldtext()
-setlocal formatexpr=
-setlocal formatoptions=tqcro
-setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
-setlocal formatprg=
-setlocal grepprg=
-setlocal iminsert=0
-setlocal imsearch=-1
-setlocal include=
-setlocal includeexpr=
-setlocal indentexpr=GetShIndent()
-setlocal indentkeys=0{,0},0),0],!^F,o,O,e,0=then,0=do,0=else,0=elif,0=fi,0=esac,0=done,0=end,),0=;;,0=;&,0=fin,0=fil,0=fip,0=fir,0=fix
-setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255,-
-setlocal keywordprg=
-setlocal nolinebreak
-setlocal nolisp
-setlocal lispwords=
-setlocal nolist
-setlocal makeencoding=
-setlocal makeprg=
-setlocal matchpairs=(:),{:},[:]
-setlocal nomodeline
-setlocal modifiable
-setlocal nrformats=bin,octal,hex
-set number
-setlocal number
-setlocal numberwidth=4
-setlocal omnifunc=
-setlocal path=
-setlocal nopreserveindent
-setlocal nopreviewwindow
-setlocal quoteescape=\\
-setlocal noreadonly
-setlocal norelativenumber
-setlocal norightleft
-setlocal rightleftcmd=search
-setlocal noscrollbind
-setlocal scrolloff=-1
-setlocal shiftwidth=2
-setlocal noshortname
-setlocal showbreak=
-setlocal sidescrolloff=-1
-setlocal signcolumn=auto
-setlocal nosmartindent
-setlocal softtabstop=2
-setlocal nospell
-setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
-setlocal spellfile=
-setlocal spelllang=en
-setlocal statusline=
-setlocal suffixesadd=
-setlocal swapfile
-setlocal synmaxcol=3000
-if &syntax != 'sh'
-setlocal syntax=sh
-endif
-setlocal tabstop=8
-setlocal tagcase=
-setlocal tagfunc=
-setlocal tags=
-setlocal termwinkey=
-setlocal termwinscroll=10000
-setlocal termwinsize=
-setlocal textwidth=0
-setlocal thesaurus=
-setlocal noundofile
-setlocal undolevels=-123456
-setlocal varsofttabstop=
-setlocal vartabstop=
-setlocal wincolor=
-setlocal nowinfixheight
-setlocal nowinfixwidth
-setlocal wrap
-setlocal wrapmargin=0
-silent! normal! zE
-let s:l = 3 - ((1 * winheight(0) + 19) / 39)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-3
-normal! 02|
-wincmd w
-argglobal
-if bufexists("~/siabim/django/Dockerfile.development") | buffer ~/siabim/django/Dockerfile.development | else | edit ~/siabim/django/Dockerfile.development | endif
-inoreabbr <buffer> <silent> stopsignal =DockerfileReplaceInstruction("stopsignal", "STOPSIGNAL")
-inoreabbr <buffer> <silent> onbuild =DockerfileReplaceInstruction("onbuild", "ONBUILD")
-inoreabbr <buffer> <silent> arg =DockerfileReplaceInstruction("arg", "ARG")
-inoreabbr <buffer> <silent> workdir =DockerfileReplaceInstruction("workdir", "WORKDIR")
-inoreabbr <buffer> <silent> user =DockerfileReplaceInstruction("user", "USER")
-inoreabbr <buffer> <silent> volume =DockerfileReplaceInstruction("volume", "VOLUME")
-inoreabbr <buffer> <silent> entrypoint =DockerfileReplaceInstruction("entrypoint", "ENTRYPOINT")
-inoreabbr <buffer> <silent> copy =DockerfileReplaceInstruction("copy", "COPY")
-inoreabbr <buffer> <silent> add =DockerfileReplaceInstruction("add", "ADD")
-inoreabbr <buffer> <silent> env =DockerfileReplaceInstruction("env", "ENV")
-inoreabbr <buffer> <silent> expose =DockerfileReplaceInstruction("expose", "EXPOSE")
-inoreabbr <buffer> <silent> label =DockerfileReplaceInstruction("label", "LABEL")
-inoreabbr <buffer> <silent> cmd =DockerfileReplaceInstruction("cmd", "CMD")
-inoreabbr <buffer> <silent> run =DockerfileReplaceInstruction("run", "RUN")
-inoreabbr <buffer> <silent> maintainer =DockerfileReplaceInstruction("maintainer", "MAINTAINER")
-inoreabbr <buffer> <silent> from =DockerfileReplaceInstruction("from", "FROM")
-setlocal keymap=
-setlocal noarabic
-setlocal autoindent
-setlocal backupcopy=
-setlocal balloonexpr=
-setlocal nobinary
-setlocal nobreakindent
-setlocal breakindentopt=
-setlocal bufhidden=
-setlocal buflisted
-setlocal buftype=
-setlocal nocindent
-setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
-setlocal cinoptions=
-setlocal cinwords=if,else,while,do,for,switch
-setlocal colorcolumn=
-setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
-setlocal commentstring=#\ %s
-setlocal complete=.,w,b,u,t,i
-setlocal concealcursor=
-setlocal conceallevel=0
-setlocal completefunc=neocomplcache#complete#auto_complete
-setlocal nocopyindent
-setlocal cryptmethod=
-setlocal nocursorbind
-setlocal nocursorcolumn
-setlocal nocursorline
-setlocal cursorlineopt=both
-setlocal define=
-setlocal dictionary=
-setlocal nodiff
-setlocal equalprg=
-setlocal errorformat=
-setlocal expandtab
-if &filetype != 'dockerfile'
-setlocal filetype=dockerfile
-endif
-setlocal fixendofline
-setlocal foldcolumn=0
-setlocal foldenable
-setlocal foldexpr=0
-setlocal foldignore=#
-setlocal foldlevel=0
-setlocal foldmarker={{{,}}}
-setlocal foldmethod=manual
-setlocal foldminlines=1
-setlocal foldnestmax=20
-setlocal foldtext=foldtext()
-setlocal formatexpr=
-setlocal formatoptions=tcq
-setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
-setlocal formatprg=
-setlocal grepprg=
-setlocal iminsert=0
-setlocal imsearch=-1
-setlocal include=
-setlocal includeexpr=
-setlocal indentexpr=
-setlocal indentkeys=0{,0},0),0],:,0#,!^F,o,O,e
-setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255
-setlocal keywordprg=
-setlocal nolinebreak
-setlocal nolisp
-setlocal lispwords=
-setlocal nolist
-setlocal makeencoding=
-setlocal makeprg=
-setlocal matchpairs=(:),{:},[:]
-setlocal nomodeline
-setlocal modifiable
-setlocal nrformats=bin,octal,hex
-set number
-setlocal number
-setlocal numberwidth=4
-setlocal omnifunc=
-setlocal path=
-setlocal nopreserveindent
-setlocal nopreviewwindow
-setlocal quoteescape=\\
-setlocal noreadonly
-setlocal norelativenumber
-setlocal norightleft
-setlocal rightleftcmd=search
-setlocal noscrollbind
-setlocal scrolloff=0
-setlocal shiftwidth=2
-setlocal noshortname
-setlocal showbreak=
-setlocal sidescrolloff=-1
-setlocal signcolumn=auto
-setlocal nosmartindent
-setlocal softtabstop=2
-setlocal nospell
-setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
-setlocal spellfile=
-setlocal spelllang=en
-setlocal statusline=
-setlocal suffixesadd=
-setlocal swapfile
-setlocal synmaxcol=3000
-if &syntax != 'dockerfile'
-setlocal syntax=dockerfile
-endif
-setlocal tabstop=8
-setlocal tagcase=
-setlocal tagfunc=
-setlocal tags=
-setlocal termwinkey=
-setlocal termwinscroll=10000
-setlocal termwinsize=
-setlocal textwidth=0
-setlocal thesaurus=
-setlocal noundofile
-setlocal undolevels=-123456
-setlocal varsofttabstop=
-setlocal vartabstop=
-setlocal wincolor=
-setlocal nowinfixheight
-setlocal nowinfixwidth
-setlocal wrap
-setlocal wrapmargin=0
-silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 19) / 38)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-1
-normal! 025|
-wincmd w
-exe '1resize ' . ((&lines * 39 + 40) / 81)
-exe '2resize ' . ((&lines * 38 + 40) / 81)
-tabnext
-edit ~/siabim/gulp/Dockerfile.development_build.sh
-set splitbelow splitright
-wincmd _ | wincmd |
-split
-1wincmd k
-wincmd w
-set nosplitbelow
-set nosplitright
-wincmd t
-set winminheight=0
-set winheight=1
-set winminwidth=0
-set winwidth=1
-exe '1resize ' . ((&lines * 39 + 40) / 81)
-exe '2resize ' . ((&lines * 38 + 40) / 81)
-argglobal
-inoreabbr <buffer> <silent> stopsignal =DockerfileReplaceInstruction("stopsignal", "STOPSIGNAL")
-inoreabbr <buffer> <silent> onbuild =DockerfileReplaceInstruction("onbuild", "ONBUILD")
-inoreabbr <buffer> <silent> arg =DockerfileReplaceInstruction("arg", "ARG")
-inoreabbr <buffer> <silent> workdir =DockerfileReplaceInstruction("workdir", "WORKDIR")
-inoreabbr <buffer> <silent> user =DockerfileReplaceInstruction("user", "USER")
-inoreabbr <buffer> <silent> volume =DockerfileReplaceInstruction("volume", "VOLUME")
-inoreabbr <buffer> <silent> entrypoint =DockerfileReplaceInstruction("entrypoint", "ENTRYPOINT")
-inoreabbr <buffer> <silent> copy =DockerfileReplaceInstruction("copy", "COPY")
-inoreabbr <buffer> <silent> add =DockerfileReplaceInstruction("add", "ADD")
-inoreabbr <buffer> <silent> env =DockerfileReplaceInstruction("env", "ENV")
-inoreabbr <buffer> <silent> expose =DockerfileReplaceInstruction("expose", "EXPOSE")
-inoreabbr <buffer> <silent> label =DockerfileReplaceInstruction("label", "LABEL")
-inoreabbr <buffer> <silent> cmd =DockerfileReplaceInstruction("cmd", "CMD")
-inoreabbr <buffer> <silent> run =DockerfileReplaceInstruction("run", "RUN")
-inoreabbr <buffer> <silent> maintainer =DockerfileReplaceInstruction("maintainer", "MAINTAINER")
-inoreabbr <buffer> <silent> from =DockerfileReplaceInstruction("from", "FROM")
-setlocal keymap=
-setlocal noarabic
-setlocal autoindent
-setlocal backupcopy=
-setlocal balloonexpr=
-setlocal nobinary
-setlocal nobreakindent
-setlocal breakindentopt=
-setlocal bufhidden=
-setlocal buflisted
-setlocal buftype=
-setlocal nocindent
-setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
-setlocal cinoptions=
-setlocal cinwords=if,else,while,do,for,switch
-setlocal colorcolumn=
-setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
-setlocal commentstring=#%s
-setlocal complete=.,w,b,u,t,i
-setlocal concealcursor=
-setlocal conceallevel=0
-setlocal completefunc=neocomplcache#complete#auto_complete
-setlocal nocopyindent
-setlocal cryptmethod=
-setlocal nocursorbind
-setlocal nocursorcolumn
-setlocal nocursorline
-setlocal cursorlineopt=both
-setlocal define=
-setlocal dictionary=
-setlocal nodiff
-setlocal equalprg=
-setlocal errorformat=
-setlocal expandtab
-if &filetype != 'sh'
-setlocal filetype=sh
-endif
-setlocal fixendofline
-setlocal foldcolumn=0
-setlocal foldenable
-setlocal foldexpr=0
-setlocal foldignore=#
-setlocal foldlevel=0
-setlocal foldmarker={{{,}}}
-setlocal foldmethod=manual
-setlocal foldminlines=1
-setlocal foldnestmax=20
-setlocal foldtext=foldtext()
-setlocal formatexpr=
-setlocal formatoptions=tqcro
-setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
-setlocal formatprg=
-setlocal grepprg=
-setlocal iminsert=0
-setlocal imsearch=-1
-setlocal include=
-setlocal includeexpr=
-setlocal indentexpr=GetShIndent()
-setlocal indentkeys=0{,0},0),0],!^F,o,O,e,0=then,0=do,0=else,0=elif,0=fi,0=esac,0=done,0=end,),0=;;,0=;&,0=fin,0=fil,0=fip,0=fir,0=fix
-setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255,-
-setlocal keywordprg=
-setlocal nolinebreak
-setlocal nolisp
-setlocal lispwords=
-setlocal nolist
-setlocal makeencoding=
-setlocal makeprg=
-setlocal matchpairs=(:),{:},[:]
-setlocal nomodeline
-setlocal modifiable
-setlocal nrformats=bin,octal,hex
-set number
-setlocal number
-setlocal numberwidth=4
-setlocal omnifunc=
-setlocal path=
-setlocal nopreserveindent
-setlocal nopreviewwindow
-setlocal quoteescape=\\
-setlocal noreadonly
-setlocal norelativenumber
-setlocal norightleft
-setlocal rightleftcmd=search
-setlocal noscrollbind
-setlocal scrolloff=-1
-setlocal shiftwidth=2
-setlocal noshortname
-setlocal showbreak=
-setlocal sidescrolloff=-1
-setlocal signcolumn=auto
-setlocal nosmartindent
-setlocal softtabstop=2
-setlocal nospell
-setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
-setlocal spellfile=
-setlocal spelllang=en
-setlocal statusline=
-setlocal suffixesadd=
-setlocal noswapfile
-setlocal synmaxcol=3000
-if &syntax != 'sh'
-setlocal syntax=sh
-endif
-setlocal tabstop=8
-setlocal tagcase=
-setlocal tagfunc=
-setlocal tags=
-setlocal termwinkey=
-setlocal termwinscroll=10000
-setlocal termwinsize=
-setlocal textwidth=0
-setlocal thesaurus=
-setlocal noundofile
-setlocal undolevels=-123456
-setlocal varsofttabstop=
-setlocal vartabstop=
-setlocal wincolor=
-setlocal nowinfixheight
-setlocal nowinfixwidth
-setlocal wrap
-setlocal wrapmargin=0
-silent! normal! zE
-let s:l = 4 - ((3 * winheight(0) + 19) / 39)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-4
-normal! 030|
-wincmd w
-argglobal
-if bufexists("~/siabim/gulp/Dockerfile.development") | buffer ~/siabim/gulp/Dockerfile.development | else | edit ~/siabim/gulp/Dockerfile.development | endif
-inoreabbr <buffer> <silent> stopsignal =DockerfileReplaceInstruction("stopsignal", "STOPSIGNAL")
-inoreabbr <buffer> <silent> onbuild =DockerfileReplaceInstruction("onbuild", "ONBUILD")
-inoreabbr <buffer> <silent> arg =DockerfileReplaceInstruction("arg", "ARG")
-inoreabbr <buffer> <silent> workdir =DockerfileReplaceInstruction("workdir", "WORKDIR")
-inoreabbr <buffer> <silent> user =DockerfileReplaceInstruction("user", "USER")
-inoreabbr <buffer> <silent> volume =DockerfileReplaceInstruction("volume", "VOLUME")
-inoreabbr <buffer> <silent> entrypoint =DockerfileReplaceInstruction("entrypoint", "ENTRYPOINT")
-inoreabbr <buffer> <silent> copy =DockerfileReplaceInstruction("copy", "COPY")
-inoreabbr <buffer> <silent> add =DockerfileReplaceInstruction("add", "ADD")
-inoreabbr <buffer> <silent> env =DockerfileReplaceInstruction("env", "ENV")
-inoreabbr <buffer> <silent> expose =DockerfileReplaceInstruction("expose", "EXPOSE")
-inoreabbr <buffer> <silent> label =DockerfileReplaceInstruction("label", "LABEL")
-inoreabbr <buffer> <silent> cmd =DockerfileReplaceInstruction("cmd", "CMD")
-inoreabbr <buffer> <silent> run =DockerfileReplaceInstruction("run", "RUN")
-inoreabbr <buffer> <silent> maintainer =DockerfileReplaceInstruction("maintainer", "MAINTAINER")
-inoreabbr <buffer> <silent> from =DockerfileReplaceInstruction("from", "FROM")
-setlocal keymap=
-setlocal noarabic
-setlocal autoindent
-setlocal backupcopy=
-setlocal balloonexpr=
-setlocal nobinary
-setlocal nobreakindent
-setlocal breakindentopt=
-setlocal bufhidden=
-setlocal buflisted
-setlocal buftype=
-setlocal nocindent
-setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
-setlocal cinoptions=
-setlocal cinwords=if,else,while,do,for,switch
-setlocal colorcolumn=
-setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
-setlocal commentstring=#\ %s
-setlocal complete=.,w,b,u,t,i
-setlocal concealcursor=
-setlocal conceallevel=0
-setlocal completefunc=neocomplcache#complete#manual_complete
-setlocal nocopyindent
-setlocal cryptmethod=
-setlocal nocursorbind
-setlocal nocursorcolumn
-setlocal nocursorline
-setlocal cursorlineopt=both
-setlocal define=
-setlocal dictionary=
-setlocal nodiff
-setlocal equalprg=
-setlocal errorformat=
-setlocal expandtab
-if &filetype != 'Dockerfile'
-setlocal filetype=Dockerfile
-endif
-setlocal fixendofline
-setlocal foldcolumn=0
-setlocal foldenable
-setlocal foldexpr=0
-setlocal foldignore=#
-setlocal foldlevel=0
-setlocal foldmarker={{{,}}}
-setlocal foldmethod=manual
-setlocal foldminlines=1
-setlocal foldnestmax=20
-setlocal foldtext=foldtext()
-setlocal formatexpr=
-setlocal formatoptions=tqcro
-setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
-setlocal formatprg=
-setlocal grepprg=
-setlocal iminsert=0
-setlocal imsearch=-1
-setlocal include=
-setlocal includeexpr=
-setlocal indentexpr=DockerfileIndent(v:lnum)
-setlocal indentkeys=0{,0},0),0],:,0#,!^F,o,O,e
-setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255,-
-setlocal keywordprg=
-setlocal nolinebreak
-setlocal nolisp
-setlocal lispwords=
-setlocal nolist
-setlocal makeencoding=
-setlocal makeprg=
-setlocal matchpairs=(:),{:},[:]
-setlocal nomodeline
-setlocal modifiable
-setlocal nrformats=bin,octal,hex
-set number
-setlocal number
-setlocal numberwidth=4
-setlocal omnifunc=
+setlocal omnifunc=javascriptcomplete#CompleteJS
 setlocal path=
 setlocal nopreserveindent
 setlocal nopreviewwindow
@@ -1591,8 +1811,8 @@ setlocal statusline=
 setlocal suffixesadd=
 setlocal noswapfile
 setlocal synmaxcol=3000
-if &syntax != 'Dockerfile'
-setlocal syntax=Dockerfile
+if &syntax != 'javascript'
+setlocal syntax=javascript
 endif
 setlocal tabstop=8
 setlocal tagcase=
@@ -1613,23 +1833,21 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 25 - ((24 * winheight(0) + 19) / 38)
+let s:l = 15 - ((14 * winheight(0) + 39) / 79)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-25
-normal! 022|
-wincmd w
-2wincmd w
-exe '1resize ' . ((&lines * 39 + 40) / 81)
-exe '2resize ' . ((&lines * 38 + 40) / 81)
-tabnext 3
+15
+normal! 040|
+tabnext 2
 set stal=1
-badd +1 docker-compose-development.yml
-badd +1 ~/siabim/django/Dockerfile.development_build.sh
-badd +1 ~/siabim/gulp/Dockerfile.development_build.sh
-badd +1 ~/siabim/django/Dockerfile.development
-badd +0 ~/siabim/gulp/Dockerfile.development
+badd +0 css/development/sass/main.sass
+badd +0 css/development/sass/global.sass
+badd +0 css/development/sass/mixins.sass
+badd +0 css/development/sass/content.sass
+badd +0 ~/siabim/gulp/siabim/gulpfile.js
+badd +0 css/development/sass/body.sass
+badd +0 css/development/sass/footer.sass
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
@@ -1641,7 +1859,6 @@ if file_readable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &so = s:so_save | let &siso = s:siso_save
-nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :
