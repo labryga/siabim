@@ -10,7 +10,8 @@ RUN mkdir /node_modules \
           /staticfiles && \
     apk update && \
     apk add --no-cache --virtual shadow && \
-    adduser -D -H -g "" -h "$(pwd)" \
+    adduser -D -H -g "" \
+            -h "$(pwd)" \
             -u "$image_uid" "$image_uid_name" && \
     chown -R "$image_uid":"$image_uid" \
              "$(pwd)" /node_modules /staticfiles && \
