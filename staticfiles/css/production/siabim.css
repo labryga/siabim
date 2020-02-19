@@ -324,4 +324,10 @@ body {
   -o-transition: all 0.9s ease;
   transition: all 0.9s ease;
   color: white;
-  font-size: 36px; }
+  font-size: 30px; }
+
+.icon-bar a:hover {
+  background-color: #4caf50; }
+
+.active {
+  background-color: khaki; }
