@@ -309,4 +309,5 @@ template {
 
 body {
   background-color: skyblue;
-  color: brown; }
+  color: black;
+  margin: 10px; }
