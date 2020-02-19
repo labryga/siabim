@@ -5,5 +5,5 @@ class SiaBimHomepage(TemplateView):
     template_name = "SiaBimHomepage.pug"
 
 
-class SiaBimTestpage(TemplateView);
+class SiaBimTestpage(TemplateView):
     template_name = "SiaBimTestpage.pug"

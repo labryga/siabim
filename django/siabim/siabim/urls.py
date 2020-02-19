@@ -1,9 +1,8 @@
 from django.contrib import admin
-from django.urls import path
-from homepage.views import SiaBimHomepage
+from django.urls import path, include
 
 
 urlpatterns = [
-    path("", SiaBimHomepage.as_view()),
+    path("", include("homepage.urls")),
     path("admin/", admin.site.urls),
 ]
