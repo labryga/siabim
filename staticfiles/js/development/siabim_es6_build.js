@@ -1,2 +1,1 @@
-console.log("das ist meine seite");
-
+console.log("TestPage");

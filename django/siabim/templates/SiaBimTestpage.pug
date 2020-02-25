@@ -9,6 +9,12 @@ html
 
   body
 
+    div(class="topnav")
+      menu_items = ["home", "news", "contact", "about"] 
+      for item in menu_items
+        a(href="##{item}") item
+
+
     div(class="icon-bar")
       a(class="active fa fa-home", href="#")
         i
@@ -17,7 +23,7 @@ html
       eintrag = ["search", "envelope", "globe", "trash"]
       for x in eintrag
         d = "fa fa-" + x
-        a(href="#", class=d)
+        a(href="a#{x}", class=d)
           i
 
   script(src="siabim.js")
