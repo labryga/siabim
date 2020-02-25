@@ -2,7 +2,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get("DJANGO_SECRETKEY")
 DEBUG = True
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", "172.18.0.1"]
+ALLOWED_HOSTS = ["192.168.56.66", "localhost", "127.0.0.1", "172.18.0.1"]
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
