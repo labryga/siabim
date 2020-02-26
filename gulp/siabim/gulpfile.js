@@ -13,7 +13,7 @@ var gulp          = require('gulp'),
 gulp.task('css', () => {
   return gulp.src([
     '/staticfiles/css/development/*.css',
-    '/staticfiles/css/development/sass/SiaBimTestpage.sass',
+    '/staticfiles/css/development/sass/*.sass',
     ])
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer('last 5 versions',
@@ -29,7 +29,7 @@ gulp.task('css', () => {
 
 gulp.task('javascript', () => {
   return gulp.src(
-    '/staticfiles/js/development/modules/*SiaBimTestpage.js'
+    '/staticfiles/js/development/modules/*.js'
     )
     .pipe(concat('siabim_es6_build.js'))
     .pipe(gulp.dest('/staticfiles/js/development/'))

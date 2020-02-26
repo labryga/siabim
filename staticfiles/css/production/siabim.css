@@ -307,20 +307,227 @@ template {
 [hidden] {
   display: none; }
 
-body {
-  background-color: salmon;
-  color: black;
-  margin: 20px; }
 
-.topnav {
-  background-color: brown;
-  margin: auto;
-  width: 800px;
-  height: 60px;
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body {
+  background-color: skyblue;
+  width: 100%;
+  height: 100%;
+  margin: 0px; }
+
+#container_main {
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0px auto;
+  position: relative; }
+  #container_main .grid_row:after {
+    display: table;
+    content: "";
+    clear: both; }
+
+#container_main_row {
+  position: relative; }
+
+#container_main_menu {
+  position: fixed;
+  float: left; }
+  #container_main_menu li {
+    list-style-type: none;
+    color: white; }
+  @media (max-width: 899px) {
+    #container_main_menu {
+      background-color: rgba(245, 255, 250, 0.2);
+      display: none; } }
+  @media (min-width: 900px) and (max-width: 1099px) {
+    #container_main_menu {
+      background-color: rgba(255, 0, 0, 0.2);
+      width: 220px;
+      height: 100%; } }
+  @media (min-width: 1100px) {
+    #container_main_menu {
+      background-color: rgba(255, 0, 0, 0.5);
+      width: 220px;
+      height: 100%; } }
+
+#container_main_menu_phone {
+  width: 100%; }
+  @media (max-width: 899px) {
+    #container_main_menu_phone {
+      background-color: rgba(245, 255, 250, 0.2);
+      height: 100px;
+      background-color: yellow; } }
+  @media (min-width: 900px) and (max-width: 1099px) {
+    #container_main_menu_phone {
+      background-color: rgba(255, 0, 0, 0.2);
+      display: none; } }
+  @media (min-width: 1100px) {
+    #container_main_menu_phone {
+      background-color: rgba(255, 0, 0, 0.5);
+      display: none; } }
+
+@media (max-width: 899px) {
+  #container_main_content {
+    background-color: rgba(245, 255, 250, 0.2);
+    background-color: blue; } }
+
+@media (min-width: 900px) and (max-width: 1099px) {
+  #container_main_content {
+    background-color: rgba(255, 0, 0, 0.2);
+    background-color: green;
+    float: right;
+    height: 100%;
+    width: calc(100% - 220px); } }
+
+@media (min-width: 1100px) {
+  #container_main_content {
+    background-color: rgba(255, 0, 0, 0.5);
+    background-color: green;
+    float: right;
+    height: 100%;
+    width: calc(100% - 220px); } }
+
+@media (max-width: 899px) {
+  #container_main_content_phone {
+    background-color: rgba(245, 255, 250, 0.2); } }
+
+@media (min-width: 900px) and (max-width: 1099px) {
+  #container_main_content_phone {
+    background-color: rgba(255, 0, 0, 0.2);
+    display: none; } }
+
+@media (min-width: 1100px) {
+  #container_main_content_phone {
+    background-color: rgba(255, 0, 0, 0.5);
+    display: none; } }
+
+#container_footer_row {
+  width: 100%;
+  height: 25px;
+  position: absolute;
+  bottom: 0px;
   text-align: center; }
-  .topnav a {
-    background-color: blue;
-    color: mintcream;
-    width: 150px;
-    height: 30px;
-    display: inline-block; }
+  #container_footer_row a {
+    width: 80px;
+    padding: 5px 5px;
+    display: inline-block;
+    text-decoration: none; }
+
+
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body {
+  background-color: skyblue;
+  width: 100%;
+  height: 100%;
+  margin: 0px; }
+
+#container_main {
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0px auto;
+  position: relative; }
+  #container_main .grid_row:after {
+    display: table;
+    content: "";
+    clear: both; }
+
+#container_main_row {
+  position: relative; }
+
+#container_main_menu {
+  position: fixed;
+  float: left; }
+  #container_main_menu li {
+    list-style-type: none;
+    color: white; }
+  @media (max-width: 899px) {
+    #container_main_menu {
+      background-color: rgba(245, 255, 250, 0.2);
+      display: none; } }
+  @media (min-width: 900px) and (max-width: 1099px) {
+    #container_main_menu {
+      background-color: rgba(255, 0, 0, 0.2);
+      width: 220px;
+      height: 100%; } }
+  @media (min-width: 1100px) {
+    #container_main_menu {
+      background-color: rgba(255, 0, 0, 0.5);
+      width: 220px;
+      height: 100%; } }
+
+#container_main_menu_phone {
+  width: 100%; }
+  @media (max-width: 899px) {
+    #container_main_menu_phone {
+      background-color: rgba(245, 255, 250, 0.2);
+      height: 100px;
+      background-color: yellow; } }
+  @media (min-width: 900px) and (max-width: 1099px) {
+    #container_main_menu_phone {
+      background-color: rgba(255, 0, 0, 0.2);
+      display: none; } }
+  @media (min-width: 1100px) {
+    #container_main_menu_phone {
+      background-color: rgba(255, 0, 0, 0.5);
+      display: none; } }
+
+@media (max-width: 899px) {
+  #container_main_content {
+    background-color: rgba(245, 255, 250, 0.2);
+    background-color: blue; } }
+
+@media (min-width: 900px) and (max-width: 1099px) {
+  #container_main_content {
+    background-color: rgba(255, 0, 0, 0.2);
+    background-color: green;
+    float: right;
+    height: 100%;
+    width: calc(100% - 220px); } }
+
+@media (min-width: 1100px) {
+  #container_main_content {
+    background-color: rgba(255, 0, 0, 0.5);
+    background-color: green;
+    float: right;
+    height: 100%;
+    width: calc(100% - 220px); } }
+
+@media (max-width: 899px) {
+  #container_main_content_phone {
+    background-color: rgba(245, 255, 250, 0.2); } }
+
+@media (min-width: 900px) and (max-width: 1099px) {
+  #container_main_content_phone {
+    background-color: rgba(255, 0, 0, 0.2);
+    display: none; } }
+
+@media (min-width: 1100px) {
+  #container_main_content_phone {
+    background-color: rgba(255, 0, 0, 0.5);
+    display: none; } }
+
+#container_footer_row {
+  width: 100%;
+  height: 25px;
+  position: absolute;
+  bottom: 0px;
+  text-align: center; }
+  #container_footer_row a {
+    width: 80px;
+    padding: 5px 5px;
+    display: inline-block;
+    text-decoration: none; }
+
+html {
+  width: 100%;
+  height: 100%; }
+
+
