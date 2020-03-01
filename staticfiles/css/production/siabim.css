@@ -307,6 +307,35 @@ template {
 [hidden] {
   display: none; }
 
+.topnav {
+  background-color: skyblue;
+  width: 90%;
+  height: 80px;
+  margin: 30px auto;
+  padding: 30px;
+  text-align: center;
+  position: relative; }
+  .topnav a {
+    background-color: khaki;
+    display: inline-block;
+    width: 80px;
+    margin: 0px 3px;
+    text-align: center;
+    line-height: 20px;
+    text-decoration: none;
+    color: brown; }
+
+.mytest {
+  background-image: url("siabim_web.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-color: salmon;
+  width: 90%;
+  height: 150px;
+  margin: 40px auto;
+  padding: 45px; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -423,7 +452,7 @@ body {
   background-origin: padding-box;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 90%;
+  width: 60%;
   height: 150px;
   margin: 50px auto;
   padding: 5px; }
