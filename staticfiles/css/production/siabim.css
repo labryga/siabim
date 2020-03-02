@@ -454,8 +454,9 @@ body {
   background-size: 20%;
   max-width: 90%;
   height: 150px;
-  margin: 50px auto;
-  padding: 35px; }
+  margin: 30px auto;
+  padding: 35px;
+  border: solid 1px rgba(143, 53, 23, 0.4); }
 
 * {
   -webkit-box-sizing: border-box;
