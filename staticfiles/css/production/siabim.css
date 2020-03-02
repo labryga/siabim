@@ -337,6 +337,10 @@ template {
   margin: 40px auto;
   padding: 45px; }
 
+@font-face {
+  font-family: Nunito-Regular;
+  src: url(Nunito-Regular.ttf); }
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -345,7 +349,8 @@ body {
   background-color: #e1f4e3;
   width: 100%;
   height: 100%;
-  margin: 0px; }
+  margin: 0px;
+  font-family: Nunito-Regular; }
 
 #container_main {
   width: 100%;
@@ -446,6 +451,10 @@ body {
     text-decoration: none; }
 
 
+@font-face {
+  font-family: Nunito-Regular;
+  src: url(Nunito-Regular.ttf); }
+
 .header_main {
   background-image: url("siabim_web.png");
   background-position: right top;
@@ -458,6 +467,10 @@ body {
   padding: 35px;
   border: solid 1px initial; }
 
+@font-face {
+  font-family: Nunito-Regular;
+  src: url(Nunito-Regular.ttf); }
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -466,7 +479,8 @@ body {
   background-color: #e1f4e3;
   width: 100%;
   height: 100%;
-  margin: 0px; }
+  margin: 0px;
+  font-family: Nunito-Regular; }
 
 #container_main {
   width: 100%;
