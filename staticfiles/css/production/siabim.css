@@ -308,7 +308,7 @@ template {
   display: none; }
 
 .topnav {
-  background-color: skyblue;
+  background-color: red;
   width: 90%;
   height: 80px;
   margin: 40px auto;
@@ -448,14 +448,14 @@ body {
 
 .header_main {
   background-image: url("siabim_web.png");
-  background-position: right;
-  background-origin: padding-box;
+  background-position: right top;
+  background-origin: content-box;
   background-repeat: no-repeat;
-  background-size: contain;
-  width: 60%;
+  background-size: 20%;
+  max-width: 90%;
   height: 150px;
   margin: 50px auto;
-  padding: 5px; }
+  padding: 35px; }
 
 * {
   -webkit-box-sizing: border-box;
