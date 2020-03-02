@@ -32,7 +32,8 @@ services:
       - ../nginx/conf.d/:/etc/nginx/conf.d/
       - ../staticfiles/css/production/:/staticfiles/css/production/
       - ../staticfiles/js/production/:/staticfiles/js/production/
-      - ../staticfiles/img//:/staticfiles/img/
+      - ../staticfiles/img/:/staticfiles/img/
+      - ../staticfiles/fonts/:/staticfiles/fonts/
 
   siabim_postgresql:
     image: postgres:11.5-alpine

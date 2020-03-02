@@ -339,7 +339,7 @@ template {
 
 @font-face {
   font-family: Nunito-Regular;
-  src: url(Nunito-Regular.ttf); }
+  src: url("Nunito-Regular.ttf"); }
 
 * {
   -webkit-box-sizing: border-box;
@@ -465,11 +465,11 @@ body {
   height: 150px;
   margin: 30px auto;
   padding: 35px;
-  border: solid 1px initial; }
+  border: solid 1px rgba(143, 153, 23, 0.4); }
 
 @font-face {
   font-family: Nunito-Regular;
-  src: url(Nunito-Regular.ttf); }
+  src: url("Nunito-Regular.ttf"); }
 
 * {
   -webkit-box-sizing: border-box;
