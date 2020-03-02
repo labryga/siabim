@@ -346,7 +346,6 @@ template {
           box-sizing: border-box; }
 
 body {
-  background-color: #e1f4e3;
   width: 100%;
   height: 100%;
   margin: 0px;
@@ -465,7 +464,7 @@ body {
   height: 150px;
   margin: 30px auto;
   padding: 35px;
-  border: solid 1px rgba(143, 153, 23, 0.4); }
+  border: solid 1px rgba(143, 153, 23, 0.2); }
 
 @font-face {
   font-family: Nunito-Regular;
@@ -476,7 +475,6 @@ body {
           box-sizing: border-box; }
 
 body {
-  background-color: #e1f4e3;
   width: 100%;
   height: 100%;
   margin: 0px;
