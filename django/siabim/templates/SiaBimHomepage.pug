@@ -8,18 +8,18 @@ html
 
   body
 
-    div(id="header_desktop", class="grind_container")
-      div(id="container_main_header", class="grid_row")
-        div(class="header_main")
+    div(class="grid_container")
 
-    div(id="header_tablet", class="grind_container")
-      div(id="container_main_header", class="grid_row")
-        div(class="header_main")
+      div(id="header_row", class="grid_row")
 
+        header_queries = ["desktop", "tablet", "phone"]
+        each query in header_queries
+          eintrag = "header_" + query
+          div(id="#{eintrag}")
 
-    div(id="header_phone", class="grind_container")
-      div(id="container_main_header", class="grid_row")
-        div(class="header_main")
+      div(id="content_row", class="grid_row")
+        div(id="menu_tablet")
+
 
       // div(id="container_main_row", class="grid_row")
 

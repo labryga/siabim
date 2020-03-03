@@ -1,11 +1,11 @@
-$border_color: rgba(143, 153, 23, 0.7)
+$border_color: rgba(143, 153, 23, 0.8)
 // $border_color: none
 $body_color:    blue
 $footer_height: 25
 
 
 @mixin grid_container
-  width:      100%
+  width:      90%
   height:     100%
   max-width:  1200px
   margin:     0px auto
@@ -41,3 +41,17 @@ $footer_height: 25
     display: none
   @media (min-width: 900px) and (max-width: 1099px)
     display: none
+
+
+@mixin page_header
+  background-image: url("siabim_web.png")
+  background-position: right 
+  background-origin:   content-box
+  background-repeat:   no-repeat
+  background-size:     contain
+  width: 100%
+  height: 80px
+  margin: 30px auto
+  padding: 15px 50px
+  border: solid 1px $border_color
+
