@@ -334,11 +334,7 @@ body {
     body {
       background-color: rgba(0, 128, 0, 0.1); } }
 
-.header_main {
-  width: 100%;
-  height: 100%;
-  max-width: 1200px;
-  margin: 0px auto;
+#header_desktop {
   background-image: url("siabim_web.png");
   background-position: right;
   background-origin: content-box;
@@ -348,9 +344,9 @@ body {
   margin: 30px auto;
   padding: 15px 50px;
   border: solid 1px rgba(143, 153, 23, 0.7); }
-  .header_main .grid_row:after {
-    display: table;
-    content: "";
-    clear: both; }
-
-
+  @media (max-width: 899px) {
+    #header_desktop {
+      display: none; } }
+  @media (min-width: 900px) and (max-width: 1099px) {
+    #header_desktop {
+      display: none; } }
