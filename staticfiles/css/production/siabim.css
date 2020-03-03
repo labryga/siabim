@@ -335,15 +335,22 @@ body {
       background-color: rgba(0, 128, 0, 0.1); } }
 
 .header_main {
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0px auto;
   background-image: url("siabim_web.png");
-  background-position: right top;
+  background-position: right;
   background-origin: content-box;
   background-repeat: no-repeat;
-  background-size: 160px;
-  max-width: 90%;
-  height: 150px;
+  background-size: contain;
+  height: 80px;
   margin: 30px auto;
-  padding: 35px;
-  border: solid 1px rgba(143, 153, 23, 0.2); }
+  padding: 15px 50px;
+  border: solid 1px rgba(143, 153, 23, 0.7); }
+  .header_main .grid_row:after {
+    display: table;
+    content: "";
+    clear: both; }
 
 
