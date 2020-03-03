@@ -1,8 +1,8 @@
-
 $border_color: rgba(143, 153, 23, 0.2)
 $body_color:    blue
 $second_color:  midnightblue
 $footer_height: 25
+
 
 @mixin grid_container
   width:      100%
@@ -21,15 +21,15 @@ $footer_height: 25
 // media queries
 @mixin phone
   @media (max-width: 899px)
-    background-color: rgba(mintcream, 0.2)
+    background-color: rgba(blue, 0.1)
     @content
 
 @mixin tablet
   @media (min-width: 900px) and (max-width: 1099px)
-    background-color: rgba(red, 0.2)
+    background-color: rgba(red, 0.1)
     @content
 
 @mixin desktop
   @media (min-width: 1100px)
-    background-color: rgba(red, 0.5)
+    background-color: rgba(green, 0.1)
     @content

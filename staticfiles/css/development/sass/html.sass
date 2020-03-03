@@ -1,6 +1,9 @@
-@import "global.sass"
 @import "mixins.sass"
 
+
+@font-face
+  font-family: Nunito-Regular
+  src: url("Nunito-Regular.ttf")
 *
   box-sizing: border-box
 
@@ -14,6 +17,6 @@ body
   margin: 0px
   font-family: Nunito-Regular
 
-@font-face
-  font-family: Nunito-Regular
-  src: url("Nunito-Regular.ttf")
+  @include phone
+  @include tablet
+  @include desktop

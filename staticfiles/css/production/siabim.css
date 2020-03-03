@@ -307,36 +307,6 @@ template {
 [hidden] {
   display: none; }
 
-.topnav {
-  background-color: red;
-  width: 90%;
-  height: 80px;
-  margin: 40px auto;
-  padding: 30px;
-  text-align: center;
-  position: relative; }
-  .topnav a {
-    background-color: khaki;
-    display: inline-block;
-    width: 80px;
-    margin: 0px 3px;
-    text-align: center;
-    line-height: 20px;
-    text-decoration: none;
-    color: brown; }
-
-.mytest {
-  background-image: url("siabim_web.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-origin: content-box;
-  background-color: salmon;
-  width: 90%;
-  height: 150px;
-  margin: 40px auto;
-  padding: 45px; }
-
 @font-face {
   font-family: Nunito-Regular;
   src: url("Nunito-Regular.ttf"); }
@@ -345,241 +315,35 @@ template {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
+html {
+  width: 100%;
+  height: 100%; }
+
 body {
   width: 100%;
   height: 100%;
   margin: 0px;
   font-family: Nunito-Regular; }
-
-#container_main {
-  width: 100%;
-  height: 100%;
-  max-width: 1200px;
-  margin: 0px auto;
-  position: relative; }
-  #container_main .grid_row:after {
-    display: table;
-    content: "";
-    clear: both; }
-
-#container_main_row {
-  position: relative; }
-
-#container_main_menu {
-  position: fixed;
-  float: left; }
-  #container_main_menu li {
-    list-style-type: none;
-    color: white; }
   @media (max-width: 899px) {
-    #container_main_menu {
-      background-color: rgba(245, 255, 250, 0.2);
-      display: none; } }
+    body {
+      background-color: rgba(0, 0, 255, 0.1); } }
   @media (min-width: 900px) and (max-width: 1099px) {
-    #container_main_menu {
-      background-color: rgba(255, 0, 0, 0.2);
-      width: 220px;
-      height: 100%; } }
+    body {
+      background-color: rgba(255, 0, 0, 0.1); } }
   @media (min-width: 1100px) {
-    #container_main_menu {
-      background-color: rgba(255, 0, 0, 0.5);
-      width: 220px;
-      height: 100%; } }
-
-#container_main_menu_phone {
-  width: 100%; }
-  @media (max-width: 899px) {
-    #container_main_menu_phone {
-      background-color: rgba(245, 255, 250, 0.2);
-      height: 100px;
-      background-color: yellow; } }
-  @media (min-width: 900px) and (max-width: 1099px) {
-    #container_main_menu_phone {
-      background-color: rgba(255, 0, 0, 0.2);
-      display: none; } }
-  @media (min-width: 1100px) {
-    #container_main_menu_phone {
-      background-color: rgba(255, 0, 0, 0.5);
-      display: none; } }
-
-@media (max-width: 899px) {
-  #container_main_content {
-    background-color: rgba(245, 255, 250, 0.2);
-    background-color: blue; } }
-
-@media (min-width: 900px) and (max-width: 1099px) {
-  #container_main_content {
-    background-color: rgba(255, 0, 0, 0.2);
-    background-color: green;
-    float: right;
-    height: 100%;
-    width: calc(100% - 220px); } }
-
-@media (min-width: 1100px) {
-  #container_main_content {
-    background-color: rgba(255, 0, 0, 0.5);
-    background-color: green;
-    float: right;
-    height: 100%;
-    width: calc(100% - 220px); } }
-
-@media (max-width: 899px) {
-  #container_main_content_phone {
-    background-color: rgba(245, 255, 250, 0.2); } }
-
-@media (min-width: 900px) and (max-width: 1099px) {
-  #container_main_content_phone {
-    background-color: rgba(255, 0, 0, 0.2);
-    display: none; } }
-
-@media (min-width: 1100px) {
-  #container_main_content_phone {
-    background-color: rgba(255, 0, 0, 0.5);
-    display: none; } }
-
-#container_footer_row {
-  width: 100%;
-  height: 25px;
-  position: absolute;
-  bottom: 0px;
-  text-align: center; }
-  #container_footer_row a {
-    width: 80px;
-    padding: 5px 5px;
-    display: inline-block;
-    text-decoration: none; }
-
-
-@font-face {
-  font-family: Nunito-Regular;
-  src: url(Nunito-Regular.ttf); }
+    body {
+      background-color: rgba(0, 128, 0, 0.1); } }
 
 .header_main {
   background-image: url("siabim_web.png");
   background-position: right top;
   background-origin: content-box;
   background-repeat: no-repeat;
-  background-size: 20%;
+  background-size: 160px;
   max-width: 90%;
   height: 150px;
   margin: 30px auto;
   padding: 35px;
   border: solid 1px rgba(143, 153, 23, 0.2); }
-
-@font-face {
-  font-family: Nunito-Regular;
-  src: url("Nunito-Regular.ttf"); }
-
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
-
-body {
-  width: 100%;
-  height: 100%;
-  margin: 0px;
-  font-family: Nunito-Regular; }
-
-#container_main {
-  width: 100%;
-  height: 100%;
-  max-width: 1200px;
-  margin: 0px auto;
-  position: relative; }
-  #container_main .grid_row:after {
-    display: table;
-    content: "";
-    clear: both; }
-
-#container_main_row {
-  position: relative; }
-
-#container_main_menu {
-  position: fixed;
-  float: left; }
-  #container_main_menu li {
-    list-style-type: none;
-    color: white; }
-  @media (max-width: 899px) {
-    #container_main_menu {
-      background-color: rgba(245, 255, 250, 0.2);
-      display: none; } }
-  @media (min-width: 900px) and (max-width: 1099px) {
-    #container_main_menu {
-      background-color: rgba(255, 0, 0, 0.2);
-      width: 220px;
-      height: 100%; } }
-  @media (min-width: 1100px) {
-    #container_main_menu {
-      background-color: rgba(255, 0, 0, 0.5);
-      width: 220px;
-      height: 100%; } }
-
-#container_main_menu_phone {
-  width: 100%; }
-  @media (max-width: 899px) {
-    #container_main_menu_phone {
-      background-color: rgba(245, 255, 250, 0.2);
-      height: 100px;
-      background-color: yellow; } }
-  @media (min-width: 900px) and (max-width: 1099px) {
-    #container_main_menu_phone {
-      background-color: rgba(255, 0, 0, 0.2);
-      display: none; } }
-  @media (min-width: 1100px) {
-    #container_main_menu_phone {
-      background-color: rgba(255, 0, 0, 0.5);
-      display: none; } }
-
-@media (max-width: 899px) {
-  #container_main_content {
-    background-color: rgba(245, 255, 250, 0.2);
-    background-color: blue; } }
-
-@media (min-width: 900px) and (max-width: 1099px) {
-  #container_main_content {
-    background-color: rgba(255, 0, 0, 0.2);
-    background-color: green;
-    float: right;
-    height: 100%;
-    width: calc(100% - 220px); } }
-
-@media (min-width: 1100px) {
-  #container_main_content {
-    background-color: rgba(255, 0, 0, 0.5);
-    background-color: green;
-    float: right;
-    height: 100%;
-    width: calc(100% - 220px); } }
-
-@media (max-width: 899px) {
-  #container_main_content_phone {
-    background-color: rgba(245, 255, 250, 0.2); } }
-
-@media (min-width: 900px) and (max-width: 1099px) {
-  #container_main_content_phone {
-    background-color: rgba(255, 0, 0, 0.2);
-    display: none; } }
-
-@media (min-width: 1100px) {
-  #container_main_content_phone {
-    background-color: rgba(255, 0, 0, 0.5);
-    display: none; } }
-
-#container_footer_row {
-  width: 100%;
-  height: 25px;
-  position: absolute;
-  bottom: 0px;
-  text-align: center; }
-  #container_footer_row a {
-    width: 80px;
-    padding: 5px 5px;
-    display: inline-block;
-    text-decoration: none; }
-
-html {
-  width: 100%;
-  height: 100%; }
 
 
