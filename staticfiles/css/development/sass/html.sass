@@ -17,6 +17,11 @@ body
   margin: 0px
   font-family: Nunito-Regular
 
-  @include phone
-  @include tablet
-  @include desktop
+  @media (max-width: 899px)
+    background-color: rgba(blue, 0.1)
+
+  @media (min-width: 900px) and (max-width: 1099px)
+    background-color: rgba(red, 0.1)
+
+  @media (min-width: 1100px)
+    background-color: rgba(green, 0.1)
