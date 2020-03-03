@@ -15,6 +15,7 @@ gulp.task('css', () => {
     '/staticfiles/css/development/*.css',
     '/staticfiles/css/development/sass/html.sass',
     '/staticfiles/css/development/sass/desktop.sass',
+    '/staticfiles/css/development/sass/tablet.sass',
     ])
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer('last 5 versions',
