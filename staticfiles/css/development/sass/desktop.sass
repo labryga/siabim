@@ -2,7 +2,21 @@
 
 
 #header_desktop
+  @include grid_container
   @include desktop
+  background-image: url("siabim_web.png")
+  background-position: right 
+  background-origin: content-box
+  background-repeat: no-repeat
+  background-size: contain
+  height: 80px
+  margin: 30px auto
+  padding: 15px 50px
+  border: solid 1px $border_color
+
+#header_tablet
+  @include grid_container
+  @include tablet
   background-image: url("siabim_web.png")
   background-position: right 
   background-origin: content-box
