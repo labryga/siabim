@@ -906,7 +906,7 @@ if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 24
-normal! 012|
+normal! 011|
 wincmd w
 argglobal
 if bufexists("~/siabim/staticfiles/js/development/modules/phone.js") | buffer ~/siabim/staticfiles/js/development/modules/phone.js | else | edit ~/siabim/staticfiles/js/development/modules/phone.js | endif
@@ -1294,12 +1294,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 34 - ((26 * winheight(0) + 15) / 30)
+let s:l = 30 - ((22 * winheight(0) + 15) / 30)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-34
-normal! 03|
+30
+normal! 011|
 wincmd w
 argglobal
 if bufexists("~/siabim/staticfiles/js/development/modules/tablet.js") | buffer ~/siabim/staticfiles/js/development/modules/tablet.js | else | edit ~/siabim/staticfiles/js/development/modules/tablet.js | endif
@@ -1687,12 +1687,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 15) / 30)
+let s:l = 30 - ((21 * winheight(0) + 15) / 30)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
-normal! 0
+30
+normal! 011|
 wincmd w
 argglobal
 if bufexists("~/siabim/staticfiles/js/development/modules/desktop.js") | buffer ~/siabim/staticfiles/js/development/modules/desktop.js | else | edit ~/siabim/staticfiles/js/development/modules/desktop.js | endif
@@ -1780,7 +1780,7 @@ setlocal norelativenumber
 setlocal norightleft
 setlocal rightleftcmd=search
 setlocal noscrollbind
-setlocal scrolloff=-1
+setlocal scrolloff=0
 setlocal shiftwidth=2
 setlocal noshortname
 setlocal sidescrolloff=-1
@@ -1816,12 +1816,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 15) / 30)
+let s:l = 12 - ((11 * winheight(0) + 15) / 30)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
-normal! 0
+12
+normal! 03|
 wincmd w
 argglobal
 if bufexists("~/siabim/django/siabim/templates/SiaBimHomepageDesktop.pug") | buffer ~/siabim/django/siabim/templates/SiaBimHomepageDesktop.pug | else | edit ~/siabim/django/siabim/templates/SiaBimHomepageDesktop.pug | endif
@@ -2218,7 +2218,6 @@ normal! zt
 normal! 03|
 lcd ~/siabim/staticfiles/css/development/sass
 wincmd w
-10wincmd w
 exe '1resize ' . ((&lines * 30 + 47) / 94)
 exe 'vert 1resize ' . ((&columns * 63 + 158) / 317)
 exe '2resize ' . ((&lines * 30 + 47) / 94)
