@@ -341,7 +341,7 @@ body {
   margin: 0px auto;
   border: 2px solid rgba(0, 0, 255, 0.2); }
   .grid_container .grid_row {
-    border: 1px solid rgba(0, 0, 0, 0.6); }
+    border: 1px dashed rgba(0, 0, 0, 0.6); }
     .grid_container .grid_row:after {
       display: table;
       content: "";
@@ -365,29 +365,25 @@ body {
     #header_desktop {
       display: none; } }
 
-#content_row_desktop #menu_desktop {
-  background-color: rgba(135, 206, 235, 0.8);
-  width: 300px;
-  height: 400px;
-  float: left; }
-  @media (max-width: 899px) {
-    #content_row_desktop #menu_desktop {
-      display: none; } }
-  @media (min-width: 900px) and (max-width: 1099px) {
-    #content_row_desktop #menu_desktop {
-      display: none; } }
+@media (max-width: 899px) {
+  #content_row_desktop {
+    display: none; } }
+
+@media (min-width: 900px) and (max-width: 1099px) {
+  #content_row_desktop {
+    display: none; } }
 
 #content_row_desktop #content_desktop {
-  background-color: salmon;
+  background-color: rgba(0, 128, 0, 0.6);
   width: 400px;
   height: 400px;
   float: right; }
-  @media (max-width: 899px) {
-    #content_row_desktop #content_desktop {
-      display: none; } }
-  @media (min-width: 900px) and (max-width: 1099px) {
-    #content_row_desktop #content_desktop {
-      display: none; } }
+
+#content_row_desktop #menu_desktop {
+  background-color: rgba(0, 128, 0, 0.4);
+  width: 400px;
+  height: 400px;
+  float: left; }
 
 #header_tablet {
   background-image: url("siabim_web.png");
@@ -406,6 +402,14 @@ body {
   @media (min-width: 1100px) {
     #header_tablet {
       display: none; } }
+
+@media (max-width: 899px) {
+  #content_row_tablet {
+    display: none; } }
+
+@media (min-width: 1100px) {
+  #content_row_tablet {
+    display: none; } }
 
 #header_phone {
   background-image: url("siabim_web.png");
