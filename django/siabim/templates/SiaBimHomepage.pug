@@ -8,37 +8,7 @@ html
 
   body
 
+    {% include "SiaBimHomepageDesktop.pug" %}
 
-    div(class="grid_container")
-
-      div(id="header_row", class="grid_row")
-        div(id="header_desktop")
-        div(id="header_tablet")
-        div(id="header_phone")
-
-      div(id="content_row", class="grid_row")
-
-        div(id="content_row_desktop")
-          div(id="menu_desktop")
-          div(id="content_desktop")
-
-
-      // div(id="container_main_row", class="grid_row")
-
-        div(id="container_main_menu", class="")
-          ul(id="not_phone_menue")
-            menu_items = ["Ausmass nach eBKP-H", "AutoCAD", "AutoLISP", "Vectorworks"]
-            each menu_item in menu_items
-              li(class="none")= menu_item
-
-        div(id="container_main_menu_phone", class="")
-
-        div(id="container_main_content", class="")
-          div(style="width: 200px; height: 400px; background-color: black;")
-
-      // div(id="container_footer_row", class="grid_row")
-        footer_entries = ["GitHub", "About", "Copyright", "FAQ"]
-        each footer_entry in footer_entries
-          a(href="")= footer_entry
 
   script(src="siabim.js")

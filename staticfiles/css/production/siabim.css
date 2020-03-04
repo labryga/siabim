@@ -347,6 +347,14 @@ body {
       content: "";
       clear: both; }
 
+@media (max-width: 899px) {
+  #grid_container_desktop {
+    display: none; } }
+
+@media (min-width: 900px) and (max-width: 1099px) {
+  #grid_container_desktop {
+    display: none; } }
+
 #header_desktop {
   background-image: url("siabim_web.png");
   background-position: right;
@@ -358,20 +366,6 @@ body {
   margin: 30px auto;
   padding: 15px 50px;
   border: solid 1px rgba(143, 153, 23, 0.8); }
-  @media (max-width: 899px) {
-    #header_desktop {
-      display: none; } }
-  @media (min-width: 900px) and (max-width: 1099px) {
-    #header_desktop {
-      display: none; } }
-
-@media (max-width: 899px) {
-  #content_row_desktop {
-    display: none; } }
-
-@media (min-width: 900px) and (max-width: 1099px) {
-  #content_row_desktop {
-    display: none; } }
 
 #content_row_desktop #content_desktop {
   background-color: rgba(0, 128, 0, 0.6);
