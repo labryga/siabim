@@ -345,7 +345,6 @@ body {
 
 #grid_container_desktop {
   width: 95%;
-  height: 100%;
   max-width: 1000px;
   margin: 0px auto;
   position: relative; }
@@ -382,8 +381,7 @@ body {
 #footer_desktop {
   background-color: rgba(0, 128, 0, 0.15);
   width: 100%;
-  height: 45px;
-  position: absolute;
+  height: 35px;
   bottom: 0px; }
 
 #grid_container_tablet {
@@ -417,18 +415,17 @@ body {
 #content_tablet {
   background-color: rgba(0, 0, 255, 0.4);
   width: 100%;
-  height: 2320px; }
+  height: 320px; }
 
 #footer_tablet {
   background-color: rgba(255, 0, 0, 0.15);
-  height: 45px;
   width: 100%;
+  height: 45px;
   bottom: 0px; }
 
 #grid_container_phone {
   width: 95%;
   max-width: 1000px;
-  height: 100%;
   margin: 0px auto;
   position: relative; }
   @media (min-width: 900px) and (max-width: 1099px) {
@@ -452,11 +449,10 @@ body {
 #menu_phone {
   background-color: rgba(0, 0, 255, 0.3);
   width: 100%;
-  height: 20px; }
+  height: 120px; }
 
 #footer_phone {
   background-color: rgba(0, 0, 255, 0.15);
   width: 100%;
   height: 30px;
-  position: absolute;
   bottom: 0px; }
