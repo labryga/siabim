@@ -2,18 +2,22 @@
 
 #grid_container_desktop
   @include desktop
+  width:      95%
+  height:     100%
+  max-width:  1000px
+  margin:     0px auto
 
 #header_desktop
   @include page_header
 
 #content_row_desktop
-  & #content_desktop
-      background-color: rgba(green, 0.6)
-      width:  400px
-      height: 400px
-      float: right
   & #menu_desktop
       background-color: rgba(green, 0.4)
       width:  400px
       height: 400px
       float: left
+  & #content_desktop
+      background-color: rgba(green, 0.6)
+      width:  400px
+      height: 400px
+      float: right

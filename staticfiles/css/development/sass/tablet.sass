@@ -1,8 +1,17 @@
 @import "mixins.sass"
 
-#header_tablet
+#grid_container_tablet
   @include tablet
+  width:      95%
+  height:     100%
+  max-width:  1000px
+  margin:     0px auto
+
+#header_tablet
   @include page_header
 
 #content_row_tablet
-  @include tablet
+  & #menu_tablet
+      background-color: rgba(red, 0.2)
+      width: 100%
+      height: 100px

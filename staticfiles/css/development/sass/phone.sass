@@ -1,5 +1,17 @@
 @import "mixins.sass"
 
-#header_phone
+#grid_container_phone
   @include phone
+  width:      95%
+  height:     100%
+  max-width:  1000px
+  margin:     0px auto
+
+#header_phone
   @include page_header
+
+#content_phone_row
+  & #menu_phone
+      background-color: rgba(blue, 0.2)
+      width: 100%
+      height: 80px
