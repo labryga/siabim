@@ -2,5 +2,18 @@
 
 #header_desktop
   @include desktop
-  @include grid_container
   @include page_header
+
+#content_row_desktop
+  & #menu_desktop
+    @include desktop
+    background-color: rgba(skyblue, 0.8)
+    width:  300px
+    height: 400px
+    float: left
+  & #content_desktop
+    @include desktop
+    background-color: rgba(salmon, 1)
+    width:  400px
+    height: 400px
+    float: right

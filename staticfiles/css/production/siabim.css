@@ -334,11 +334,20 @@ body {
     body {
       background-color: rgba(0, 128, 0, 0.1); } }
 
-#header_desktop {
-  width: 90%;
+.grid_container {
+  width: 100%;
   height: 100%;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0px auto;
+  border: 2px solid rgba(0, 0, 255, 0.2); }
+  .grid_container .grid_row {
+    border: 1px solid rgba(0, 0, 0, 0.6); }
+    .grid_container .grid_row:after {
+      display: table;
+      content: "";
+      clear: both; }
+
+#header_desktop {
   background-image: url("siabim_web.png");
   background-position: right;
   background-origin: content-box;
@@ -355,16 +364,32 @@ body {
   @media (min-width: 900px) and (max-width: 1099px) {
     #header_desktop {
       display: none; } }
-  #header_desktop .grid_row:after {
-    display: table;
-    content: "";
-    clear: both; }
+
+#content_row_desktop #menu_desktop {
+  background-color: rgba(135, 206, 235, 0.8);
+  width: 300px;
+  height: 400px;
+  float: left; }
+  @media (max-width: 899px) {
+    #content_row_desktop #menu_desktop {
+      display: none; } }
+  @media (min-width: 900px) and (max-width: 1099px) {
+    #content_row_desktop #menu_desktop {
+      display: none; } }
+
+#content_row_desktop #content_desktop {
+  background-color: salmon;
+  width: 400px;
+  height: 400px;
+  float: right; }
+  @media (max-width: 899px) {
+    #content_row_desktop #content_desktop {
+      display: none; } }
+  @media (min-width: 900px) and (max-width: 1099px) {
+    #content_row_desktop #content_desktop {
+      display: none; } }
 
 #header_tablet {
-  width: 90%;
-  height: 100%;
-  max-width: 1200px;
-  margin: 0px auto;
   background-image: url("siabim_web.png");
   background-position: right;
   background-origin: content-box;
@@ -380,28 +405,9 @@ body {
       display: none; } }
   @media (min-width: 1100px) {
     #header_tablet {
-      display: none; } }
-  #header_tablet .grid_row:after {
-    display: table;
-    content: "";
-    clear: both; }
-
-#menu_tablet {
-  width: 100%;
-  height: 300px;
-  border: 2px solid rgba(143, 153, 23, 0.8); }
-  @media (max-width: 899px) {
-    #menu_tablet {
-      display: none; } }
-  @media (min-width: 1100px) {
-    #menu_tablet {
       display: none; } }
 
 #header_phone {
-  width: 90%;
-  height: 100%;
-  max-width: 1200px;
-  margin: 0px auto;
   background-image: url("siabim_web.png");
   background-position: right;
   background-origin: content-box;
@@ -418,7 +424,3 @@ body {
   @media (min-width: 1100px) {
     #header_phone {
       display: none; } }
-  #header_phone .grid_row:after {
-    display: table;
-    content: "";
-    clear: both; }

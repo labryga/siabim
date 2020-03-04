@@ -3,15 +3,6 @@ $border_color: rgba(143, 153, 23, 0.8)
 $body_color:    blue
 $footer_height: 25
 
-
-@mixin grid_container
-  width:      90%
-  height:     100%
-  max-width:  1200px
-  margin:     0px auto
-  & .grid_row 
-    @include clearfix
-
 @mixin clearfix
   &:after
     display:  table
@@ -54,4 +45,3 @@ $footer_height: 25
   margin: 30px auto
   padding: 15px 50px
   border: solid 1px $border_color
-

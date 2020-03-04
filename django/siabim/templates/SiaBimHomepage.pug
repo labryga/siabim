@@ -8,17 +8,19 @@ html
 
   body
 
+
     div(class="grid_container")
 
       div(id="header_row", class="grid_row")
-
-        header_queries = ["desktop", "tablet", "phone"]
-        each query in header_queries
-          eintrag = "header_" + query
-          div(id="#{eintrag}")
+        div(id="header_desktop")
+        div(id="header_tablet")
+        div(id="header_phone")
 
       div(id="content_row", class="grid_row")
-        div(id="menu_tablet")
+
+        div(id="content_row_desktop")
+          div(id="menu_desktop")
+          div(id="content_desktop")
 
 
       // div(id="container_main_row", class="grid_row")
