@@ -27,6 +27,11 @@ if (inhalthoehe > fensterhoehe) {
   footer_phone.style.position = "absolute";
 }
 
+window.addEventListener("orientationchange", function () {
+  console.log("Bildschirm gedreht!!");
+  console.log(screen.orientation);
+  console.log(grid_container_phone.clientHeight);
+}, false);
 var fensterhoehe = window.innerHeight;
 var inhalthoehe = grid_container_tablet.clientHeight;
 
