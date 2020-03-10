@@ -1,7 +1,7 @@
 console.log("TestPage");
 
-var fensterhoehe = window.innerHeight;
-var inhalthoehe  = grid_container_desktop.clientHeight;
+let fensterhoehe = window.innerHeight;
+let inhalthoehe  = grid_container_desktop.clientHeight;
 
 if (inhalthoehe > fensterhoehe) {
   console.log("inhalt gross");
@@ -13,7 +13,6 @@ if (inhalthoehe > fensterhoehe) {
   grid_container_desktop.style.height = "100%";
   footer_desktop.style.position       = "absolute";
 }
-
 
 
 var fensterhoehe = window.innerHeight;
