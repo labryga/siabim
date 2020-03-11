@@ -1,21 +1,23 @@
-let fensterhoehe = window.innerHeight;
-let inhalthoehe  = grid_container_phone.clientHeight;
 
-
-if (inhalthoehe > fensterhoehe) {
-  console.log("inhalt gross");
-  grid_container_phone.style.height = "";
-  footer_phone.style.position       = "";
-
-} else {
-  console.log("inhalt klein");
-  grid_container_phone.style.height = "100%";
-  footer_phone.style.position       = "absolute";
+function myOrientation(myGrid, myFooter) {
+  if (screen.orientation.type           == "landscape-primary") {
+      myGrid.style.height = "";
+      myFooter.style.position       = "";
+      console.log(myGrid);
+  } else if (screen.orientation.type    == "portrait-primary") {
+      myGrid.style.height = "100%";
+      myFooter.style.position       = "absolute";
+  }
 }
 
 
-window.addEventListener("orientationchange", function(){
-  console.log("Bildschirm gedreht!!");
-  console.log(screen.orientation);
-  console.log(grid_container_phone.clientHeight);
-}, false);
+window.addEventListener("load", function() {
+    myOrientation(grid_container_phone, footer_phone);
+  }
+  , false); 
+
+
+window.addEventListener("orientationchange", function() {
+    myOrientation(grid_container_phone, footer_phone);
+  }
+  , false);
