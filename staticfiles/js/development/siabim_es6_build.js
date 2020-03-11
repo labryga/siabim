@@ -13,8 +13,6 @@ console.log("TestPage");
 //   footer_desktop.style.position       = "absolute";
 // }
 
-
-
 function myOrientation(myGrid, myFooter) {
   if (screen.orientation.type           == "landscape-primary") {
       myGrid.style.height = "";
@@ -25,6 +23,9 @@ function myOrientation(myGrid, myFooter) {
       myFooter.style.position       = "absolute";
   }
 }
+
+
+
 
 
 window.addEventListener("load", function() {
@@ -39,14 +40,13 @@ window.addEventListener("orientationchange", function() {
   , false);
 
 
-// var fensterhoehe = window.innerHeight;
-// var inhalthoehe  = grid_container_tablet.clientHeight;
-//
-// if (inhalthoehe > fensterhoehe) {
-//   grid_container_tablet.style.height = "";
-//   footer_tablet.style.position       = "";
-//
-// } else {
-//   grid_container_tablet.style.height = "100%";
-//   footer_tablet.style.position       = "absolute";
-// }
+window.addEventListener("load", function() {
+    myOrientation(grid_container_tablet, footer_tablet);
+  }
+  , false); 
+
+
+window.addEventListener("orientationchange", function() {
+    myOrientation(grid_container_tablet, footer_tablet);
+  }
+  , false);

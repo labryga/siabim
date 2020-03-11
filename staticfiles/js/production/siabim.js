@@ -28,14 +28,10 @@ window.addEventListener("load", function () {
 }, false);
 window.addEventListener("orientationchange", function () {
   myOrientation(grid_container_phone, footer_phone);
-}, false); // var fensterhoehe = window.innerHeight;
-// var inhalthoehe  = grid_container_tablet.clientHeight;
-//
-// if (inhalthoehe > fensterhoehe) {
-//   grid_container_tablet.style.height = "";
-//   footer_tablet.style.position       = "";
-//
-// } else {
-//   grid_container_tablet.style.height = "100%";
-//   footer_tablet.style.position       = "absolute";
-// }
+}, false);
+window.addEventListener("load", function () {
+  myOrientation(grid_container_tablet, footer_tablet);
+}, false);
+window.addEventListener("orientationchange", function () {
+  myOrientation(grid_container_tablet, footer_tablet);
+}, false);
