@@ -1,3 +1,4 @@
+
 function myOrientation(myGrid, myFooter) {
   if (screen.orientation.type           == "landscape-primary") {
       myGrid.style.height = "";

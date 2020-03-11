@@ -1,16 +1,12 @@
 "use strict";
 
-console.log("TestPage"); // var fensterhoehe = window.innerHeight;
-// var inhalthoehe  = grid_container_desktop.clientHeight;
-//
-// if (inhalthoehe > fensterhoehe) {
-//   grid_container_desktop.style.height = "";
-//   footer_desktop.style.position       = "";
-//
-// } else {
-//   grid_container_desktop.style.height = "100%";
-//   footer_desktop.style.position       = "absolute";
-// }
+console.log("TestPage");
+window.addEventListener("load", function () {
+  myOrientation(grid_container_desktop, footer_desktop);
+}, false);
+window.addEventListener("orientationchange", function () {
+  myOrientation(grid_container_desktop, footer_desktop);
+}, false);
 
 function myOrientation(myGrid, myFooter) {
   if (screen.orientation.type == "landscape-primary") {
