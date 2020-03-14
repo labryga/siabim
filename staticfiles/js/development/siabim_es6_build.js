@@ -1,4 +1,3 @@
-console.log("TestPage");
 
 
 window.addEventListener("load", function() {
