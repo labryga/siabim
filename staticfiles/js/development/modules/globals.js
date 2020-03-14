@@ -1,12 +1,10 @@
 
-function myOrientation(myGrid, myFooter) {
+let screenOrientation = (deviceGrid, deviceFooter) => {
   if (screen.orientation.type == "landscape-primary") {
-      myGrid.style.height = "";
-      myFooter.style.position = "";
-      console.log(myGrid);
+      deviceGrid.style.height = "";
+      deviceFooter.style.position = "";
   } else if (screen.orientation.type == "portrait-primary") {
-      myGrid.style.height = "100%";
-      myFooter.style.position = "absolute";
+      deviceGrid.style.height = "100%";
+      deviceFooter.style.position = "absolute";
   }
-}
-
+};
