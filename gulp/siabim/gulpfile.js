@@ -32,7 +32,9 @@ gulp.task('css', () => {
 
 gulp.task('javascript', () => {
   return gulp.src(
-    '/staticfiles/js/development/modules/*.js'
+    '/staticfiles/js/development/modules/globals.js',
+    '/staticfiles/js/development/modules/phone.js',
+    '/staticfiles/js/development/modules/tablet.js',
     )
     .pipe(concat('siabim_es6_build.js'))
     .pipe(gulp.dest('/staticfiles/js/development/'))
