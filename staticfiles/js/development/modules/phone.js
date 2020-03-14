@@ -1,5 +1,4 @@
 
-
 window.addEventListener("load", function() {
     myOrientation(grid_container_phone, footer_phone);
   }

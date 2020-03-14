@@ -3,7 +3,7 @@ version: "3"
 services:
 
   siabim_django:
-    image: siabim_django:2.2.10
+    image: siabim_django:2.2.11
     depends_on:
       - siabim_postgresql
     env_file:
