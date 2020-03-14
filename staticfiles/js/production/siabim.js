@@ -1,12 +1,5 @@
 "use strict";
 
-window.addEventListener("load", function () {
-  myOrientation(grid_container_desktop, footer_desktop);
-}, false);
-window.addEventListener("orientationchange", function () {
-  myOrientation(grid_container_desktop, footer_desktop);
-}, false);
-
 function myOrientation(myGrid, myFooter) {
   if (screen.orientation.type == "landscape-primary") {
     myGrid.style.height = "";
@@ -29,4 +22,10 @@ window.addEventListener("load", function () {
 }, false);
 window.addEventListener("orientationchange", function () {
   myOrientation(grid_container_tablet, footer_tablet);
+}, false);
+window.addEventListener("load", function () {
+  myOrientation(grid_container_desktop, footer_desktop);
+}, false);
+window.addEventListener("orientationchange", function () {
+  myOrientation(grid_container_desktop, footer_desktop);
 }, false);

@@ -31,11 +31,12 @@ gulp.task('css', () => {
 });
 
 gulp.task('javascript', () => {
-  return gulp.src(
+  return gulp.src([
     '/staticfiles/js/development/modules/globals.js',
     '/staticfiles/js/development/modules/phone.js',
     '/staticfiles/js/development/modules/tablet.js',
-    )
+    '/staticfiles/js/development/modules/desktop.js',
+    ])
     .pipe(concat('siabim_es6_build.js'))
     .pipe(gulp.dest('/staticfiles/js/development/'))
     .pipe(babel({
