@@ -1,11 +1,11 @@
 "use strict";
 
-var screenOrientation = function screenOrientation(deviceGrid, deviceFooter) {
+var screenOrientation = function screenOrientation(deviceGridContainer, deviceFooter) {
   if (screen.orientation.type == "landscape-primary") {
-    deviceGrid.style.height = "";
+    deviceGridContainer.style.height = "";
     deviceFooter.style.position = "";
   } else if (screen.orientation.type == "portrait-primary") {
-    deviceGrid.style.height = "100%";
+    deviceGridContainer.style.height = "100%";
     deviceFooter.style.position = "absolute";
   }
 };
