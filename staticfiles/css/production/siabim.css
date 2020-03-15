@@ -390,7 +390,6 @@ body {
 
 #grid_container_tablet {
   width: 95%;
-  height: 100%;
   margin: 0px auto; }
   @media (max-width: 899px) {
     #grid_container_tablet {
@@ -420,21 +419,22 @@ body {
 #content_tablet {
   background-color: rgba(255, 165, 0, 0.4);
   width: 100%;
-  height: 820px; }
+  height: 400px; }
 
 #footer_tablet_row {
-  position: absolute;
   bottom: 0px; }
 
 #footer_tablet {
   background-color: rgba(255, 165, 0, 0.55);
   width: 100%;
-  height: 45px; }
+  height: 35px; }
 
 #grid_container_phone {
   width: 95%;
   max-width: 1000px;
-  margin: 0px auto; }
+  height: 100%;
+  margin: 0px auto;
+  position: relative; }
   @media (min-width: 900px) and (max-width: 1099px) {
     #grid_container_phone {
       display: none; } }
@@ -456,10 +456,16 @@ body {
 #menu_phone {
   background-color: rgba(0, 0, 255, 0.3);
   width: 100%;
-  height: 320px; }
+  height: 80px; }
+
+#content_phone {
+  background-color: rgba(0, 0, 255, 0.6);
+  width: 100%;
+  height: 150px; }
 
 #footer_phone {
   background-color: rgba(0, 0, 255, 0.5);
   width: 100%;
   height: 30px;
+  position: absolute;
   bottom: 0px; }
