@@ -1,15 +1,13 @@
-let content_tablet_available_height = screen.height -
-                                      header_tablet_row.offsetHeight -
-                                      menu_tablet_row.offsetHeight   -
-                                      footer_tablet_row.offsetHeight;
 
-let content_tablet_height = content_tablet.offsetHeight;
+let tabletOrientation = () => {
 
+  let content_tablet_available_height = screen.height -
+                                        header_tablet_row.offsetHeight -
+                                        menu_tablet_row.offsetHeight   -
+                                        footer_tablet_row.offsetHeight;
 
-console.log(content_tablet_available_height);
+  let content_tablet_height = content_tablet.offsetHeight;
 
-
-let mobileOrientationChange = () => {
   if (content_tablet_height > content_tablet_available_height) {
     grid_container_tablet.style.height = "";
     footer_tablet_row.style.position   = "";
@@ -21,14 +19,14 @@ let mobileOrientationChange = () => {
 };
 
 window.addEventListener("load", function() {
-  console.log("etwas gedreht...");
-  mobileOrientationChange();
+  console.log("geladen...");
+  tabletOrientation();
   }
   , false);
 
 window.addEventListener("orientationchange", function() {
-  console.log("etwas gedreht...");
-  mobileOrientationChange();
+  console.log("gedreht...");
+  tabletOrientation();
   }
   , false);
 

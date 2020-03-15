@@ -1,5 +1,4 @@
 
-
 let screenOrientation = (deviceGridContainer, deviceFooter) => {
   if (screen.orientation.type == "landscape-primary") {
       deviceGridContainer.style.height = "";
