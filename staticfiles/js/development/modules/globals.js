@@ -9,3 +9,4 @@ let screenOrientation = (deviceGridContainer, deviceFooter) => {
       deviceFooter.style.position = "absolute";
   }
 };
+
