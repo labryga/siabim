@@ -9,23 +9,26 @@ let tabletFooterPosition = () => {
   let content_tablet_height = contentTablet.offsetHeight;
 
   if (content_tablet_height > content_tablet_available_height) {
-    gridContainerTablet.style.height = "";
-    footerTabletRow.style.position   = "";
+      gridContainerTablet.style.height = "";
+      footerTabletRow.style.position   = "";
   } else {
-    gridContainerTablet.style.height = "100%";
-    footerTabletRow.style.position   = "absolute";
+      gridContainerTablet.style.height = "100%";
+      footerTabletRow.style.position   = "absolute";
   }
 
 };
 
 
-window.addEventListener("load", function() {
-  tabletFooterPosition();
-  }
-  , false);
+let mgl = window.matchMedia("(min-width: 900px) and (max-width: 1099px)");
 
-window.addEventListener("orientationchange", function() {
-  tabletFooterPosition();
-  }
-  , false);
+mgl.addListener(function(m) {
+  if(m.matches) {
+    tabletFooterPosition();
+  } else {
+    desktopFooterPosition();
+  };
+}
+);
+
+
 

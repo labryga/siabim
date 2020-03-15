@@ -326,10 +326,10 @@ body {
   padding: 0px;
   position: relative;
   font-family: Nunito-Regular; }
-  @media (max-width: 899px) {
+  @media (max-width: 699px) {
     body {
       background-color: rgba(0, 0, 255, 0.1); } }
-  @media (min-width: 900px) and (max-width: 1099px) {
+  @media (min-width: 700px) and (max-width: 1099px) {
     body {
       background-color: rgba(255, 0, 0, 0.1); } }
   @media (min-width: 1100px) {
@@ -350,12 +350,12 @@ body {
 
 #gridContainerDesktop {
   width: 95%;
-  max-width: 1000px;
+  max-width: 1366px;
   margin: 0px auto; }
-  @media (max-width: 899px) {
+  @media (max-width: 699px) {
     #gridContainerDesktop {
       display: none; } }
-  @media (min-width: 900px) and (max-width: 1099px) {
+  @media (min-width: 700px) and (max-width: 1099px) {
     #gridContainerDesktop {
       display: none; } }
 
@@ -372,13 +372,13 @@ body {
 
 #menuDesktop {
   background-color: rgba(0, 128, 0, 0.2);
-  width: 250px;
+  width: calc(100% - 1024px);
   height: 700px;
   float: left; }
 
 #contentDesktop {
   background-color: rgba(0, 128, 0, 0.5);
-  width: calc(100% - 250px);
+  width: 1024px;
   height: 1050px;
   float: right; }
 
@@ -393,7 +393,7 @@ body {
 #gridContainerTablet {
   width: 95%;
   margin: 0px auto; }
-  @media (max-width: 899px) {
+  @media (max-width: 699px) {
     #gridContainerTablet {
       display: none; } }
   @media (min-width: 1100px) {
@@ -421,7 +421,7 @@ body {
 #contentTablet {
   background-color: rgba(255, 165, 0, 0.4);
   width: 100%;
-  height: 400px; }
+  height: 1400px; }
 
 #footerTabletRow {
   bottom: 0px; }
@@ -437,7 +437,7 @@ body {
   max-width: 1000px;
   margin: 0px auto;
   position: relative; }
-  @media (min-width: 900px) and (max-width: 1099px) {
+  @media (min-width: 700px) and (max-width: 1099px) {
     #grid_container_phone {
       display: none; } }
   @media (min-width: 1100px) {

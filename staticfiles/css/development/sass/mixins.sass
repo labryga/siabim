@@ -10,17 +10,17 @@ $footer_height: 25
     clear:    both
 
 @mixin phone
-  @media (max-width: 899px)
+  @media (max-width: 699px)
     @content
-  @media (min-width: 900px) and (max-width: 1099px)
+  @media (min-width: 700px) and (max-width: 1099px)
     display: none
   @media (min-width: 1100px)
     display: none
 
 @mixin tablet
-  @media (min-width: 900px) and (max-width: 1099px)
+  @media (min-width: 700px) and (max-width: 1099px)
     @content
-  @media (max-width: 899px)
+  @media (max-width: 699px)
     display: none
   @media (min-width: 1100px)
     display: none
@@ -28,12 +28,12 @@ $footer_height: 25
 @mixin desktop
   @media (min-width: 1100px)
     @content
-  @media (max-width: 899px)
+  @media (max-width: 699px)
     display: none
-  @media (min-width: 900px) and (max-width: 1099px)
+  @media (min-width: 700px) and (max-width: 1099px)
     display: none
 
 
 @mixin page_header
-  background-image:  url("siabim_web.png")
+  background-image:   url("siabim_web.png")
   background-repeat: no-repeat

@@ -17,12 +17,10 @@ let desktopFooterPosition = () => {
 
 
 window.addEventListener("load", function() {
-    desktopFooterPosition(gridContainerDesktop, footerDesktop);
-  }
-  , false); 
+    desktopFooterPosition();
+  }, false); 
 
 window.addEventListener("orientationchange", function() {
-    desktopFooterPosition(gridContainerDesktop, footerDesktop);
-  }
-  , false);
+    desktopFooterPosition();
+  }, false);
 

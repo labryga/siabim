@@ -33,12 +33,16 @@ var tabletFooterPosition = function tabletFooterPosition() {
   }
 };
 
-window.addEventListener("load", function () {
-  tabletFooterPosition();
-}, false);
-window.addEventListener("orientationchange", function () {
-  tabletFooterPosition();
-}, false);
+var mgl = window.matchMedia("(min-width: 900px) and (max-width: 1099px)");
+mgl.addListener(function (m) {
+  if (m.matches) {
+    tabletFooterPosition();
+  } else {
+    desktopFooterPosition();
+  }
+
+  ;
+});
 
 var desktopFooterPosition = function desktopFooterPosition() {
   var contentDesktopAvailableHeight = screen.height - headerDesktop.offsetHeight - footerDesktopRow.offsetHeight;
@@ -54,8 +58,8 @@ var desktopFooterPosition = function desktopFooterPosition() {
 };
 
 window.addEventListener("load", function () {
-  desktopFooterPosition(gridContainerDesktop, footerDesktop);
+  desktopFooterPosition();
 }, false);
 window.addEventListener("orientationchange", function () {
-  desktopFooterPosition(gridContainerDesktop, footerDesktop);
+  desktopFooterPosition();
 }, false);
