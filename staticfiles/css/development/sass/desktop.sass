@@ -1,35 +1,39 @@
 @import "mixins.sass"
 
-#grid_container_desktop
+#gridContainerDesktop
   @include desktop
-  width:      95%
-  height:     100%
-  max-width:  1000px
-  margin:     0px auto
+  width:     95%
+  // height:    100%
+  max-width: 1000px
+  margin:    0px auto
 
-#header_desktop
+#headerDesktop
   @include page_header
   background-position: right 
   background-origin:   content-box
   background-size:     contain
   width:   100%
-  height:  80px
-  margin:  30px auto
-  padding: 15px 50px
+  height:  90px
+  margin:  0px auto
+  padding: 20px 30px
 
-#menu_desktop
-  background-color: rgba(green, 0.4)
-  width:  400px
-  height: 400px
+$menu-desktop-width: 250px
+#menuDesktop
+  background-color: rgba(green, 0.2)
+  width:  $menu-desktop-width
+  height: 700px
   float:  left
 
-#content_desktop
-  background-color: rgba(green, 0.6)
-  width:  400px
-  height: 400px
+#contentDesktop
+  background-color: rgba(green, 0.5)
+  width:  calc(100% - #{$menu-desktop-width})
+  height: 1050px
   float:  right
 
-#footer_desktop_row
+#footerDesktopRow
+  bottom: 0px
+
+#footerDesktop
   background-color: rgba(green, 0.15)
   width:    100%
   height:   35px

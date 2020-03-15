@@ -337,68 +337,70 @@ body {
       background-color: rgba(0, 128, 0, 0.1); } }
 
 .grid_container {
-  border: 0px dotted rgba(255, 0, 0, 0.9);
+  border: 1px dotted rgba(255, 0, 0, 0.9);
   position: relative; }
 
 .grid_row {
   width: 100%;
-  border: 0px dashed rgba(0, 0, 0, 0.6); }
+  border: 1px dashed rgba(0, 0, 0, 0.6); }
   .grid_row:after {
     display: table;
     content: "";
     clear: both; }
 
-#grid_container_desktop {
+#gridContainerDesktop {
   width: 95%;
-  height: 100%;
   max-width: 1000px;
   margin: 0px auto; }
   @media (max-width: 899px) {
-    #grid_container_desktop {
+    #gridContainerDesktop {
       display: none; } }
   @media (min-width: 900px) and (max-width: 1099px) {
-    #grid_container_desktop {
+    #gridContainerDesktop {
       display: none; } }
 
-#header_desktop {
+#headerDesktop {
   background-image: url("siabim_web.png");
   background-repeat: no-repeat;
   background-position: right;
   background-origin: content-box;
   background-size: contain;
   width: 100%;
-  height: 80px;
-  margin: 30px auto;
-  padding: 15px 50px; }
+  height: 90px;
+  margin: 0px auto;
+  padding: 20px 30px; }
 
-#menu_desktop {
-  background-color: rgba(0, 128, 0, 0.4);
-  width: 400px;
-  height: 400px;
+#menuDesktop {
+  background-color: rgba(0, 128, 0, 0.2);
+  width: 250px;
+  height: 700px;
   float: left; }
 
-#content_desktop {
-  background-color: rgba(0, 128, 0, 0.6);
-  width: 400px;
-  height: 400px;
+#contentDesktop {
+  background-color: rgba(0, 128, 0, 0.5);
+  width: calc(100% - 250px);
+  height: 1050px;
   float: right; }
 
-#footer_desktop_row {
+#footerDesktopRow {
+  bottom: 0px; }
+
+#footerDesktop {
   background-color: rgba(0, 128, 0, 0.15);
   width: 100%;
   height: 35px; }
 
-#grid_container_tablet {
+#gridContainerTablet {
   width: 95%;
   margin: 0px auto; }
   @media (max-width: 899px) {
-    #grid_container_tablet {
+    #gridContainerTablet {
       display: none; } }
   @media (min-width: 1100px) {
-    #grid_container_tablet {
+    #gridContainerTablet {
       display: none; } }
 
-#header_tablet {
+#headerTablet {
   background-image: url("siabim_web.png");
   background-repeat: no-repeat;
   background-color: rgba(255, 165, 0, 0.2);
@@ -410,24 +412,25 @@ body {
   margin: 10px auto;
   padding: 15px 50px; }
 
-#menu_tablet {
+#menuTablet {
   background-color: rgba(255, 165, 0, 0.2);
   width: 100%;
   height: 100px;
   margin: 10px 0px; }
 
-#content_tablet {
+#contentTablet {
   background-color: rgba(255, 165, 0, 0.4);
   width: 100%;
   height: 400px; }
 
-#footer_tablet_row {
+#footerTabletRow {
   bottom: 0px; }
 
-#footer_tablet {
+#footerTablet {
   background-color: rgba(255, 165, 0, 0.55);
   width: 100%;
-  height: 35px; }
+  height: 35px;
+  margin: 10px 0px 0px 0px; }
 
 #grid_container_phone {
   width: 95%;

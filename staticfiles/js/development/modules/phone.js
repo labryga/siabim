@@ -1,4 +1,5 @@
-let phoneOrientation = () => {
+
+let phoneFooterPosition = () => {
 
   let content_phone_available_height = screen.height -
                                         header_phone_row.offsetHeight -
@@ -17,14 +18,14 @@ let phoneOrientation = () => {
 
 };
 
+
 window.addEventListener("load", function() {
-  phoneOrientation();
+  phoneFooterPosition();
   }
   , false); 
 
-
 window.addEventListener("orientationchange", function() {
-  phoneOrientation();
+  phoneFooterPosition();
   }
   , false);
 

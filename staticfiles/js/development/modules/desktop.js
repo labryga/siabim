@@ -1,12 +1,28 @@
-//
-// window.addEventListener("load", function() {
-//     screenOrientation(grid_container_desktop, footer_desktop);
-//   }
-//   , false); 
-//
-//
-// window.addEventListener("orientationchange", function() {
-//     screenOrientation(grid_container_desktop, footer_desktop);
-//   }
-//   , false);
-//
+
+let desktopFooterPosition = () => {
+  let contentDesktopAvailableHeight = screen.height -
+                                      headerDesktop.offsetHeight -
+                                      footerDesktopRow.offsetHeight;
+
+  let contentDesktopHeight = contentDesktop.offsetHeight;
+
+  if (contentDesktopHeight < contentDesktopAvailableHeight) {
+    gridContainerDesktop.style.height = "100%";
+    footerDesktopRow.style.position   = "absolute";
+  } else {
+    gridContainerDesktop.style.height = "";
+    footerDesktopRow.style.position   = "";
+  }
+};
+
+
+window.addEventListener("load", function() {
+    desktopFooterPosition(gridContainerDesktop, footerDesktop);
+  }
+  , false); 
+
+window.addEventListener("orientationchange", function() {
+    desktopFooterPosition(gridContainerDesktop, footerDesktop);
+  }
+  , false);
+

@@ -1,16 +1,6 @@
 "use strict";
 
-var screenOrientation = function screenOrientation(deviceGridContainer, deviceFooter) {
-  if (screen.orientation.type == "landscape-primary") {
-    deviceGridContainer.style.height = "";
-    deviceFooter.style.position = "";
-  } else if (screen.orientation.type == "portrait-primary") {
-    deviceGridContainer.style.height = "100%";
-    deviceFooter.style.position = "absolute";
-  }
-};
-
-var phoneOrientation = function phoneOrientation() {
+var phoneFooterPosition = function phoneFooterPosition() {
   var content_phone_available_height = screen.height - header_phone_row.offsetHeight - menu_phone_row.offsetHeight - footer_phone_row.offsetHeight;
   var content_phone_height = content_phone.offsetHeight;
 
@@ -24,41 +14,48 @@ var phoneOrientation = function phoneOrientation() {
 };
 
 window.addEventListener("load", function () {
-  phoneOrientation();
+  phoneFooterPosition();
 }, false);
 window.addEventListener("orientationchange", function () {
-  phoneOrientation();
+  phoneFooterPosition();
 }, false);
 
-var tabletOrientation = function tabletOrientation() {
-  var content_tablet_available_height = screen.height - header_tablet_row.offsetHeight - menu_tablet_row.offsetHeight - footer_tablet_row.offsetHeight;
-  var content_tablet_height = content_tablet.offsetHeight;
+var tabletFooterPosition = function tabletFooterPosition() {
+  var content_tablet_available_height = screen.height - headerTabletRow.offsetHeight - menuTabletRow.offsetHeight - footerTabletRow.offsetHeight;
+  var content_tablet_height = contentTablet.offsetHeight;
 
   if (content_tablet_height > content_tablet_available_height) {
-    grid_container_tablet.style.height = "";
-    footer_tablet_row.style.position = "";
+    gridContainerTablet.style.height = "";
+    footerTabletRow.style.position = "";
   } else {
-    grid_container_tablet.style.height = "100%";
-    footer_tablet_row.style.position = "absolute";
+    gridContainerTablet.style.height = "100%";
+    footerTabletRow.style.position = "absolute";
   }
 };
 
 window.addEventListener("load", function () {
-  console.log("geladen...");
-  tabletOrientation();
+  tabletFooterPosition();
 }, false);
 window.addEventListener("orientationchange", function () {
-  console.log("gedreht...");
-  tabletOrientation();
-}, false); //
-// window.addEventListener("load", function() {
-//     screenOrientation(grid_container_desktop, footer_desktop);
-//   }
-//   , false); 
-//
-//
-// window.addEventListener("orientationchange", function() {
-//     screenOrientation(grid_container_desktop, footer_desktop);
-//   }
-//   , false);
-//
+  tabletFooterPosition();
+}, false);
+
+var desktopFooterPosition = function desktopFooterPosition() {
+  var contentDesktopAvailableHeight = screen.height - headerDesktop.offsetHeight - footerDesktopRow.offsetHeight;
+  var contentDesktopHeight = contentDesktop.offsetHeight;
+
+  if (contentDesktopHeight < contentDesktopAvailableHeight) {
+    gridContainerDesktop.style.height = "100%";
+    footerDesktopRow.style.position = "absolute";
+  } else {
+    gridContainerDesktop.style.height = "";
+    footerDesktopRow.style.position = "";
+  }
+};
+
+window.addEventListener("load", function () {
+  desktopFooterPosition(gridContainerDesktop, footerDesktop);
+}, false);
+window.addEventListener("orientationchange", function () {
+  desktopFooterPosition(gridContainerDesktop, footerDesktop);
+}, false);
