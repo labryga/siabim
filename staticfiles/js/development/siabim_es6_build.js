@@ -1,4 +1,5 @@
 
+
 let screenOrientation = (deviceGridContainer, deviceFooter) => {
   if (screen.orientation.type == "landscape-primary") {
       deviceGridContainer.style.height = "";
@@ -35,15 +36,15 @@ window.addEventListener("orientationchange", function() {
   , false);
 
 
-
-window.addEventListener("load", function() {
-    screenOrientation(grid_container_desktop, footer_desktop);
-  }
-  , false); 
-
-
-window.addEventListener("orientationchange", function() {
-    screenOrientation(grid_container_desktop, footer_desktop);
-  }
-  , false);
-
+//
+// window.addEventListener("load", function() {
+//     screenOrientation(grid_container_desktop, footer_desktop);
+//   }
+//   , false); 
+//
+//
+// window.addEventListener("orientationchange", function() {
+//     screenOrientation(grid_container_desktop, footer_desktop);
+//   }
+//   , false);
+//

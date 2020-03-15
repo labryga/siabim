@@ -336,8 +336,11 @@ body {
     body {
       background-color: rgba(0, 128, 0, 0.1); } }
 
+.grid_container {
+  border: 2px dashed rgba(255, 0, 0, 0.9); }
+
 .grid_row {
-  border: 1px dashed rgba(0, 0, 0, 0.2); }
+  border: 1px dashed rgba(0, 0, 0, 0.5); }
   .grid_row:after {
     display: table;
     content: "";
@@ -345,6 +348,7 @@ body {
 
 #grid_container_desktop {
   width: 95%;
+  height: 100%;
   max-width: 1000px;
   margin: 0px auto;
   position: relative; }
@@ -378,10 +382,11 @@ body {
   height: 400px;
   float: right; }
 
-#footer_desktop {
+#footer_desktop_row {
   background-color: rgba(0, 128, 0, 0.15);
   width: 100%;
   height: 35px;
+  position: absolute;
   bottom: 0px; }
 
 #grid_container_tablet {

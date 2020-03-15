@@ -21,10 +21,15 @@ window.addEventListener("load", function () {
 }, false);
 window.addEventListener("orientationchange", function () {
   screenOrientation(grid_container_tablet, footer_tablet);
-}, false);
-window.addEventListener("load", function () {
-  screenOrientation(grid_container_desktop, footer_desktop);
-}, false);
-window.addEventListener("orientationchange", function () {
-  screenOrientation(grid_container_desktop, footer_desktop);
-}, false);
+}, false); //
+// window.addEventListener("load", function() {
+//     screenOrientation(grid_container_desktop, footer_desktop);
+//   }
+//   , false); 
+//
+//
+// window.addEventListener("orientationchange", function() {
+//     screenOrientation(grid_container_desktop, footer_desktop);
+//   }
+//   , false);
+//
