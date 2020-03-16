@@ -1,4 +1,3 @@
-
 let desktopFooterPosition = () => {
   let contentDesktopAvailableHeight = screen.height -
                                       headerDesktop.offsetHeight -

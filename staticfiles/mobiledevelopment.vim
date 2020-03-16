@@ -1435,12 +1435,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 29 - ((2 * winheight(0) + 39) / 78)
+let s:l = 1 - ((0 * winheight(0) + 39) / 78)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-29
-normal! 011|
+1
+normal! 0
 wincmd w
 argglobal
 if bufexists("js/development/modules/tablet.js") | buffer js/development/modules/tablet.js | else | edit js/development/modules/tablet.js | endif
@@ -1738,9 +1738,9 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 exe 'vert 1resize ' . ((&columns * 43 + 68) / 136)
-exe '2resize ' . ((&lines * 39 + 40) / 81)
+exe '2resize ' . ((&lines * 59 + 40) / 81)
 exe 'vert 2resize ' . ((&columns * 92 + 68) / 136)
-exe '3resize ' . ((&lines * 38 + 40) / 81)
+exe '3resize ' . ((&lines * 18 + 40) / 81)
 exe 'vert 3resize ' . ((&columns * 92 + 68) / 136)
 argglobal
 setlocal keymap=
@@ -1998,7 +1998,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 19) / 39)
+let s:l = 1 - ((0 * winheight(0) + 29) / 59)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -2138,17 +2138,18 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 11 - ((10 * winheight(0) + 19) / 38)
+let s:l = 11 - ((10 * winheight(0) + 9) / 18)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 11
 normal! 027|
 wincmd w
+2wincmd w
 exe 'vert 1resize ' . ((&columns * 43 + 68) / 136)
-exe '2resize ' . ((&lines * 39 + 40) / 81)
+exe '2resize ' . ((&lines * 59 + 40) / 81)
 exe 'vert 2resize ' . ((&columns * 92 + 68) / 136)
-exe '3resize ' . ((&lines * 38 + 40) / 81)
+exe '3resize ' . ((&lines * 18 + 40) / 81)
 exe 'vert 3resize ' . ((&columns * 92 + 68) / 136)
 tabnext
 edit css/development/sass/html.sass

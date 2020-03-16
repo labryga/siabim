@@ -64,7 +64,6 @@ mgl.addListener(function(m) {
 );
 
 
-
 let desktopFooterPosition = () => {
   let contentDesktopAvailableHeight = screen.height -
                                       headerDesktop.offsetHeight -

@@ -375,7 +375,15 @@ body {
   background-color: rgba(0, 128, 0, 0.2);
   width: 230px;
   height: 700px;
+  padding: 25px 25px;
   float: left; }
+
+.menuDesktopTitel {
+  color: blue;
+  letter-spacing: 1px; }
+
+.menuDesktopUntertitel {
+  padding: 3px 10px; }
 
 #contentDesktop {
   background-color: rgba(0, 128, 0, 0.5);
