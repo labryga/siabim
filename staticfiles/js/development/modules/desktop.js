@@ -25,8 +25,9 @@ window.addEventListener("orientationchange", function() {
   }, false);
 
 window.addEventListener("resize", function() {
-  contentWidthValue.innerHTML = getComputedStyle(contentWidthValue).width;
-  screenWidth.innerHTML = window.innerWidth;
+  contentWidthValueDesktop.innerHTML = "contentWidth "+
+                                        getComputedStyle(contentWidthValueDesktop).width;
+  screenWidth.innerHTML = "screenWidth " + window.innerWidth;
 });
 
 
