@@ -1738,9 +1738,9 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 exe 'vert 1resize ' . ((&columns * 43 + 68) / 136)
-exe '2resize ' . ((&lines * 59 + 40) / 81)
+exe '2resize ' . ((&lines * 39 + 40) / 81)
 exe 'vert 2resize ' . ((&columns * 92 + 68) / 136)
-exe '3resize ' . ((&lines * 18 + 40) / 81)
+exe '3resize ' . ((&lines * 38 + 40) / 81)
 exe 'vert 3resize ' . ((&columns * 92 + 68) / 136)
 argglobal
 setlocal keymap=
@@ -1866,11 +1866,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 39) / 78)
+let s:l = 27 - ((26 * winheight(0) + 39) / 78)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
+27
 normal! 0
 wincmd w
 argglobal
@@ -1998,7 +1998,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 29) / 59)
+let s:l = 1 - ((0 * winheight(0) + 19) / 39)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -2036,7 +2036,7 @@ setlocal commentstring=//\ %s
 setlocal complete=.,w,b,u,t,i
 setlocal concealcursor=
 setlocal conceallevel=0
-setlocal completefunc=neocomplcache#complete#manual_complete
+setlocal completefunc=neocomplcache#complete#auto_complete
 setlocal nocopyindent
 setlocal cryptmethod=
 setlocal nocursorbind
@@ -2138,18 +2138,17 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 11 - ((10 * winheight(0) + 9) / 18)
+let s:l = 16 - ((15 * winheight(0) + 19) / 38)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-11
-normal! 027|
+16
+normal! 061|
 wincmd w
-2wincmd w
 exe 'vert 1resize ' . ((&columns * 43 + 68) / 136)
-exe '2resize ' . ((&lines * 59 + 40) / 81)
+exe '2resize ' . ((&lines * 39 + 40) / 81)
 exe 'vert 2resize ' . ((&columns * 92 + 68) / 136)
-exe '3resize ' . ((&lines * 18 + 40) / 81)
+exe '3resize ' . ((&lines * 38 + 40) / 81)
 exe 'vert 3resize ' . ((&columns * 92 + 68) / 136)
 tabnext
 edit css/development/sass/html.sass
