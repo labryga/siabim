@@ -24,3 +24,11 @@ window.addEventListener("orientationchange", function() {
     desktopFooterPosition();
   }, false);
 
+window.addEventListener("resize", function() {
+  contentWidthValue.innerHTML = getComputedStyle(contentWidthValue).width;
+  screenWidth.innerHTML = window.innerWidth;
+});
+
+
+
+
