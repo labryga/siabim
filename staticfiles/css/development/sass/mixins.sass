@@ -10,17 +10,17 @@ $footer_height: 25
     clear:    both
 
 @mixin phone
-  @media (max-width: 600px)
+  @media (max-width: 767px)
     @content
-  @media (min-width: 601px)
+  @media (min-width: 768px)
     display: none
   @media (min-width: 1070px)
     display: none
 
 @mixin tablet
-  @media (min-width: 601px)
+  @media (min-width: 768px)
     @content
-  @media (max-width: 600px)
+  @media (max-width: 767px)
     display: none
   @media (min-width: 1070px)
     display: none
@@ -28,9 +28,9 @@ $footer_height: 25
 @mixin desktop
   @media (min-width: 1070px)
     @content
-  @media (max-width: 600px)
+  @media (max-width: 767px)
     display: none
-  @media (min-width: 601px) and (max-width: 1069px)
+  @media (min-width: 768px) and (max-width: 1069px)
     display: none
 
 

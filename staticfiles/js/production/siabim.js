@@ -63,7 +63,3 @@ window.addEventListener("load", function () {
 window.addEventListener("orientationchange", function () {
   desktopFooterPosition();
 }, false);
-window.addEventListener("resize", function () {
-  contentWidthValueDesktop.innerHTML = "contentWidth " + getComputedStyle(contentWidthValueDesktop).width;
-  screenWidth.innerHTML = "screenWidth " + window.innerWidth;
-});

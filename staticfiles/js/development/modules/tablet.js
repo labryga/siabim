@@ -30,5 +30,3 @@ mgl.addListener(function(m) {
 }
 );
 
-
-
