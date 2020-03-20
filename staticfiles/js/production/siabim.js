@@ -33,8 +33,8 @@ var tabletFooterPosition = function tabletFooterPosition() {
   }
 };
 
-var mgl = window.matchMedia("(min-width: 900px) and (max-width: 1099px)");
-mgl.addListener(function (m) {
+var tablet = window.matchMedia("(min-width: 900px) and (max-width: 1099px)");
+tablet.addListener(function (m) {
   if (m.matches) {
     tabletFooterPosition();
   } else {

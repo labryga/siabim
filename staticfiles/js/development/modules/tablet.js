@@ -19,9 +19,9 @@ let tabletFooterPosition = () => {
 };
 
 
-let mgl = window.matchMedia("(min-width: 900px) and (max-width: 1099px)");
+let tablet = window.matchMedia("(min-width: 900px) and (max-width: 1099px)");
 
-mgl.addListener(function(m) {
+tablet.addListener(function(m) {
   if(m.matches) {
     tabletFooterPosition();
   } else {
