@@ -11,14 +11,19 @@ var phoneFooterPosition = function phoneFooterPosition() {
     grid_container_phone.style.height = "100%";
     footer_phone_row.style.position = "absolute";
   }
-};
+}; //
+//
+// window.addEventListener("load", function() {
+//   phoneFooterPosition();
+//   }
+//   , false); 
+//
+// window.addEventListener("orientationchange", function() {
+//   phoneFooterPosition();
+//   }
+//   , false);
+//
 
-window.addEventListener("load", function () {
-  phoneFooterPosition();
-}, false);
-window.addEventListener("orientationchange", function () {
-  phoneFooterPosition();
-}, false);
 
 var tabletFooterPosition = function tabletFooterPosition() {
   var content_tablet_available_height = screen.height - headerTabletRow.offsetHeight - menuTabletRow.offsetHeight - footerTabletRow.offsetHeight;
@@ -33,16 +38,7 @@ var tabletFooterPosition = function tabletFooterPosition() {
   }
 };
 
-var tablet = window.matchMedia("(min-width: 900px) and (max-width: 1099px)");
-tablet.addListener(function (m) {
-  if (m.matches) {
-    tabletFooterPosition();
-  } else {
-    desktopFooterPosition();
-  }
-
-  ;
-});
+var tabletMedia = window.matchMedia("(min-width: 768px) and (max-width: 1070px)");
 
 var desktopFooterPosition = function desktopFooterPosition() {
   var contentDesktopAvailableHeight = screen.height - headerDesktop.offsetHeight - footerDesktopRow.offsetHeight;

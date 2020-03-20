@@ -17,15 +17,15 @@ let phoneFooterPosition = () => {
   }
 
 };
-
-
-window.addEventListener("load", function() {
-  phoneFooterPosition();
-  }
-  , false); 
-
-window.addEventListener("orientationchange", function() {
-  phoneFooterPosition();
-  }
-  , false);
-
+//
+//
+// window.addEventListener("load", function() {
+//   phoneFooterPosition();
+//   }
+//   , false); 
+//
+// window.addEventListener("orientationchange", function() {
+//   phoneFooterPosition();
+//   }
+//   , false);
+//

@@ -22,4 +22,3 @@ window.addEventListener("load", function() {
 window.addEventListener("orientationchange", function() {
     desktopFooterPosition();
   }, false);
-

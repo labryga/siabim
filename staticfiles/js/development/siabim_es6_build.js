@@ -18,18 +18,18 @@ let phoneFooterPosition = () => {
   }
 
 };
-
-
-window.addEventListener("load", function() {
-  phoneFooterPosition();
-  }
-  , false); 
-
-window.addEventListener("orientationchange", function() {
-  phoneFooterPosition();
-  }
-  , false);
-
+//
+//
+// window.addEventListener("load", function() {
+//   phoneFooterPosition();
+//   }
+//   , false); 
+//
+// window.addEventListener("orientationchange", function() {
+//   phoneFooterPosition();
+//   }
+//   , false);
+//
 
 
 let tabletFooterPosition = () => {
@@ -52,16 +52,7 @@ let tabletFooterPosition = () => {
 };
 
 
-let tablet = window.matchMedia("(min-width: 900px) and (max-width: 1099px)");
-
-tablet.addListener(function(m) {
-  if(m.matches) {
-    tabletFooterPosition();
-  } else {
-    desktopFooterPosition();
-  };
-}
-);
+let tabletMedia = window.matchMedia("(min-width: 768px) and (max-width: 1070px)");
 
 
 let desktopFooterPosition = () => {
@@ -88,4 +79,3 @@ window.addEventListener("load", function() {
 window.addEventListener("orientationchange", function() {
     desktopFooterPosition();
   }, false);
-
