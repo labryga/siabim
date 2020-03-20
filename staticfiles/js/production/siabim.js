@@ -11,21 +11,11 @@ var phoneFooterPosition = function phoneFooterPosition() {
     grid_container_phone.style.height = "100%";
     footer_phone_row.style.position = "absolute";
   }
-}; //
-//
-// window.addEventListener("load", function() {
-//   phoneFooterPosition();
-//   }
-//   , false); 
-//
-// window.addEventListener("orientationchange", function() {
-//   phoneFooterPosition();
-//   }
-//   , false);
-//
+};
 
+var tabletMedia = window.matchMedia("(min-width: 768px) and (max-width: 1070px)");
 
-var tabletFooterPosition = function tabletFooterPosition() {
+var tabletFooterPosition = function tabletFooterPosition(mediaQuery) {
   var content_tablet_available_height = screen.height - headerTabletRow.offsetHeight - menuTabletRow.offsetHeight - footerTabletRow.offsetHeight;
   var content_tablet_height = contentTablet.offsetHeight;
 
@@ -36,9 +26,10 @@ var tabletFooterPosition = function tabletFooterPosition() {
     gridContainerTablet.style.height = "100%";
     footerTabletRow.style.position = "absolute";
   }
-};
 
-var tabletMedia = window.matchMedia("(min-width: 768px) and (max-width: 1070px)");
+  console.log("available height:" + content_tablet_available_height);
+  console.log("content height" + content_tablet_height);
+};
 
 var desktopFooterPosition = function desktopFooterPosition() {
   var contentDesktopAvailableHeight = screen.height - headerDesktop.offsetHeight - footerDesktopRow.offsetHeight;
@@ -53,9 +44,13 @@ var desktopFooterPosition = function desktopFooterPosition() {
   }
 };
 
-window.addEventListener("load", function () {
-  desktopFooterPosition();
-}, false);
 window.addEventListener("orientationchange", function () {
   desktopFooterPosition();
+  tabletFooterPosition();
+  phoneFooterPosition();
+}, false);
+window.addEventListener("load", function () {
+  desktopFooterPosition();
+  tabletFooterPosition();
+  phoneFooterPosition();
 }, false);

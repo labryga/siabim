@@ -13,12 +13,3 @@ let desktopFooterPosition = () => {
     footerDesktopRow.style.position   = "";
   }
 };
-
-
-window.addEventListener("load", function() {
-    desktopFooterPosition();
-  }, false); 
-
-window.addEventListener("orientationchange", function() {
-    desktopFooterPosition();
-  }, false);

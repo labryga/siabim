@@ -1,5 +1,4 @@
 
-
 let phoneFooterPosition = () => {
 
   let content_phone_available_height = screen.height -
@@ -18,21 +17,11 @@ let phoneFooterPosition = () => {
   }
 
 };
-//
-//
-// window.addEventListener("load", function() {
-//   phoneFooterPosition();
-//   }
-//   , false); 
-//
-// window.addEventListener("orientationchange", function() {
-//   phoneFooterPosition();
-//   }
-//   , false);
-//
 
 
-let tabletFooterPosition = () => {
+let tabletMedia = window.matchMedia("(min-width: 768px) and (max-width: 1070px)");
+
+let tabletFooterPosition = (mediaQuery) => {
 
   let content_tablet_available_height = screen.height -
                                         headerTabletRow.offsetHeight -
@@ -48,12 +37,9 @@ let tabletFooterPosition = () => {
       gridContainerTablet.style.height = "100%";
       footerTabletRow.style.position   = "absolute";
   }
-
+  console.log("available height:" + content_tablet_available_height);
+  console.log("content height" + content_tablet_height);
 };
-
-
-let tabletMedia = window.matchMedia("(min-width: 768px) and (max-width: 1070px)");
-
 
 let desktopFooterPosition = () => {
   let contentDesktopAvailableHeight = screen.height -
@@ -71,11 +57,15 @@ let desktopFooterPosition = () => {
   }
 };
 
+window.addEventListener("orientationchange", function() {
+    desktopFooterPosition();
+    tabletFooterPosition();
+    phoneFooterPosition();
+  }, false);
 
 window.addEventListener("load", function() {
     desktopFooterPosition();
+    tabletFooterPosition();
+    phoneFooterPosition();
   }, false); 
 
-window.addEventListener("orientationchange", function() {
-    desktopFooterPosition();
-  }, false);
