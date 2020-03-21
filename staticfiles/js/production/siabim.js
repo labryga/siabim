@@ -1,10 +1,10 @@
 "use strict";
 
 var phoneFooterPosition = function phoneFooterPosition() {
-  var content_phone_available_height = screen.height - header_phone_row.offsetHeight - menu_phone_row.offsetHeight - footer_phone_row.offsetHeight;
-  var content_phone_height = content_phone.offsetHeight;
+  var contentPhoneAvailableHeight = screen.height - header_phone_row.offsetHeight - menu_phone_row.offsetHeight - footer_phone_row.offsetHeight;
+  var contentPhoneHeight = content_phone.offsetHeight;
 
-  if (content_phone_height > content_phone_available_height) {
+  if (contentPhoneHeight > contentPhoneAvailableHeight) {
     grid_container_phone.style.height = "";
     footer_phone_row.style.position = "";
   } else {
@@ -13,41 +13,37 @@ var phoneFooterPosition = function phoneFooterPosition() {
   }
 };
 
-var tabletMedia = window.matchMedia("(min-width: 768px) and (max-width: 1070px)");
+var tabletFooterPosition = function tabletFooterPosition() {
+  var contentTabletAvailableHeight = screen.height - headerTabletRow.offsetHeight - menuTabletRow.offsetHeight - footerTabletRow.offsetHeight;
+  var contentTabletHeight = contentTablet.offsetHeight;
 
-var tabletFooterPosition = function tabletFooterPosition(mediaQuery) {
-  var content_tablet_available_height = screen.height - headerTabletRow.offsetHeight - menuTabletRow.offsetHeight - footerTabletRow.offsetHeight;
-  var content_tablet_height = contentTablet.offsetHeight;
-
-  if (content_tablet_height > content_tablet_available_height) {
-    gridContainerTablet.style.height = "";
-    footerTabletRow.style.position = "";
-  } else {
+  if (contentTabletHeight < contentTabletAvailableHeight) {
     gridContainerTablet.style.height = "100%";
     footerTabletRow.style.position = "absolute";
+  } else {
+    gridContainerTablet.style.height = "";
+    footerTabletRow.style.position = "";
   }
 
-  console.log("available height:" + content_tablet_available_height);
-  console.log("content height" + content_tablet_height);
+  console.log("available height:" + contentTabletAvailableHeight);
+  console.log("content height" + contentTabletHeight);
 };
 
 var desktopFooterPosition = function desktopFooterPosition() {
   var contentDesktopAvailableHeight = screen.height - headerDesktop.offsetHeight - footerDesktopRow.offsetHeight;
   var contentDesktopHeight = contentDesktop.offsetHeight;
 
-  if (contentDesktopHeight < contentDesktopAvailableHeight) {
-    gridContainerDesktop.style.height = "100%";
-    footerDesktopRow.style.position = "absolute";
-  } else {
+  if (contentDesktopHeight > contentDesktopAvailableHeight) {
     gridContainerDesktop.style.height = "";
     footerDesktopRow.style.position = "";
+  } else {
+    gridContainerDesktop.style.height = "100%";
+    footerDesktopRow.style.position = "absolute";
   }
 };
 
 window.addEventListener("orientationchange", function () {
-  desktopFooterPosition();
-  tabletFooterPosition();
-  phoneFooterPosition();
+  location.reload();
 }, false);
 window.addEventListener("load", function () {
   desktopFooterPosition();

@@ -1,22 +1,19 @@
 
-let tabletMedia = window.matchMedia("(min-width: 768px) and (max-width: 1070px)");
-
-let tabletFooterPosition = (mediaQuery) => {
-
-  let content_tablet_available_height = screen.height -
+let tabletFooterPosition = () => {
+  let contentTabletAvailableHeight = screen.height -
                                         headerTabletRow.offsetHeight -
                                         menuTabletRow.offsetHeight   -
                                         footerTabletRow.offsetHeight;
 
-  let content_tablet_height = contentTablet.offsetHeight;
+  let contentTabletHeight = contentTablet.offsetHeight;
 
-  if (content_tablet_height > content_tablet_available_height) {
-      gridContainerTablet.style.height = "";
-      footerTabletRow.style.position   = "";
-  } else {
+  if (contentTabletHeight < contentTabletAvailableHeight) {
       gridContainerTablet.style.height = "100%";
       footerTabletRow.style.position   = "absolute";
+  } else {
+      gridContainerTablet.style.height = "";
+      footerTabletRow.style.position   = "";
   }
-  console.log("available height:" + content_tablet_available_height);
-  console.log("content height" + content_tablet_height);
+  console.log("available height:" + contentTabletAvailableHeight);
+  console.log("content height" + contentTabletHeight);
 };

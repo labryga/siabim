@@ -1,7 +1,5 @@
 window.addEventListener("orientationchange", function() {
-    desktopFooterPosition();
-    tabletFooterPosition();
-    phoneFooterPosition();
+    location.reload();
   }, false);
 
 window.addEventListener("load", function() {
