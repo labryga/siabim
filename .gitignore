@@ -4,6 +4,7 @@
 !/gulp/
 !/postgresql
 !/staticfiles
+/staticfiles/django/
 !/nginx
 !/vim/
 .npm
