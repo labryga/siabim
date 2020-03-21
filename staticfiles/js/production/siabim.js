@@ -1,61 +1,25 @@
 "use strict";
 
-var phoneFooterPosition = function phoneFooterPosition() {
-  var contentPhoneAvailableHeight = screen.height - header_phone_row.offsetHeight - menu_phone_row.offsetHeight - footer_phone_row.offsetHeight;
-  var contentPhoneHeight = content_phone.offsetHeight;
-
-  if (contentPhoneHeight < contentPhoneAvailableHeight) {
-    grid_container_phone.style.height = "100%";
-    footer_phone_row.style.position = "absolute";
-  } else {
-    grid_container_phone.style.height = "";
-    footer_phone_row.style.position = "";
-  }
-};
-
-var tabletFooterPosition = function tabletFooterPosition() {
-  var contentTabletAvailableHeight = screen.height - headerTabletRow.offsetHeight - menuTabletRow.offsetHeight - footerTabletRow.offsetHeight;
-  var contentTabletHeight = contentTablet.offsetHeight;
-
-  if (contentTabletHeight < contentTabletAvailableHeight) {
-    gridContainerTablet.style.height = "100%";
-    footerTabletRow.style.position = "absolute";
-  } else {
-    gridContainerTablet.style.height = "";
-    footerTabletRow.style.position = "";
-  }
-
-  console.log("available height:" + contentTabletAvailableHeight);
-  console.log("content height" + contentTabletHeight);
-};
-
-var desktopFooterPosition = function desktopFooterPosition() {
-  var contentDesktopAvailableHeight = screen.height - headerDesktop.offsetHeight - footerDesktopRow.offsetHeight;
-  var contentDesktopHeight = contentDesktop.offsetHeight;
-
-  if (contentDesktopHeight < contentDesktopAvailableHeight) {
-    gridContainerDesktop.style.height = "100%";
-    footerDesktopRow.style.position = "absolute";
-  } else {
-    gridContainerDesktop.style.height = "";
-    footerDesktopRow.style.position = "";
-  }
-};
-
-var footerPosition = function footerPosition(header, content, gridContainer, footerRow) {
+var footerPosition = function footerPosition(gridContainer, headerRow, contentRow, footerRow) {
   var contentAvailableHeight = screen.height - headerRow.offsetHeight - footerRow.offsetHeight;
-  var contentHeight = content.offsetHeight;
+  var contentHeight = contentRow.offsetHeight;
 
   if (contentHeight < contentAvailableHeight) {
     gridContainer.style.height = "100%";
+    footerRow.style.position = "absolute";
+  } else {
+    gridContainer.style.height = "";
+    footerRow.style.position = "";
   }
+
+  ;
 };
 
 window.addEventListener("orientationchange", function () {
   location.reload();
 }, false);
 window.addEventListener("load", function () {
-  desktopFooterPosition();
-  tabletFooterPosition();
-  phoneFooterPosition();
+  footerPosition(gridContainerDesktop, headerDesktopRow, contentDesktopRow, footerDesktopRow);
+  footerPosition(gridContainerTablet, headerTabletRow, contentTabletRow, footerTabletRow);
+  footerPosition(gridContainerPhone, headerPhoneRow, contentPhoneRow, footerPhoneRow);
 }, false);

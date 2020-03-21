@@ -431,7 +431,7 @@ body {
 #contentTablet {
   background-color: rgba(255, 165, 0, 0.4);
   width: 100%;
-  height: 300px; }
+  height: 1300px; }
 
 #footerTabletRow {
   bottom: 0px; }
@@ -472,7 +472,7 @@ body {
 #contentPhone {
   background-color: rgba(0, 0, 255, 0.4);
   width: 100%;
-  height: 850px; }
+  height: 50px; }
 
 #footerPhoneRow {
   bottom: 0px; }
