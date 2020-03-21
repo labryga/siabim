@@ -6,11 +6,11 @@ let desktopFooterPosition = () => {
 
   let contentDesktopHeight = contentDesktop.offsetHeight;
 
-  if (contentDesktopHeight > contentDesktopAvailableHeight) {
-    gridContainerDesktop.style.height = "";
-    footerDesktopRow.style.position   = "";
-  } else {
+  if (contentDesktopHeight < contentDesktopAvailableHeight) {
     gridContainerDesktop.style.height = "100%";
     footerDesktopRow.style.position   = "absolute";
+  } else {
+    gridContainerDesktop.style.height = "";
+    footerDesktopRow.style.position   = "";
   }
 };

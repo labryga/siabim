@@ -7,12 +7,12 @@ let phoneFooterPosition = () => {
 
   let contentPhoneHeight = content_phone.offsetHeight;
 
-  if (contentPhoneHeight > contentPhoneAvailableHeight) {
-      grid_container_phone.style.height = "";
-      footer_phone_row.style.position   = "";
-  } else {
+  if (contentPhoneHeight < contentPhoneAvailableHeight) {
       grid_container_phone.style.height = "100%";
       footer_phone_row.style.position   = "absolute";
+  } else {
+      grid_container_phone.style.height = "";
+      footer_phone_row.style.position   = "";
   }
 
 };
