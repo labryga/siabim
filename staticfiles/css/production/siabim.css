@@ -442,18 +442,18 @@ body {
   height: 45px;
   margin: 5px 0px 0px 0px; }
 
-#grid_container_phone {
+#gridContainerPhone {
   width: 95%;
   margin: 0px auto;
   position: relative; }
   @media (min-width: 768px) {
-    #grid_container_phone {
+    #gridContainerPhone {
       display: none; } }
   @media (min-width: 1070px) {
-    #grid_container_phone {
+    #gridContainerPhone {
       display: none; } }
 
-#header_phone {
+#headerPhone {
   background-image: url("siabim_web.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -464,20 +464,20 @@ body {
   margin: 10px auto;
   padding: 6px; }
 
-#menu_phone {
+#menuPhone {
   background-color: rgba(0, 0, 255, 0.2);
   width: 100%;
   height: 80px; }
 
-#content_phone {
+#contentPhone {
   background-color: rgba(0, 0, 255, 0.4);
   width: 100%;
   height: 850px; }
 
-#footer_phone_row {
+#footerPhoneRow {
   bottom: 0px; }
 
-#footer_phone {
+#footerPhone {
   background-color: rgba(0, 0, 255, 0.5);
   width: 100%;
   height: 30px; }
