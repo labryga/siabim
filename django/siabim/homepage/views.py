@@ -1,5 +1,6 @@
 from django.views.generic import TemplateView
-from ckeditor_uploader.fields import RichTextField
+from django.db import models
+from ckeditor.fields import RichTextField
 
 
 class SiaBimHomepage(TemplateView):
