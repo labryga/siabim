@@ -1,3 +1,8 @@
 from django.contrib import admin
+from . models import HomepageModel
 
-# Register your models here.
+
+class HomepageModelAdmin(admin.ModelAdmin):
+    pass
+
+admin.site.register(HomepageModel, HomepageModelAdmin)
