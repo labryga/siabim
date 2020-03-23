@@ -1,10 +1,10 @@
-from django.views.generic import TemplateView
-from django.db import models
-from ckeditor.fields import RichTextField
+from django.views.generic import TemplateView, ListView
+from . models import HomepageModel
 
 
-class SiaBimHomepage(TemplateView):
+class SiaBimHomepage(ListView):
     template_name = "SiaBimHomepage.pug"
+    model = HomepageModel
 
 
 class SiaBimTestpage(TemplateView):
