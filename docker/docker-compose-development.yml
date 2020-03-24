@@ -35,7 +35,7 @@ services:
       - ../staticfiles/js/production/:/staticfiles/js/production/
       - ../staticfiles/img/:/staticfiles/img/
       - ../staticfiles/fonts/:/staticfiles/fonts/
-      - ../staticfiles/django/:/staticfiles/django/
+      - ../staticfiles/django/:/static/
 
   siabim_postgresql:
     image: postgres:11.5-alpine

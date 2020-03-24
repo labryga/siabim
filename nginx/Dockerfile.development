@@ -1,0 +1,16 @@
+FROM nginx:1.17-alpine
+
+WORKDIR /siabim
+ARG host_user_name
+ARG host_user_id
+ENV user_name=$host_user_name \
+    user_id=$host_user_id
+RUN apk update && \
+    apk add --virtual --no-cache \
+    shadow \
+    adduser -D -g "" -H \
+    -u "$user_id" \
+    -h "$(pwd)" "$user_name" && \
+    chown -R "$user_id":"$user_id" "$(pwd)" && \
+    usermod -a -G "$user_id" nginx && \
+    apk del shadow
