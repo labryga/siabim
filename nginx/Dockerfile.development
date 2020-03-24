@@ -12,5 +12,6 @@ RUN apk update && \
     -u "$user_id" \
     -h "$(pwd)" "$user_name" && \
     chown -R "$user_id":"$user_id" "$(pwd)" && \
-    usermod -a -G "$user_id" "nginx" && \
+    usermod -a -G "$user_name" "nginx" && \
+    usermod -a -G "nginx" "$user_name" && \
     apk del shadow
