@@ -6,14 +6,8 @@ div(id="gridContainerDesktop", class="grid_container")
 
   div(id="contentDesktopRow",  class="grid_row")
     div(id="menuDesktop")
-      software = ["revit", "vectorworks", "archicad"]
-      for x in software
-        div
-          a(href="#", class="menuDesktopTitel")= x
-            untermenu = ["eins", "zwei", "drei"]
-            for y in untermenu
-              div
-                a(href="#", class="menuDesktopUntertitel")= y
+      div(id="menuDesktopRevit")
+        a(class="menuDesktopTitle")= "Revit"
 
     div(id="contentDesktop")
 

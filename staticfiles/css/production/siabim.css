@@ -379,17 +379,18 @@ body {
   float: left; }
 
 .menuDesktopTitel {
-  color: blue;
+  color: red;
   letter-spacing: 1px; }
-
-.menuDesktopUntertitel {
-  padding: 3px 10px; }
+  .menuDesktopTitel .menuDesktopUntertitel {
+    color: red;
+    display: block;
+    padding: 30px 10px; }
 
 #contentDesktop {
   background-color: rgba(0, 128, 0, 0.5);
   width: calc(100% - 230px);
   min-width: 768px;
-  height: 1150px;
+  height: 150px;
   float: right; }
 
 #footerDesktopRow {
@@ -431,7 +432,7 @@ body {
 #contentTablet {
   background-color: rgba(255, 165, 0, 0.4);
   width: 100%;
-  height: 1300px; }
+  height: 1400px; }
 
 #footerTabletRow {
   bottom: 0px; }
