@@ -1,6 +1,7 @@
 
 
 
+
 let footerPosition = (gridContainer, headerRow, contentRow, footerRow) => {
   let contentAvailableHeight = screen.height -
                                headerRow.offsetHeight -
