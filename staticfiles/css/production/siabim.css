@@ -372,11 +372,22 @@ body {
   padding: 20px 30px; }
 
 #menuDesktop {
+  background-color: rgba(0, 128, 0, 0.2);
   width: 230px;
   height: 400px;
   padding: 25px 25px;
-  border: solid black 0.5px;
   float: left; }
+
+.desktopMenuEntries {
+  position: absolute; }
+
+.desktopMenuEntriesDisplay {
+  display: none; }
+
+.desktopMenuEntry {
+  text-decoration: none;
+  line-height: 30px;
+  display: block; }
 
 #contentDesktop {
   width: calc(100% - 230px);

@@ -8,6 +8,12 @@ div(id="gridContainerDesktop", class="grid_container")
 
     div(id="menuDesktop")
 
+      div(id="desktopMainMenu", class="desktopMenuEntries")
+        werte = ["Bauen im Bestand", "Bauingenieurwesen", "Gebäudetechnik"]
+        for w in werte
+          a(href="#", class="desktopMenuEntry")= w
+
+
     div(id="contentDesktop")
 
   div(id="footerDesktopRow",   class="grid_row")
