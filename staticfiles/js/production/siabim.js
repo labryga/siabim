@@ -1,5 +1,12 @@
 "use strict";
 
+// menuDesktop.onclick = function(event) {
+//   let ziel = event.target;
+//   console.log(ziel.parentElement);
+// };
+console.log(menuDesktop.children.length);
+console.log(menuDesktop.children);
+
 var footerPosition = function footerPosition(gridContainer, headerRow, contentRow, footerRow) {
   var contentAvailableHeight = screen.height - headerRow.offsetHeight - footerRow.offsetHeight;
   var contentHeight = contentRow.offsetHeight;

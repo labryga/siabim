@@ -8,11 +8,20 @@ div(id="gridContainerDesktop", class="grid_container")
 
     div(id="menuDesktop")
 
-      div(id="desktopMainMenu", class="desktopMenuEntries")
-        werte = ["Bauen im Bestand", "Bauingenieurwesen", "Gebäudetechnik"]
-        for w in werte
+      div(id="desktopMenuMain", class="desktopMenuEntries ")
+        werte1 = ["Bauen im Bestand", "Bauingenieurwesen", "Gebäudetechnik",]
+        for w in werte1
+          a(href="#", class="desktopMenuEntry")= w
+        werte2 = ["Komplexes Modellieren", "Revit-API", "Rhino", "Vectorworks"]
+        for w in werte2
           a(href="#", class="desktopMenuEntry")= w
 
+
+      div(id="desktopMenuBauenImBestand", class="desktopMenuEntries desktopMenuEntriesDisplay")
+        a(href="#", class="desktopMenuEntry")= "zurück"
+        werte = ["Bauphasen", "Mengenermittlung"]
+        for w in werte
+          a(href="#", class="desktopMenuEntry")= w
 
     div(id="contentDesktop")
 
