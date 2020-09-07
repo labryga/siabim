@@ -38,6 +38,6 @@ services:
       - ../staticfiles/fonts/:/static/fonts/
 
   siabim_postgresql:
-    image: postgres:11.5-alpine
+    image: postgres:11.9-alpine
     env_file:
       - ./.env_siabim_postgresql

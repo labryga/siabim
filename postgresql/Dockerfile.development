@@ -1,4 +1,4 @@
-FROM postgres:11-alpine 
+FROM postgres:11.9-alpine 
 
 ARG host_uid
 ARG host_uid_name
